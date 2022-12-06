@@ -1,0 +1,4 @@
+MAILTO=developer@brabbl.com
+PYTHONWARNINGS="ignore::DeprecationWarning"
+
+# m h  dom mon dow   command

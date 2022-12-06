@@ -1,0 +1,33 @@
+{% load i18n %}Subject: {% trans "Brabbl - Recent Discussions on" %} vorwärts.de
+
+{{ content_summary }}
+• {% blocktrans count counter=arguments|length %}
+{{ counter }} new Argument.
+{% plural %}
+{{ counter }} new Arguments.
+{% endblocktrans %}<br/>
+• {% blocktrans count counter=discussions|length %}
+{{ counter }} new Discussion.
+{% plural %}
+{{ counter }} new Discussions.
+{% endblocktrans %}<br/>
+• {% blocktrans count counter=discussions|length %}
+{{ counter }} new Voting.
+{% plural %}
+{{ counter }} new Votings.
+{% endblocktrans %}<br/><br/>
+
+{% if latest_discussions %}
+{% trans "Here are a few recent discussions which may interest you:" %}<br/>
+{% if latest_discussions.0 %}
+{{ latest_discussions.0.source_url }}<br/>
+{% endif %}
+{% if latest_discussions.1 %}
+{{ latest_discussions.1.source_url }}<br/>
+{% endif %}
+{% if latest_discussions.2 %}
+{{ latest_discussions.2.source_url }}<br/>
+{% endif %}
+{% endif %}
+
+{{ sign }}

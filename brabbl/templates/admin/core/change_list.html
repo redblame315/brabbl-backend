@@ -1,0 +1,17 @@
+{% extends "admin/change_list.html" %}
+{% load i18n %}
+
+{% block object-tools %}
+    {% if opts.model_name == 'wording'%}
+        <div>
+            <div class="submit-row">
+                <a class="button" value="" name="_migrate_wordings"
+                    onclick="if (!confirm('{% trans 'Are you really migrate wordings?' %}')) return false"
+                    href="{% url 'migrate-customer-available-wordings' %}">{% trans 'Migrate wordings for customers' %}</a>
+            </div>
+        </div>
+        <br />
+    {% endif %}
+
+    {{ block.super }}
+{% endblock %}

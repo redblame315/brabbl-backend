@@ -1,0 +1,16 @@
+@import 'font.css';
+
+.ReactModal__Content {
+    transform: scale(1);
+    -webkit-transition: 0s;
+    -moz-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clearfix {
+    clear: both;
+}

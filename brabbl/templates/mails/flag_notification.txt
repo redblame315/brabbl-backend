@@ -1,0 +1,12 @@
+{% load i18n %}Subject: {% trans "Brabbl post has been flagged" %}
+
+{{ content_summary }}
+
+{% trans "Title" %}: "{{ title }}"<br/>
+{% trans "Type" %}: {{ type }}<br/>
+{% trans "ID" %}: {{ obj.id }}<br/>
+{% trans "User" %}: {{ obj.created_by.username }}<br/>
+{% trans "Reports / flagging" %}: {{ customer.flag_count_notification }}<br/>
+{% trans "Link" %}: {{ obj.discussion.source_url }}<br/>
+
+{{ sign }}

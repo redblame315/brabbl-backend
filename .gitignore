@@ -1,0 +1,84 @@
+# ------------------------- Linux
+*~
+
+# KDE
+.directory
+
+# ------------------------- OSX
+.DS_Store
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# ------------------------- Code Editors / IDEs
+# VSCode
+.vscode
+
+# vim
+.*.sw[a-z]
+*.un~
+Session.vim
+
+
+# ------------------------- Python
+*.py[co]
+
+env
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+coverage
+develop-eggs
+.installed.cfg
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.pytest_cache
+.coverage
+.coverage 2
+.coverage 3
+.tox
+test_results.html
+
+#Translations
+*.mo
+
+
+# ------------------------ Django
+*.log
+*.pot
+*.pyc
+settings_local.py
+
+# ------------------------ Custom
+.cache
+.tmp
+*.sqlite3
+htmlcov
+node_modules
+frontend/lib
+docs/build
+*.orig
+# *.sql
+*.tox/*
+media
+static_files/
+.idea
+
+# ------------------------- dynamically created?
+assets/style.css
+deployment/assets

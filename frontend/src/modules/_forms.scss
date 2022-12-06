@@ -1,0 +1,207 @@
+button {
+  background-color: transparent;
+  border: 1px solid $medium-grey;
+  padding: 12px;
+  font-weight: bold;
+  color: $dark-grey;
+  font-size: 14px;
+
+  &.primary {
+    background-color: $red;
+    color: $white;
+
+    &:hover {
+      background-color: darken($red, 5%);
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    background-color: darken($white, 5%);
+  }
+}
+
+
+/*
+  Full screen forms
+*/
+
+.fullform-header {
+  margin: 80px 0 60px 0;
+
+  h1, h2 {
+    font-family: $font-family-serif;
+    text-align: center;
+  }
+
+  p {
+    font-family: $font-family-serif;
+    color: $dark-grey;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
+.fullform-body {
+  font-size: 1rem;
+
+  label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+    font-weight: normal;
+  }
+
+  .optionsForm input {
+    margin-right: 5px;
+  }
+
+  .helpText {
+    font-size: 0.8em;
+  }
+
+  .fullform-section {
+    margin: 1em 0;
+
+    h2 {
+      font-size: 1.2em;
+      font-weight: bold;
+      border-bottom: 2px solid $dark-grey;
+      line-height: 2;
+
+      &:before {
+        font-family: $font-family-icons;
+        margin-right: 10px;
+        color: $dark-grey;
+      }
+    }
+
+    &.optionsForm {
+      .row > label {
+        font-weight: bold;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-bottom: 2px solid #989898;
+        line-height: 2;
+        margin-bottom: 15px;
+
+        &:before {
+          font-family: $font-family-icons;
+          color: $dark-grey;
+          margin-right: 10px;
+          content: "\F013";
+        }
+      }
+    }
+
+    &.createDiscussionForm h2:before {
+      content: "\F040";
+    }
+
+    &.optionsForm h2:before {
+      content: "\F013";
+    }
+  }
+
+  input,
+  textarea,
+  select {
+    margin: 0;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  textarea {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid $medium-grey;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  select {
+    background-color: transparent;
+    width: 100%;
+    padding: 15px 10px;
+    border: 0;
+    border-top: 2px solid $light-grey;
+    border-bottom: 2px solid $light-grey;
+
+    option {
+      background-color: transparent;
+      padding: 10px;
+    }
+  }
+
+  .row {
+    position: relative;
+    margin: 1em 0;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 1em;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .errorlist {
+      position: absolute;
+      width: 100%;
+      background-color: $white;
+      right: 0;
+      margin: 0;
+
+      li {
+        color: $red;
+        font-size: 0.8em;
+        text-align: right;
+
+        padding: 0.5em 0;
+      }
+    }
+
+    &.err {
+      padding-bottom: 1em;
+
+      input,
+      textarea {
+        border-color: $red;
+      }
+    }
+  }
+
+  .error {
+    font-size: 0.9em;
+    margin-bottom: 2em;
+  }
+
+  .errorlist {
+    font-size: 0.9em;
+    padding: 0;
+    color: $red;
+    list-style: none;
+  }
+}
+
+.fullform-footer button {
+  width: 100%;
+  margin-bottom: 5px;
+}

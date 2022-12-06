@@ -1,0 +1,7 @@
+{% load url_tags i18n %}Subject: {% trans "Brabbl-Registration on" %} {{next | domain}}
+
+{{ content_summary }}
+
+{% build_absolute_url url %}{% if next %}?next={{ next|urlencode }}{% endif %}
+
+{{ sign }}

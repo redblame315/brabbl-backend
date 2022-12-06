@@ -1,0 +1,2443 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:02+0200\n"
+"PO-Revision-Date: 2021-09-15 11:53+0053\n"
+"Last-Translator: b'Will Smith <demo-user-1@brabbl.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.3\n"
+
+#: accounts/admin.py:22
+msgid "User Info Settings"
+msgstr "Einstellungen"
+
+#: accounts/admin.py:82
+msgid "Personal info"
+msgstr "Persönliche Daten"
+
+#: accounts/admin.py:83
+msgid "Additional info"
+msgstr "Zusätzliche Daten"
+
+#: accounts/admin.py:87
+msgid "Permissions"
+msgstr "Berechtigungen"
+
+#: accounts/admin.py:89
+msgid "Important dates"
+msgstr "Wichtige Daten:"
+
+#: accounts/admin.py:100
+msgid "News Email"
+msgstr "Neuigkeiten E-Mail"
+
+#: accounts/apps.py:7 templates/accounts/user_list.html:35
+#: templates/mails/flag_notification.txt:8 utils/language_utils.py:19
+msgid "User"
+msgstr "Benutzer"
+
+#: accounts/authentication.py:16
+msgid "Invalid token."
+msgstr "Ungültiges brabbl API Token"
+
+#: accounts/forms.py:13 accounts/models.py:96
+msgid "First Name"
+msgstr "Vorname"
+
+#: accounts/forms.py:14 accounts/models.py:97
+msgid "Last Name"
+msgstr "Nachname"
+
+#: accounts/forms.py:16 accounts/models.py:99 utils/language_utils.py:230
+msgid "Gender"
+msgstr "Geschlecht"
+
+#: accounts/forms.py:18 accounts/models.py:98
+msgid "Year of birth"
+msgstr "Geburtsjahr"
+
+#: accounts/forms.py:23 accounts/models.py:100 utils/language_utils.py:235
+msgid "Postcode"
+msgstr "Postleitzahl"
+
+#: accounts/forms.py:24 accounts/models.py:102 utils/language_utils.py:239
+msgid "City"
+msgstr "Ort"
+
+#: accounts/forms.py:27 accounts/models.py:105 utils/language_utils.py:245
+msgid "Bundesland"
+msgstr "Bundesland"
+
+#: accounts/forms.py:29 accounts/models.py:101 utils/language_utils.py:237
+msgid "Country"
+msgstr "Land"
+
+#: accounts/forms.py:30 accounts/models.py:103 utils/language_utils.py:241
+msgid "Organization"
+msgstr "Organisation"
+
+#: accounts/forms.py:31 accounts/models.py:104 utils/language_utils.py:243
+msgid "Position"
+msgstr "Tätigkeitsfeld / Aufgabe"
+
+#: accounts/forms.py:45 accounts/models.py:208
+msgid "Allowed parameters: {{domain}}"
+msgstr "Mögliche Platzhalter: {{domain}}"
+
+#: accounts/forms.py:57
+msgid "Default wording should be one of available wordings"
+msgstr "Default wording muss zu den 'verfügbaren Wordings' gehören."
+
+#: accounts/middleware.py:50 accounts/tests/test_middleware.py:22
+#: accounts/tests/test_middleware.py:30
+msgid "Invalid brabbl API Token."
+msgstr "Ungültiges brabbl API Token"
+
+#: accounts/middleware.py:60
+#, python-format
+msgid "Invalid referrer for customer %(customer)s: %(referrer)s"
+msgstr "Ungültiger 'Bezugnehmer' für Kunden %(customer)s: %(referrer)s"
+
+#: accounts/middleware.py:67 accounts/middleware.py:72
+#, python-format
+msgid "Invalid referrer domain for customer %(customer)s: %(referrer)s"
+msgstr "Ungültige 'Bezugnehmer'-Domain für Kunden %(customer)s: %(referrer)s"
+
+#: accounts/models.py:171
+msgid "One domain per line."
+msgstr "Eine Domain pro Zeile."
+
+#: accounts/models.py:182
+msgid "One email per line."
+msgstr "Eine E-Mail pro Zeile"
+
+#: accounts/models.py:186
+msgid "ReplyTo email"
+msgstr "'Reply to' E-Mail"
+
+#: accounts/models.py:189
+msgid "If left empty, the address of the moderator will be used."
+msgstr "Falls leer, wird die Moderatorenadresse genutzt."
+
+#: accounts/models.py:219
+msgid "Username"
+msgstr "Benutzername"
+
+#: accounts/models.py:220
+msgid "First name + Last name"
+msgstr "Vorname + Nachname"
+
+#: accounts/models.py:323 utils/language_utils.py:231
+msgid "Whatever"
+msgstr "sonstiges"
+
+#: accounts/models.py:324 utils/language_utils.py:232
+msgid "Male"
+msgstr "männlich"
+
+#: accounts/models.py:325 utils/language_utils.py:233
+msgid "Female"
+msgstr "weiblich"
+
+#: accounts/models.py:342
+msgid "Latest news mail delivery"
+msgstr "Letzer Newsmail-Versand"
+
+#: accounts/models.py:345
+msgid "Date of activation"
+msgstr "Aktivierungsdatum"
+
+#: accounts/models.py:348 utils/models.py:14
+msgid "Deletion date"
+msgstr "Löschungsdatum"
+
+#: accounts/models.py:352 utils/language_utils.py:183
+msgid "Profile picture"
+msgstr "Profilbild"
+
+#: accounts/models.py:504
+msgid "Email asking for confirmation of account."
+msgstr "Bestätigungs-E-Mail "
+
+#: accounts/models.py:506
+msgid "Daily Summary."
+msgstr "Tägliche Zusammenfassung"
+
+#: accounts/models.py:507
+msgid "Forgot Password."
+msgstr "Passwort vergessen?"
+
+#: accounts/models.py:508
+msgid "Argument flagging."
+msgstr "Argument flagging"
+
+#: accounts/models.py:509
+msgid "Invitation to join private account."
+msgstr "Einladung zu geschütztem Account."
+
+#: accounts/models.py:510
+msgid "Non active user warning."
+msgstr "Warnung 'user nicht aktiviert'."
+
+#: accounts/models.py:517 accounts/models.py:521
+msgid ""
+"Allowed parameters: {{domain}}, and {{username}}, {{firstname}}, "
+"{{lastname}} if type is not Argument flagging."
+msgstr ""
+"Erlaubte Platzhalter: {{domain}}; sowie {{username}}, {{firstname}}, "
+"{{lastname}} (außer bei 'Argument flagging')."
+
+#: accounts/serializers.py:48
+msgid "This account is inactive."
+msgstr "Dieser Account ist nicht (mehr) aktiviert."
+
+#: accounts/serializers.py:51
+msgid "This account is not yet verified"
+msgstr "Die E-Mail Adresse muss noch verifiziert werden"
+
+#: accounts/serializers.py:54
+msgid "Password or user name is invalid."
+msgstr "Kennwort oder Benutzername ungültig."
+
+#: accounts/serializers.py:57
+msgid "Username and password must be entered"
+msgstr "Benutzername und Kennwort müssen eingegeben werden"
+
+#: accounts/serializers.py:83
+msgid "Unknown e-mail."
+msgstr "Unbekannte E-Mail."
+
+#: accounts/serializers.py:152
+msgid "This email address is already in use."
+msgstr "Diese E-Mail-Adresse wird bereits verwendet."
+
+#: accounts/serializers.py:169
+msgid "This username is not available."
+msgstr "Benutzername wird bereits verwendet."
+
+#: accounts/serializers.py:215 accounts/serializers.py:218
+#, python-brace-format
+msgid "{0} is not yet invited."
+msgstr ""
+"{0} ist dem System nicht bekannt. Bitte melden Sie sich mit der E-Mail "
+"Adresse an, unter der Sie eingeladen wurden. Überprüfen Sie Ihre Eingabe "
+"oder wenden sich an die Person, die Sie eingeladen hat. Vielen Dank."
+
+#: accounts/serializers.py:222 accounts/serializers.py:229
+#, python-brace-format
+msgid "{0} is required."
+msgstr "{0} muss eingegeben werden."
+
+#: accounts/serializers.py:244
+#, python-brace-format
+msgid "{0} is already in use."
+msgstr "{0} wird bereits verwendet."
+
+#: accounts/serializers.py:315 templates/iframe.html:41
+#: templates/iframe.html:48
+msgid "Auth token is not valid."
+msgstr "AuthToken ist nicht gültig."
+
+#: accounts/serializers.py:346
+msgid "Group doesn't exist."
+msgstr "Berechtigungs-Gruppe extistiert nicht."
+
+#: accounts/serializers.py:377
+msgid "Admin invitation is not allowed"
+msgstr ""
+"Keine ausgewaehlten Teilnehmer erlaubt (xx Admin invitation is not allowed "
+"xx)"
+
+#: accounts/serializers.py:381
+msgid "Email is not valid"
+msgstr "E-Mail Adresse ist nicht gültig."
+
+#: accounts/templatetags/user_additional_info.py:36
+msgid "Registration:"
+msgstr "Anmeldung:"
+
+#: accounts/views.py:84
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: accounts/views.py:86
+#, python-format
+msgid ""
+"By signing up, you agree to %s Basic Rules, Terms of Service, and Privacy Policy.<br/>\n"
+"        Have fun discussing on customer page. This text should be customizable.<br/>\n"
+"        Please update the following required fields"
+msgstr ""
+"Beim Sign-up stimmen Sie %s zu.<br/>\n"
+"Dieser Text sollte aber nirgendwo erscheinen (custom wording :) ).<br/>"
+
+#: accounts/views.py:93
+msgid ""
+"Thank you very much. Your brabbl account at {}\n"
+"                has been successfully activated."
+msgstr ""
+"Vielen Dank. Ihr Account auf %(user_domain)s wurde erfolgreich aktiviert."
+
+#: accounts/views.py:339 core/views.py:431
+msgid "You do not have permission to users"
+msgstr "Keine Zugriffsberechtigung für 'user'."
+
+#: accounts/views.py:357
+msgid "User doesn't exist."
+msgstr "User existiert nicht."
+
+#: accounts/views.py:360
+msgid "You do not have permission to change this user."
+msgstr ""
+"Sie haben nicht die Berechtigung, die Einstellungen für diesen User zu "
+"ändern."
+
+#: conf/base.py:61
+msgid "English"
+msgstr "Englisch"
+
+#: conf/base.py:62
+msgid "Deutsch"
+msgstr "Deutsch"
+
+#: conf/base.py:63
+msgid "Spanish"
+msgstr "Spanisch"
+
+#: conf/base.py:64
+msgid "French"
+msgstr "Französisch"
+
+#: conf/base.py:65
+msgid "Italian"
+msgstr "Italienisch"
+
+#: conf/base.py:66
+msgid "Greek"
+msgstr "Griechisch"
+
+#: conf/base.py:67
+msgid "Ukrainian"
+msgstr "Ukrainisch"
+
+#: conf/base.py:68
+msgid "Russian"
+msgstr "Russisch"
+
+#: core/admin.py:23
+msgid "Barometer Wording"
+msgstr "Barometer Wording"
+
+#: core/admin.py:35
+msgid "Statement voting"
+msgstr "Statement voting"
+
+#: core/admin.py:39
+msgid "Statement list header"
+msgstr "Statement list header"
+
+#: core/admin.py:40
+msgid "Statement header"
+msgstr "Statement header"
+
+#: core/admin.py:43
+msgid "Add button short (top)"
+msgstr "Add button short (top)"
+
+#: core/admin.py:44
+msgid "Add button (bottom)"
+msgstr "Hinzufüge Button (unten)"
+
+#: core/admin.py:45
+msgid "Survey - list header"
+msgstr "Ideensammlung - Listenheader"
+
+#: core/admin.py:46
+msgid "Survey - Add answer button"
+msgstr "Ideensammlung - Antwort hinzufügen button"
+
+#: core/admin.py:48
+msgid "Reply counter"
+msgstr "Reaktionen Zähler"
+
+#: core/admin.py:72 core/admin.py:98 utils/language_utils.py:74
+msgid "Discussion"
+msgstr "Diskussion X"
+
+#: core/admin.py:78 core/models.py:52 utils/language_utils.py:217
+msgid "Statement"
+msgstr "Beitrag"
+
+#: core/admin.py:84 core/admin.py:104
+msgid "Customer"
+msgstr "Kunde"
+
+#: core/admin.py:138
+msgid "Properties"
+msgstr "Eigenschaften"
+
+#: core/admin.py:144
+msgid "Time limit"
+msgstr "Beschränkte Laufzeit"
+
+#: core/forms.py:30 core/tests/test_admin.py:31
+msgid "End time cannot be earlier than start time!"
+msgstr "Das Ende kann nicht vor dem Anfang liegen."
+
+#: core/models.py:34 utils/language_utils.py:210
+msgid "very poor"
+msgstr "sehr schlecht"
+
+#: core/models.py:35 utils/language_utils.py:211
+msgid "poor"
+msgstr "schlecht "
+
+#: core/models.py:36 utils/language_utils.py:212
+msgid "ok"
+msgstr "ok"
+
+#: core/models.py:37 utils/language_utils.py:213
+msgid "good"
+msgstr "gut"
+
+#: core/models.py:38 utils/language_utils.py:214
+msgid "very good"
+msgstr "sehr gut"
+
+#: core/models.py:39 utils/language_utils.py:215
+msgid "CONTRA"
+msgstr "CONTRA"
+
+#: core/models.py:40 utils/language_utils.py:216
+msgid "PRO"
+msgstr "PRO"
+
+#: core/models.py:41 utils/language_utils.py:166
+msgid "Contra-Argument"
+msgstr "Contra-Argument"
+
+#: core/models.py:42 utils/language_utils.py:167
+msgid "Pro-Argument"
+msgstr "Pro-Argument"
+
+#: core/models.py:43 core/models.py:47
+msgid "Button Contra"
+msgstr "Contra"
+
+#: core/models.py:44 core/models.py:46 core/models.py:48 core/models.py:50
+#: utils/language_utils.py:220
+msgid "Write new argument"
+msgstr "Neues Argument schreiben"
+
+#: core/models.py:45 core/models.py:49
+msgid "Button Pro"
+msgstr "Button Pro"
+
+#: core/models.py:51 core/models.py:59
+msgid "Name singular"
+msgstr "Name (Singular)"
+
+#: core/models.py:53 core/models.py:61
+msgid "Plural name"
+msgstr "Name (Plural)"
+
+#: core/models.py:54 utils/language_utils.py:218
+msgid "Statements"
+msgstr "Beiträge"
+
+#: core/models.py:55
+msgid "Top button"
+msgstr "Oberer Button"
+
+#: core/models.py:56 core/models.py:58 utils/language_utils.py:219
+msgid "Write new statement"
+msgstr "Neuen Beitrag schreiben"
+
+#: core/models.py:57
+msgid "Bottom button"
+msgstr "Unterer Button"
+
+#: core/models.py:60 core/models.py:63 utils/language_utils.py:151
+msgid "Reply"
+msgstr "Antwort"
+
+#: core/models.py:62 utils/language_utils.py:152
+msgid "Replies"
+msgstr "Reaktionen"
+
+#: core/models.py:64
+msgid "Answer"
+msgstr "Antwort"
+
+#: core/models.py:80
+msgid "Notification Email Verification Required"
+msgstr "Notification: E-Mail Bestätigung erforderlich"
+
+#: core/models.py:81
+msgid "Notification on Logout"
+msgstr "Notification: Logout erfolgreich"
+
+#: core/models.py:82
+msgid "Notification SignUp Required"
+msgstr "Notification: Anmeldung erforderlich"
+
+#: core/models.py:83
+msgid "Notification Report Posted"
+msgstr "Notification: Bedenklicher Inhalt gemeldet"
+
+#: core/models.py:84
+msgid "Notification Message Posted"
+msgstr "Notification: Beitrag gepostet"
+
+#: core/models.py:85
+msgid "Notification Message Updated"
+msgstr "Notification Nachricht aktualisiert"
+
+#: core/models.py:86
+msgid "Notification Profile Updated"
+msgstr "Notification: Profil aktualisiert"
+
+#: core/models.py:87
+msgid "Notification Reset Password"
+msgstr "Notification: Passwort zurücksetzen"
+
+#: core/models.py:88
+msgid "Hidden posting title"
+msgstr "Verborgenes Argument (Titel)"
+
+#: core/models.py:89
+msgid "Hidden posting body"
+msgstr "Versteckter post (body)"
+
+#: core/models.py:90
+msgid "Notification Discussion Already Completed"
+msgstr "Notification: Diskussion bereits beendet"
+
+#: core/models.py:91
+msgid "Notification Discussion Not Started Yet"
+msgstr "Diese Diskussion ist noch nicht aktiv."
+
+#: core/models.py:105
+msgid "Sign Up Title"
+msgstr "Sign-up Screen Titel"
+
+#: core/models.py:106
+msgid "Sign Up Text"
+msgstr "Sign-up Screen Text"
+
+#: core/models.py:107
+msgid "Login Title"
+msgstr "Login Screen Titel"
+
+#: core/models.py:108
+msgid "Login Text"
+msgstr "Login Screen Text"
+
+#: core/models.py:109
+msgid "Welcome Title"
+msgstr "Willkommen Screen Titel"
+
+#: core/models.py:110
+msgid "Welcome Text (after Social-Auth Sign Up)"
+msgstr "Willkommen Screen Text (nach Social Sign up)"
+
+#: core/models.py:111
+msgid "Welcome Text (after Email Sign Up)"
+msgstr "Willkommen Screen Text (nach E-Mail Sign up)"
+
+#: core/models.py:112
+msgid "Barometer Start Sign"
+msgstr "Barometer Wording"
+
+#: core/models.py:113
+msgid "Data policy overlay title"
+msgstr "Datenschutz Zustimmungsaufforderung (Titel)"
+
+#: core/models.py:114
+msgid "Data policy overlay body"
+msgstr "Datenschutz Zustimmungsaufforderung (Text)"
+
+#: core/models.py:115
+msgid "Sign up to private account failed"
+msgstr "Anmeldung zu geschütztem Account fehlgeschlagen"
+
+#: core/models.py:116
+msgid "Verification required"
+msgstr "Verifizierung erforderlich"
+
+#: core/models.py:117
+msgid "List of duplicate invitation email"
+msgstr "Liste doppelt eingeladener E-Mail Adressen"
+
+#: core/models.py:118
+msgid "Private discussions not confirmed"
+msgstr "[Private discussions - nicht verifiziert]"
+
+#: core/models.py:119
+msgid "Private discussions not logged in"
+msgstr "[Private discussions - nicht angemeldet]"
+
+#: core/models.py:131
+msgid "First create a model to see all messages"
+msgstr "Erst ein 'model' anlegen, um alle Nachrichten zu sehen."
+
+#: core/models.py:173 core/models.py:300 utils/language_utils.py:275
+msgid "Image"
+msgstr "Bild"
+
+#: core/models.py:186
+msgid "Wording"
+msgstr "Individuelles Wording"
+
+#: core/models.py:206
+msgid "Barometer always shows the current voting results"
+msgstr "Barometer zeigt immer die Ergebnisse"
+
+#: core/models.py:208
+msgid ""
+"Barometer only shows results to users who already voted for this statement"
+msgstr "Barometer zeigt Ergebnisse erst wenn der User selbst abgestimmt hat."
+
+#: core/models.py:210
+msgid ""
+"Barometer only shows results to users who already voted for this statement, "
+"and to users with 'Admin' account"
+msgstr ""
+"Barometer zeigt Ergebnisse erst wenn der User abgestimmt hat (nur Admins "
+"sehen immer die Ergebnisse)."
+
+#: core/models.py:264 utils/language_utils.py:250
+msgid "Show all"
+msgstr "Alle anzeigen"
+
+#: core/models.py:265
+msgid "Search by any tag"
+msgstr "Muss mindestens einen der Tags enthalten"
+
+#: core/models.py:266
+msgid "Search by all tags"
+msgstr "Muss alle Tags enthalten"
+
+#: core/models.py:284 core/models.py:398 templates/accounts/user_list.html:25
+#: utils/language_utils.py:195
+msgid "Active"
+msgstr "Aktiv"
+
+#: core/models.py:285 core/models.py:399
+msgid "Hidden"
+msgstr "Entfernt"
+
+#: core/models.py:301
+msgid "Video"
+msgstr "Video"
+
+#: core/permissions.py:31
+msgid "Object must be created or modified only by an administrator."
+msgstr "Object darf nur von einem Admin erstellt oder modifiziert werden."
+
+#: core/permissions.py:38
+msgid "Can't be modified, because other users have already responded on it."
+msgstr ""
+"Objekt darf nicht mehr modifiziert werden, da auf dieses bereits reagiert "
+"wurde."
+
+#: core/permissions.py:48
+msgid "Only the creator can modify this object."
+msgstr "Nur der Ersteller darf dieses Objekt modifizieren."
+
+#: core/serializers.py:96
+msgid "There are only whole or half numbers allowed."
+msgstr "Es sind nur ganze oder halbe Zahlen erlaubt."
+
+#: core/serializers.py:194
+msgid "Statement not found"
+msgstr "Statement nicht gefunden"
+
+#: core/serializers.py:215
+msgid "Arguments are not allowed in this discussion."
+msgstr "Argumente sind in dieser Diskussion nicht erlaubt."
+
+#: core/serializers.py:219
+msgid "Replies are not allowed in this discussion."
+msgstr "['Replies' sind in dieser Diskussion nicht erlaubt.]"
+
+#: core/serializers.py:335 core/serializers.py:764
+msgid "Discussion not found﻿"
+msgstr "Diskussion nicht gefunden"
+
+#: core/serializers.py:504 core/serializers.py:508
+msgid "ID is already in use."
+msgstr "ID wird bereits verwendet."
+
+#: core/serializers.py:515
+msgid "`Wording` needed for Barometer."
+msgstr "`Wording` wird für Barometer benötigt."
+
+#: core/serializers.py:773
+msgid "Statement not found﻿"
+msgstr "Statement nicht gefunden"
+
+#: core/views.py:243
+msgid "Discussion has no barometer."
+msgstr "Diese Diskussion hat kein Barometer."
+
+#: core/views.py:341
+msgid "Discussion has no arguments."
+msgstr "Die Diskussion hat noch keine Argumente."
+
+#: core/views.py:344
+msgid "You can not rate hidden argument"
+msgstr "Entfernte/Unangemessene Beiträge können nicht bewertet werden"
+
+#: templates/404.html:4
+msgid "Not Found"
+msgstr "Nicht gefunden."
+
+#: templates/500.html:4
+msgid "Server Error"
+msgstr "Server Error."
+
+#: templates/accounts/password_reset.html:13
+msgid "Password has been reset"
+msgstr "Kennwort zurückgesetzt"
+
+#: templates/accounts/password_reset.html:15
+#: templates/mails/user_reset_password.txt:1
+msgid "Reset password"
+msgstr "Kennwort zurücksetzen"
+
+#: templates/accounts/password_reset.html:23
+#, python-format
+msgid ""
+"Password of your brabbl account at %(customer_url)s has been changed "
+"successfully."
+msgstr ""
+"Ihr Kennwort Ihres brabbl-Accounts auf %(customer_url)s wurde erfolgreich "
+"geändert."
+
+#: templates/accounts/password_reset.html:26
+msgid "In a few moments you will be redirected to"
+msgstr "Sie werden in Kürze weitergeleitet auf "
+
+#: templates/accounts/password_reset.html:42
+msgid "New password"
+msgstr "Neues Kennwort"
+
+#: templates/accounts/password_reset.html:53
+msgid "Confirm password"
+msgstr "Kennwort bestätigen"
+
+#: templates/accounts/password_reset.html:64
+msgid "Change password"
+msgstr "Kennwort ändern"
+
+#: templates/accounts/password_reset.html:70
+msgid ""
+"The link you used is invalid or has already been used. Please request a new "
+"confirmation link."
+msgstr ""
+"Der geöffnete Link ist ungültig oder wurde bereits genutzt. Bitte fordere "
+"erneut einen Link an."
+
+#: templates/accounts/user_list.html:12
+msgid "User List"
+msgstr "Liste aller User"
+
+#: templates/accounts/welcome.html:28
+msgid "Finish sign up"
+msgstr "Anmelden"
+
+#: templates/admin/accounts/change_form.html:9
+#: templates/admin/accounts/change_form.html:16
+#: templates/admin/core/change_form.html:9
+msgid "Are you really want to create copy of this object?"
+msgstr "Möchten Sie wirkliche das aktuelle Objekt kopieren?"
+
+#: templates/admin/accounts/change_form.html:10
+#: templates/admin/accounts/change_form.html:17
+#: templates/admin/core/change_form.html:10
+msgid "Duplicate an object"
+msgstr "Objekt duplizieren"
+
+#: templates/admin/core/change_list.html:9
+msgid "Are you really migrate wordings?"
+msgstr "Wirklich wordings migrieren?"
+
+#: templates/admin/core/change_list.html:10
+msgid "Migrate wordings for customers"
+msgstr "Wordings migrieren (v1.x -> 2.0.0)"
+
+#: templates/admin/edit_inline/set_of_properties.html:18
+msgid "Delete?"
+msgstr "Löschen?"
+
+#: templates/admin/edit_inline/set_of_properties.html:32
+msgid "Change"
+msgstr "bearbeiten"
+
+#: templates/admin/edit_inline/set_of_properties.html:34
+msgid "View on site"
+msgstr "Webseite anzeigen"
+
+#: templates/admin/edit_inline/set_of_properties.html:81
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr "Weiteren %(verbose_name)s hinzufügen"
+
+#: templates/admin/edit_inline/set_of_properties.html:82
+msgid "Remove"
+msgstr "Entfernen"
+
+#: templates/base.html:31 templates/iframe.html:31 utils/language_utils.py:173
+msgid "powered by"
+msgstr "powered by"
+
+#: templates/mails/flag_notification.txt:1
+msgid "Brabbl post has been flagged"
+msgstr "Beitrag wurde gemeldet"
+
+#: templates/mails/flag_notification.txt:5
+msgid "Title"
+msgstr "Titel"
+
+#: templates/mails/flag_notification.txt:6
+msgid "Type"
+msgstr "Typ"
+
+#: templates/mails/flag_notification.txt:7
+msgid "ID"
+msgstr "ID"
+
+#: templates/mails/flag_notification.txt:9
+msgid "Reports / flagging"
+msgstr "Meldungen"
+
+#: templates/mails/flag_notification.txt:10
+msgid "Link"
+msgstr "Link"
+
+#: templates/mails/invite_participants.txt:1
+msgid "Brabbl-Invitation on"
+msgstr "Brabbl-Einladung auf"
+
+#: templates/mails/news_mail.txt:1
+msgid "Brabbl - Recent Discussions on"
+msgstr "Brabbl — Aktuelle Diskussionen auf"
+
+#: templates/mails/news_mail.txt:4
+#, python-format
+msgid ""
+"\n"
+"%(counter)s new Argument.\n"
+msgid_plural ""
+"\n"
+"%(counter)s new Arguments.\n"
+msgstr[0] ""
+"\n"
+"%(counter)s neue Argument\n"
+msgstr[1] ""
+"\n"
+"%(counter)s neue Argumente\n"
+
+#: templates/mails/news_mail.txt:9
+#, python-format
+msgid ""
+"\n"
+"%(counter)s new Discussion.\n"
+msgid_plural ""
+"\n"
+"%(counter)s new Discussions.\n"
+msgstr[0] ""
+"\n"
+"%(counter)s neue Diskussion\n"
+msgstr[1] ""
+"\n"
+"%(counter)s neue Diskussionen\n"
+
+#: templates/mails/news_mail.txt:14
+#, python-format
+msgid ""
+"\n"
+"%(counter)s new Voting.\n"
+msgid_plural ""
+"\n"
+"%(counter)s new Votings.\n"
+msgstr[0] ""
+"\n"
+"%(counter)s neue Stimmabgabe\n"
+msgstr[1] ""
+"\n"
+"%(counter)s neue Stimmabgaben\n"
+
+#: templates/mails/news_mail.txt:21
+msgid "Here are a few recent discussions which may interest you:"
+msgstr "Hier ein paar aktuelle Diskussionen die Sie vielleicht interessieren:"
+
+#: templates/mails/verify_registration.txt:1
+msgid "Brabbl-Registration on"
+msgstr "Brabbl-Registrierung auf"
+
+#: utils/language_utils.py:23
+msgid ""
+"Thank you for your registration!\n"
+"                You will receive an email with a confirmation link.\n"
+"                Once you click this, you can join the discussion."
+msgstr ""
+"Vielen Dank für Ihre Registrierung!\n"
+"Sie erhalten in Kürze eine Email mit einem Bestätigungs-Link. Nach Klick auf diesen Link können Sie unbegrenzt an den Diskussionen teilnehmen."
+
+#: utils/language_utils.py:27
+msgid "sort by date"
+msgstr "Sortiert nach Datum"
+
+#: utils/language_utils.py:28
+msgid "sort by personal review"
+msgstr "Sortiert nach eigener Bewertung"
+
+#: utils/language_utils.py:30
+msgid "sorted by own rating"
+msgstr "Sortiert nach eigener Bewertung"
+
+#: utils/language_utils.py:32
+msgid "sort by average rating"
+msgstr "Sortiert nach durchschnittlicher Bewertung"
+
+#: utils/language_utils.py:34
+msgid "You must sign in to participate in the discussion"
+msgstr "Sie müssen sich anmelden, um an der Diskussion teilzunehmen."
+
+#: utils/language_utils.py:37
+msgid "The profile has been updated successfully"
+msgstr "Das Profil wurde erfolgreich aktualisiert."
+
+#: utils/language_utils.py:39
+msgid "Choose topic"
+msgstr "Nach Tags / Themen filtern"
+
+#: utils/language_utils.py:40
+msgid "Profile"
+msgstr "Profil"
+
+#: utils/language_utils.py:41
+msgid "Logout"
+msgstr "Abmelden"
+
+#: utils/language_utils.py:42
+msgid "Register"
+msgstr "Registrieren"
+
+#: utils/language_utils.py:43
+msgid "Login"
+msgstr "Anmelden"
+
+#: utils/language_utils.py:44
+msgid "You have been logged out"
+msgstr "Sie haben sich erfolgreich abgemeldet. Bis bald!"
+
+#: utils/language_utils.py:45
+msgid "Come back soon!"
+msgstr "Bis bald!"
+
+#: utils/language_utils.py:46
+msgid "All discussions"
+msgstr "Alle Diskussionen"
+
+#: utils/language_utils.py:48
+msgid "The argument has been changed"
+msgstr "Das Argument wurde geändert."
+
+#: utils/language_utils.py:51
+msgid "Great! Your argument is online now"
+msgstr "Ihr Argument ist jetzt online."
+
+#: utils/language_utils.py:53
+msgid "Edit discussion"
+msgstr "Diskussion bearbeiten"
+
+#: utils/language_utils.py:54
+msgid "Edit Discussion"
+msgstr "Änderungen speichern"
+
+#: utils/language_utils.py:55
+msgid "Create discussion"
+msgstr "Diskussion hinzufügen"
+
+#: utils/language_utils.py:57
+msgid "An email was sent with instructions on how to reset the password"
+msgstr ""
+"Sie erhalten eine Email mit Informationen, wie Sie Ihr Passwort ändern "
+"können."
+
+#: utils/language_utils.py:59
+msgid "Edit suggestion"
+msgstr "Beitrag bearbeiten"
+
+#: utils/language_utils.py:60
+msgid "Report suggestion"
+msgstr "Beitrag melden"
+
+#: utils/language_utils.py:61
+msgid "Add new suggestion"
+msgstr "Neue Idee hinzufügen"
+
+#: utils/language_utils.py:62
+msgid "Add new Discussion"
+msgstr "Diskussion hinzufügen"
+
+#: utils/language_utils.py:63
+msgid "Add new Survey"
+msgstr "Ideensammlung hinzufügen"
+
+#: utils/language_utils.py:64
+msgid "Update Discussion"
+msgstr "Diskussion aktualisieren"
+
+#: utils/language_utils.py:65
+msgid "Add new pro-argument"
+msgstr "Neues Pro-Argument schreiben"
+
+#: utils/language_utils.py:66
+msgid "Add new contra-argument"
+msgstr "Neues Contra-Argument schreiben"
+
+#: utils/language_utils.py:67
+msgid "Edit argument"
+msgstr "Argument bearbeiten"
+
+#: utils/language_utils.py:68
+msgid "Publish argument"
+msgstr "* Argument posten *"
+
+#: utils/language_utils.py:69
+msgid "Publish Argument"
+msgstr "Argument veröffentlichen"
+
+#: utils/language_utils.py:70
+msgid "Edit survey"
+msgstr "Ideensammlung bearbeiten"
+
+#: utils/language_utils.py:71
+msgid "Edit Survey"
+msgstr "Änderungen speichern"
+
+#: utils/language_utils.py:72
+msgid "Add new survey"
+msgstr "Ideensammlung veröffentlichen"
+
+#: utils/language_utils.py:73
+msgid "Survey"
+msgstr "Ideensammlung"
+
+#: utils/language_utils.py:75
+msgid "Tags"
+msgstr "Tags / Schlagworte"
+
+#: utils/language_utils.py:76
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: utils/language_utils.py:77
+msgid "Create a new account"
+msgstr "Neuen Account anlegen"
+
+#: utils/language_utils.py:78
+msgid "Forgot your password?"
+msgstr "Passwort vergessen?"
+
+#: utils/language_utils.py:80
+msgid "Please drag a picture to the image area to change your profile picture"
+msgstr ""
+"Bitte ziehen Sie ein Bild auf den markierten Bereich, um Ihr Profilbild zu "
+"ändern."
+
+#: utils/language_utils.py:83
+msgid "Please drag a picture to the image area to change discussion picture"
+msgstr ""
+"Bitte ziehen Sie ein Bild auf den markierten Bereich, um das Vorschaubild "
+"für diese Diskussion zu ändern."
+
+#: utils/language_utils.py:85
+msgid "Reset Password"
+msgstr "Kennwort zurücksetzen"
+
+#: utils/language_utils.py:86
+msgid "Update profile"
+msgstr "Profil aktualisieren"
+
+#: utils/language_utils.py:87
+msgid "Already have an account?"
+msgstr "Account bereits vorhanden?"
+
+#: utils/language_utils.py:88
+msgid "to"
+msgstr "für"
+
+#: utils/language_utils.py:89
+msgid "from"
+msgstr "von"
+
+#: utils/language_utils.py:90
+msgid "Edit"
+msgstr "Änderungen Speichern"
+
+#: utils/language_utils.py:91
+msgid "Add new"
+msgstr "Speichern"
+
+#: utils/language_utils.py:92
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: utils/language_utils.py:93
+msgid "There was a server error"
+msgstr "Es gab einen Server Fehler."
+
+#: utils/language_utils.py:94
+msgid "The action could not be carried out"
+msgstr "Server Error. Die Aktion konnte nicht ausgeführt werden."
+
+#: utils/language_utils.py:95
+msgid "Please provide a subject"
+msgstr "Bitte eine Überschrift angeben."
+
+#: utils/language_utils.py:97
+msgid "Please provide details for your argument"
+msgstr "Bitte das Argument genauer ausführen."
+
+#: utils/language_utils.py:99
+msgid "Just arguments"
+msgstr "Nur Argumente"
+
+#: utils/language_utils.py:100
+msgid "Just the Opiniometer"
+msgstr "Nur Meinungsbarometer"
+
+#: utils/language_utils.py:101
+msgid "Opiniometer plus Arguments"
+msgstr "Meinungsbarometer und Argumente"
+
+#: utils/language_utils.py:102
+msgid "Thesis statement or question"
+msgstr "These oder Frage"
+
+#: utils/language_utils.py:104
+msgid "Please provide a thesis statement or question"
+msgstr "Bitte eine These oder Frage angeben"
+
+#: utils/language_utils.py:107
+msgid "The thesis statement / question must not exceed 160 characters"
+msgstr "Die These / Frage darf maximal 160 Zeichen lang sein."
+
+#: utils/language_utils.py:110
+msgid "Please select the type of discussion"
+msgstr "Bitte den Diskussions-Typ auswählen."
+
+#: utils/language_utils.py:113
+msgid "Please select the Opiniometer"
+msgstr "Bitte das Meinungsbarometer auswählen."
+
+#: utils/language_utils.py:116
+msgid "Please select the type of Opiniometer"
+msgstr "Bitte den Meinungsbarometer-Typ auswählen."
+
+#: utils/language_utils.py:119
+msgid "Allow suggestions by admins only"
+msgstr "Neue Vorschläge nur von Admins erlauben."
+
+#: utils/language_utils.py:121
+msgid "Allow suggestions by users"
+msgstr "Neue Vorschläge auch von Nutzern erlauben."
+
+#: utils/language_utils.py:123
+msgid "Please provide a (unique) username"
+msgstr "Bitte einen (noch freien) Nutzernamen angeben."
+
+#: utils/language_utils.py:125
+msgid "Please provide a password"
+msgstr "Bitte ein Passwort eingeben"
+
+#: utils/language_utils.py:126
+msgid "Please provide a fist name"
+msgstr "Bitte einen Vornamen eingeben."
+
+#: utils/language_utils.py:127
+msgid "Please provide a last name"
+msgstr "Bitte einen Nachnamen eingeben."
+
+#: utils/language_utils.py:129
+msgid "Please provide an email address"
+msgstr "Bitte eine E-Mail Adresse eingeben."
+
+#: utils/language_utils.py:132
+msgid "Please provide a valid email address"
+msgstr "Bitte eine gültige E-Mail Adresse eingeben."
+
+#: utils/language_utils.py:134
+msgid "No email notifications"
+msgstr "Keine E-Mail Benachrichtigungen."
+
+#: utils/language_utils.py:135
+msgid "News e-mail (frequency)"
+msgstr "Häufigkeit der News-E-Mail"
+
+#: utils/language_utils.py:136
+msgid "daily"
+msgstr "täglich"
+
+#: utils/language_utils.py:137
+msgid "weekly"
+msgstr "wöchentlich"
+
+#: utils/language_utils.py:138
+msgid "User name"
+msgstr "Benutzername"
+
+#: utils/language_utils.py:139
+msgid "First name"
+msgstr "Vorname"
+
+#: utils/language_utils.py:140
+msgid "Last name"
+msgstr "Nachname"
+
+#: utils/language_utils.py:141
+msgid "Email Address"
+msgstr "E-Mail"
+
+#: utils/language_utils.py:142
+msgid "The passwords do not match"
+msgstr "Passwörter nicht identisch"
+
+#: utils/language_utils.py:143
+msgid "Password"
+msgstr "Passwort"
+
+#: utils/language_utils.py:145
+msgid "Please enter a password again"
+msgstr "(Passwort wiederholen X)"
+
+#: utils/language_utils.py:147
+msgid "characters remaining"
+msgstr "verbleibende Zeichen"
+
+#: utils/language_utils.py:148
+msgid "Average opinion"
+msgstr "durchschnittliche Meinung"
+
+#: utils/language_utils.py:149
+msgid "What do you think?"
+msgstr "Was meinen Sie?"
+
+#: utils/language_utils.py:150
+msgid "Argument"
+msgstr "Argument"
+
+#: utils/language_utils.py:153
+msgid "No suggestions yet"
+msgstr "Noch keine Beiträge vorhanden."
+
+#: utils/language_utils.py:155
+msgid "Thanks for reporting! We will review that content shortly"
+msgstr "Danke für Ihren Hinweis. Wir werden den Beitrag in Kürze prüfen."
+
+#: utils/language_utils.py:157
+msgid "Thank you for your message"
+msgstr "Danke für Ihre Nachricht."
+
+#: utils/language_utils.py:158
+msgid "We will consider the amount shortly"
+msgstr ""
+"Danke für Ihren Hinweis. Wir werden den Beitrag so bald wie möglich prüfen."
+
+#: utils/language_utils.py:159
+msgid "Hide proposal"
+msgstr "Beitrag verstecken"
+
+#: utils/language_utils.py:160
+msgid "Edit proposal"
+msgstr "Beitrag bearbeiten"
+
+#: utils/language_utils.py:161
+msgid "Report proposal"
+msgstr "Beitrag melden"
+
+#: utils/language_utils.py:162
+msgid "Add new argument"
+msgstr "Neues Argument hinzufügen"
+
+#: utils/language_utils.py:163
+msgid "No arguments yet"
+msgstr "Noch keine Argumente"
+
+#: utils/language_utils.py:164
+msgid " Start the discussion now!"
+msgstr "Starten Sie die Diskussion!"
+
+#: utils/language_utils.py:165
+msgid "Show more arguments"
+msgstr "Mehr Argumente anzeigen"
+
+#: utils/language_utils.py:168
+msgid "Hide argument"
+msgstr "Argument verstecken"
+
+#: utils/language_utils.py:169
+msgid "Show argument"
+msgstr "[Argument anzeigen]"
+
+#: utils/language_utils.py:170
+msgid "Delete argument"
+msgstr "[Argument löschen]"
+
+#: utils/language_utils.py:171
+msgid "Report argument"
+msgstr "Beitrag melden"
+
+#: utils/language_utils.py:172
+msgid "Rate"
+msgstr "Bewerten"
+
+#: utils/language_utils.py:174
+msgid "DISCUSSION"
+msgstr "DISKUSSION"
+
+#: utils/language_utils.py:175
+msgid "inconsequential"
+msgstr "belanglos"
+
+#: utils/language_utils.py:176
+msgid "questionable"
+msgstr "fragwürdig"
+
+#: utils/language_utils.py:177
+msgid "justifiable"
+msgstr "akzeptabel"
+
+#: utils/language_utils.py:178
+msgid "relevant"
+msgstr "relevant"
+
+#: utils/language_utils.py:179
+msgid "convincingly"
+msgstr "überzeugend"
+
+#: utils/language_utils.py:180
+msgid "Contra"
+msgstr "Contra"
+
+#: utils/language_utils.py:181
+msgid "Pro"
+msgstr "Pro"
+
+#: utils/language_utils.py:182
+msgid "Votes"
+msgstr "Stimmen"
+
+#: utils/language_utils.py:184
+msgid "Back"
+msgstr "zurück"
+
+#: utils/language_utils.py:185
+msgid "cancel"
+msgstr "abbrechen"
+
+#: utils/language_utils.py:186
+msgid "create"
+msgstr "hinzufügen"
+
+#: utils/language_utils.py:187
+msgid "change"
+msgstr "bearbeiten"
+
+#: utils/language_utils.py:188
+msgid "Opinion"
+msgstr "Meinung"
+
+#: utils/language_utils.py:189
+msgid "Subject"
+msgstr "Titel"
+
+#: utils/language_utils.py:190
+msgid "Suggestion"
+msgstr "Vorschlag"
+
+#: utils/language_utils.py:191
+msgid "Please enter a suggestion"
+msgstr "Bitte einen Vorschlag machen"
+
+#: utils/language_utils.py:192
+msgid "by"
+msgstr "von"
+
+#: utils/language_utils.py:193
+msgid "All"
+msgstr "Alle"
+
+#: utils/language_utils.py:194
+msgid "Total"
+msgstr "Gesamt"
+
+#: utils/language_utils.py:196
+msgid "Not Active"
+msgstr "Nicht aktiv"
+
+#: utils/language_utils.py:197
+msgid "Filter by status"
+msgstr "Filtern nach Status"
+
+#: utils/language_utils.py:198
+msgid "Completed"
+msgstr "Diskussion ist beendet."
+
+#: utils/language_utils.py:199
+msgid "Starts in"
+msgstr "Diskussion startet in "
+
+#: utils/language_utils.py:200
+msgid "Ends in"
+msgstr "Diskussion endet in:"
+
+#: utils/language_utils.py:201
+msgid "Starts"
+msgstr "Startet"
+
+#: utils/language_utils.py:202
+msgid "Finishes"
+msgstr "Endet"
+
+#: utils/language_utils.py:203
+msgid "d"
+msgstr "Tage"
+
+#: utils/language_utils.py:204
+msgid "h"
+msgstr "Stunden"
+
+#: utils/language_utils.py:205
+msgid "m"
+msgstr "Minuten"
+
+#: utils/language_utils.py:206
+msgid "s"
+msgstr "Sekunden"
+
+#: utils/language_utils.py:207
+msgid "Start Time"
+msgstr "Start Zeitpunkt"
+
+#: utils/language_utils.py:208
+msgid "End Time"
+msgstr "End-Zeitpunkt"
+
+#: utils/language_utils.py:209
+msgid "Answer(s)"
+msgstr "Antwort(en)"
+
+#: utils/language_utils.py:221
+msgid "Login with Facebook"
+msgstr "Login mit Facebook"
+
+#: utils/language_utils.py:222
+msgid "Login with Twitter"
+msgstr "Login mit Twitter"
+
+#: utils/language_utils.py:223
+msgid "Login with Google"
+msgstr "Login mit Google"
+
+#: utils/language_utils.py:224
+msgid "Sign up with"
+msgstr "Anmelden mit"
+
+#: utils/language_utils.py:225
+msgid "Sign In"
+msgstr "Anmelden"
+
+#: utils/language_utils.py:226
+msgid "or via mail"
+msgstr "oder via E-Mail"
+
+#: utils/language_utils.py:227
+msgid "Login to participate"
+msgstr "Login"
+
+#: utils/language_utils.py:228
+msgid "Year of Birth"
+msgstr "Geburtsjahr"
+
+#: utils/language_utils.py:229
+msgid "Please provide a years of birth"
+msgstr "Bitte ein Geburtsjahr eingeben"
+
+#: utils/language_utils.py:234
+msgid "Please provide a gender"
+msgstr "Bitte ein Geschlecht auswählen."
+
+#: utils/language_utils.py:236
+msgid "Please provide a postcode"
+msgstr "Bitte eine Postleitzahl eingeben"
+
+#: utils/language_utils.py:238
+msgid "Please provide a country"
+msgstr "Bitte ein Land angeben."
+
+#: utils/language_utils.py:240
+msgid "Please provide a city"
+msgstr "Bitte den Wohnort angeben."
+
+#: utils/language_utils.py:242
+msgid "Please provide a organization"
+msgstr "Bitte eine Organisation eingeben."
+
+#: utils/language_utils.py:244
+msgid "Please provide a position"
+msgstr ""
+"Bitte gib dein Tätigkeitsfeld bzw. deine Aufgabe innerhalb der Organisation "
+"an"
+
+#: utils/language_utils.py:246
+msgid "Please provide a bundesland"
+msgstr "Bitte das Bundesland angeben, wo du wohnst."
+
+#: utils/language_utils.py:247
+msgid "Edit List"
+msgstr "Liste bearbeiten"
+
+#: utils/language_utils.py:248
+msgid "Discussion List"
+msgstr "Diskussions-Liste"
+
+#: utils/language_utils.py:249
+msgid "Save List"
+msgstr "Liste speichern"
+
+#: utils/language_utils.py:251
+msgid "Show sum of tags"
+msgstr "Mindestens ein Tag stimmt überein"
+
+#: utils/language_utils.py:252
+msgid "Show intersection of tags"
+msgstr "Alle Tags stimmen überein"
+
+#: utils/language_utils.py:253
+msgid "List name"
+msgstr "Titel der Liste"
+
+#: utils/language_utils.py:254
+msgid "Hide tag filter for Users"
+msgstr "Tag Filter für Nutzer verstecken?"
+
+#: utils/language_utils.py:256
+msgid "Tag filter in the list view will not be shown to users"
+msgstr ""
+"Der Tag-Filter in der Listen Darstellung wird nur Administratoren angezeigt."
+
+#: utils/language_utils.py:257
+msgid "Please provide a list name"
+msgstr "Bitte einen Titel für die Liste eingeben."
+
+#: utils/language_utils.py:258
+msgid "The list name must not exceed 160 characters"
+msgstr "Der Titel der Liste darf maximal 160 Zeichen lang sein."
+
+#: utils/language_utils.py:259
+msgid "Content of list"
+msgstr "Listen Inhalt"
+
+#: utils/language_utils.py:260
+msgid "Please select the content of list"
+msgstr "Bitte den Listen-Inhalt auswählen."
+
+#: utils/language_utils.py:261
+msgid "Please select the Wording schema"
+msgstr "Bitte ein individuelles Wording auswählen."
+
+#: utils/language_utils.py:262
+msgid "You can enter maximum of 4 digits"
+msgstr "Maximal vier Ziffern."
+
+#: utils/language_utils.py:263
+msgid "Add a tag"
+msgstr "Tag hinzufügen"
+
+#: utils/language_utils.py:264
+msgid "Press enter to add a tag"
+msgstr "'Enter' drücken um einen Tag hinzuzufügen"
+
+#: utils/language_utils.py:265
+msgid "The discussion has not started yet"
+msgstr "Diese Diskussion ist noch nicht aktiv."
+
+#: utils/language_utils.py:266
+msgid "Write Pro-Argument"
+msgstr "Pro-Argument"
+
+#: utils/language_utils.py:267
+msgid "Write Contra-Argument"
+msgstr "Contra-Argument"
+
+#: utils/language_utils.py:268
+msgid "Update Argument"
+msgstr ""
+"\n"
+"%(counter)s neue Argument\n"
+
+#: utils/language_utils.py:270
+msgid "They were an email sent with instructions to reset the password"
+msgstr ""
+"Sie erhalten eine E-Mail mit Informationen, wie Sie Ihr Passwort ändern "
+"können."
+
+#: utils/language_utils.py:271
+msgid "Add media"
+msgstr "Medieninhalte hinzufügen"
+
+#: utils/language_utils.py:272
+msgid "User list"
+msgstr "User Liste"
+
+#: utils/language_utils.py:274
+msgid "You can also upload an image or add a Youtube link"
+msgstr ""
+"Sie können zusätzlich auch ein Bild oder den Link zu einem YouTube Video "
+"hinzufügen."
+
+#: utils/language_utils.py:276
+msgid "Content removed"
+msgstr "[Beitrag entfernt]"
+
+#: utils/language_utils.py:278
+msgid "This content was inappropriate and has been removed by our staff"
+msgstr "Dieser Beitrag verstößt gegen unsere Nutzungsbedingungen."
+
+#: utils/language_utils.py:281
+msgid ""
+"Please stick to our guidelines for good discussions and refrain from posts "
+"that are likely to be regarded as offensive or rude"
+msgstr ""
+"Bitte halte Dich an unsere Nutzungsbedingungen und poste keine Beiträge, die"
+" als unangemessen oder persönlich beleidigend empfunden werden könnten."
+
+#: utils/language_utils.py:283
+msgid "User can add replies to arguments"
+msgstr "Verschachtelte Diskussion von Argumenten möglich"
+
+#: utils/language_utils.py:284
+msgid "Allow replies to arguments"
+msgstr "['Replies' zu Argumenten erlauben]"
+
+#: utils/language_utils.py:285
+msgid "Delete discussion"
+msgstr "Diskussion löschen"
+
+#: utils/language_utils.py:287
+msgid "Really delete this discussion? (This cannot be undone!)"
+msgstr "Diskussion wirklich löschen? (Kann nicht rückgängig gemacht werden)"
+
+#: utils/language_utils.py:289
+msgid "key_discussion-modal_textfield-title_description-of-discussion"
+msgstr "Kurze Beschreibung / Infotext zur Diskussion (optional)"
+
+#: utils/language_utils.py:291
+msgid "key_discussion-modal_textfield-url_web-url-of-discussion"
+msgstr ""
+"URL (nur falls diese Diskussion auf einer externen Webseite eingebunden "
+"wird)"
+
+#: utils/language_utils.py:293
+msgid "key_invite-participants-modal_title-of-invite-participants"
+msgstr "Teilnehmer*innen einladen"
+
+#: utils/language_utils.py:295
+msgid "key_invite-participants-modal_textfield-email_label"
+msgstr "E-Mail Adressen"
+
+#: utils/language_utils.py:297
+msgid "key_invite-participants-modal_textfield-email_help-text"
+msgstr "E-Mail Adressen, durch Komma getrennt"
+
+#: utils/language_utils.py:299
+msgid "key_invite-participants-modal_textfield-email_error-email"
+msgstr "Bitte E-Mail Adresse(n) eingeben"
+
+#: utils/language_utils.py:301
+msgid "key_invite-participants-modal_textfield-email_error-emails"
+msgstr "[Bitte korrekte E-Mail Adressen eingeben]"
+
+#: utils/language_utils.py:303
+msgid "key_invite-participants-modal_submit-button_label"
+msgstr "Jetzt Einladen!"
+
+#: utils/language_utils.py:305
+msgid "key_invite-participants-modal_invitation-list_revoke-invitation-hint"
+msgstr "Einladung widerrufen"
+
+#: utils/language_utils.py:307
+msgid "key_invite-participants-modal_invitation-count-title"
+msgstr " Person(en) eingeladen:"
+
+#: utils/language_utils.py:309
+msgid "key_invite-participants-modal_alert_revoke-invitation-confirm"
+msgstr "Einladung wirklich widerrufen?"
+
+#: utils/language_utils.py:310
+msgid "key_survey-statement-options_edit"
+msgstr "Bearbeiten"
+
+#: utils/language_utils.py:311
+msgid "key_survey-statement-options_report"
+msgstr "Beitrag melden"
+
+#: utils/language_utils.py:312
+msgid "key_signup_provide-password_title"
+msgstr "Sicheres Passwort (bitte mindestens 8 Zeichen)"
+
+#: utils/language_utils.py:313
+msgid "key_signup_provide-password_error-text"
+msgstr ""
+"Bitte ein sicheres Passwort für die Anmeldung auf dieser Plattform angeben."
+
+#: utils/language_utils.py:314
+msgid "key_signup_retype-password_title"
+msgstr "Passwort wiederholen"
+
+#: utils/language_utils.py:315
+msgid "key_signup_retype-password_error-text"
+msgstr ""
+"Bitte das Passwort ein zweites Mal eintippen (um Tippfehler auszuschließen)."
+
+#: utils/language_utils.py:316
+msgid "key_login_email-textfield_error-text"
+msgstr ""
+"Bitte die Email Adresse angeben, die bei der Registrierung verwendet wurde"
+
+#: utils/language_utils.py:317
+msgid "accept_data_policy_overlay_not_checked_error"
+msgstr "Bitte markieren sie die Checkbox."
+
+#: utils/language_utils.py:318
+msgid "key_discussion-modal_add-pdf-file_title"
+msgstr "PDF hinzufügen"
+
+#: utils/language_utils.py:319
+msgid "key_discussion-modal_add-pdf-file_help"
+msgstr "Füge bis zu 5 PDF Dateien zur Beschreibung hinzu."
+
+#: utils/language_utils.py:320
+msgid "key_discussion-modal_delete-pdf-hint"
+msgstr "PDF entfernen"
+
+#: utils/language_utils.py:321
+msgid "key_discussion-modal_delete-pdf-confirm"
+msgstr "PDF wirklich entfernen?"
+
+#: utils/language_utils.py:323
+msgid "key_discussion-modal_discussion-type-section_title"
+msgstr "Diskussions-Typ"
+
+#: utils/language_utils.py:325
+msgid ""
+"key_discussion-modal_discussion-type-section_pro-contra-discussion-name"
+msgstr "Einfache Pro-Contra Diskussion"
+
+#: utils/language_utils.py:326
+msgid "statement-list-item_more-button-title"
+msgstr "Details anzeigen"
+
+#: utils/language_utils.py:327
+msgid "statement-list-item_hide-button-title"
+msgstr "weniger Details"
+
+#: utils/language_utils.py:328
+msgid "arguments"
+msgstr "Argument(e)"
+
+#: utils/language_utils.py:329
+msgid "key_discussion-options_edit"
+msgstr "Bearbeiten"
+
+#: utils/language_utils.py:330
+msgid "key_discussion-options_delete"
+msgstr "Löschen"
+
+#: utils/language_utils.py:331
+msgid "key_survey-statement-options_delete"
+msgstr "Löschen"
+
+#: utils/language_utils.py:333
+msgid "Really delete this statement? (This cannot be undone!)"
+msgstr "Diskussion wirklich löschen? (Kann nicht rückgängig gemacht werden)"
+
+#: utils/language_utils.py:334
+msgid "Delete statement"
+msgstr "Vorschlag Löschen"
+
+#: utils/language_utils.py:336
+msgid "key_statement-modal_add-image_title"
+msgstr "Bild hinzufügen"
+
+#: utils/language_utils.py:338
+msgid "key_statement-modal_add-image_help"
+msgstr "Tippen um ein Bild hinzuzufügen oder zu ändern."
+
+#: utils/language_utils.py:339
+msgid "ADD PDF"
+msgstr "Datei auswählen"
+
+#: utils/language_utils.py:340
+msgid "Add Photo"
+msgstr "Bild auswählen"
+
+#: utils/language_utils.py:341
+msgid "Add new idea"
+msgstr "Neuen Vorschlag machen"
+
+#: utils/language_utils.py:342
+msgid "key_discussion_status_completed"
+msgstr "Diskussion abgeschlossen"
+
+#: utils/language_utils.py:343
+msgid "key_discussion_status_not_started"
+msgstr "Diese Diskussion ist noch nicht aktiv."
+
+#: utils/language_utils.py:344
+msgid "key_discussion_status_started"
+msgstr "Diskussion läuft"
+
+#: utils/language_utils.py:346
+msgid "key_statement-modal_statement-title_title-label"
+msgstr "Vorschlag / Idee:"
+
+#: utils/language_utils.py:348
+msgid "key_statement-modal_statement-description_title-label"
+msgstr "Beschreibung (optional):"
+
+#: utils/language_utils.py:349
+msgid "key_survey-statement-options_show"
+msgstr "Beitrag wieder anzeigen"
+
+#: utils/language_utils.py:350
+msgid "key_survey-statement-options_hide"
+msgstr "Beitrag verstecken"
+
+#: utils/language_utils.py:351
+msgid "Now"
+msgstr "Ab sofort"
+
+#: utils/language_utils.py:352
+msgid "Active Forever"
+msgstr "Kein Zeitlimit"
+
+#: utils/language_utils.py:353
+msgid "key_discussion-modal_discussion-type-help-text"
+msgstr ""
+"\"Ideensammlung\" ist ideal für Fragen, wo mehrere mehrere Optionen/Ideen "
+"gesammelt und verglichen werden sollen. Für jede einzelne Idee können dann "
+"Pro- und Contra Argumente ausgetauscht werden."
+
+#: utils/language_utils.py:354
+msgid "key_discussion-modal_start-time-help-text"
+msgstr ""
+"Gib hier einen Zeitpunkt in der Zukunft an, falls diese Diskussion nicht "
+"sofort starten soll."
+
+#: utils/language_utils.py:355
+msgid "key_discussion-modal_end-time-help-text"
+msgstr ""
+"Nach diesem Zeitpunkt kann an der Diskussion nicht mehr aktiv teilgenommen "
+"und abgestimmt werden."
+
+#: utils/language_utils.py:357
+msgid "key_discussion-modal_textfield-url_web-url-of-discussion-help-text"
+msgstr ""
+"URL (nur falls diese Diskussion auf einer externen Webseite eingebunden "
+"wird)"
+
+#: utils/language_utils.py:358
+msgid "key_discussion-modal_wording-help-text"
+msgstr ""
+"Je nach Diskussionsfrage kann hier ein passendes 'Wording' festgelegt "
+"werden."
+
+#: utils/language_utils.py:359
+msgid "key_discussion-modal_survey-option-help-text"
+msgstr ""
+"Wähle \"Nur Admins\", wenn die Teilnehmer*innen keine neuen Vorschläge "
+"machen sollen, sondern alle möglichen Antworten/Optionen bereits feststehen "
+"und es nur um die Abwägung geht."
+
+#: utils/language_utils.py:361
+msgid "key_discussion-modal_discussion-settings-help-text"
+msgstr ""
+"Falls gewünscht, kannst Du z.B. zunächst nur Argumente sammeln und die "
+"Abstimmung erst später erlauben. Wähle dann zunächst: \"Nur Argumente\" und "
+"später: \"Argumente und Barometer\"."
+
+#: utils/language_utils.py:362
+msgid "Advanced Options"
+msgstr "Erweiterte Optionen"
+
+#: utils/language_utils.py:364
+msgid "key_invite-participants_checkbox-is-admin-invitation"
+msgstr "Diesen Usern 'Admin' Rechte gewähren?"
+
+#: utils/language_utils.py:365
+msgid "Manage Participants"
+msgstr "Teilnehmer:innen auswählen"
+
+#: utils/language_utils.py:367
+msgid "key_discussion-modal_choose-private-label"
+msgstr "Selected users only (xx choose private label xx)"
+
+#: utils/language_utils.py:369
+msgid "key_discussion-modal_choose-private_public-text"
+msgstr "Alle Nutzer:innen dieses Accounts"
+
+#: utils/language_utils.py:371
+msgid "key_discussion-modal_choose-private-help-text"
+msgstr ""
+"Bei \"Nur ausgewählte Teilnehmer:innen\" können nur bestimmte Personen an "
+"der Diskussion teilnehmen. Anderen Personen wird die Diskussion nicht "
+"angezeigt."
+
+#: utils/language_utils.py:373
+msgid "key_discussion-modal_participants-section-title"
+msgstr "Wer darf teilnehmen?"
+
+#: utils/language_utils.py:375
+msgid "key_discussion-modal_private-discussion-no-participants"
+msgstr ""
+"Bitte wähle die Personen aus, die an dieser Diskussion teilnehmen sollen. "
+"(Bisher ist niemand ausgewählt)"
+
+#: utils/language_utils.py:377
+msgid "key_discussion-modal_public-discussion-text"
+msgstr ""
+"Aktuell können alle Teilnehmer:innen dieses Accounts diese Diskussion sehen "
+"und sich daran beteiligen."
+
+#: utils/language_utils.py:379
+msgid "key_discussion-modal_private-discussion-text"
+msgstr ""
+"Aktuell können nur die nachfolgenden Teilnehmer:innen diese Diskussion sehen"
+" und sich daran beteiligen:"
+
+#: utils/language_utils.py:381
+msgid "key_discussion-modal_choose-private_private-text"
+msgstr "Nur ausgewählte Teilnehmer:innen"
+
+#: utils/language_utils.py:382
+msgid "key_user-menu_refresh-data"
+msgstr "Ergebnisse aktualisieren"
+
+#: utils/language_utils.py:383
+msgid "key_barometer_disagree"
+msgstr "key_barometer_disagree (hier sollte ein 'Wording' stehen)"
+
+#: utils/language_utils.py:384
+msgid "key_barometer_agree"
+msgstr "key_barometer_disagree (hier sollte ein 'Wording' stehen)"
+
+#: utils/language_utils.py:385
+msgid "key_barometer_behavior"
+msgstr "Optionen für Barometer Ergebnisse"
+
+#: utils/language_utils.py:386
+msgid "key_barometer_always_show"
+msgstr "Alle Ergebnisse immer anzeigen."
+
+#: utils/language_utils.py:387
+msgid "key_barometer_show_only_for_voted_user"
+msgstr ""
+"Ergebnisse nur für Barometer anzeigen, wo der/die User:in selbst schon "
+"abgestimmt hat."
+
+#: utils/language_utils.py:388
+msgid "key_barometer_show_only_for_voted_user_or_admin"
+msgstr ""
+"Ergebnisse nur für Barometer anzeigen, wo der/die User:in selbst schon "
+"abgestimmt hat. (Nur Admins sehen immer die Ergebnisse)"
+
+#: utils/language_utils.py:389
+msgid "key_discussion-modal_barometer-behavior-help-text"
+msgstr ""
+"Um eine spannende Motivation zur Teilnahme zu liefern, kannst Du die "
+"Ergebnisse erst anzeigen lassen, wenn der/die User:in selbst auch abgestimmt"
+" hat. Bei bereits abgeschlossenen Diskussionen werden Ergebnisse immer "
+"angezeigt."
+
+#: utils/language_utils.py:391
+msgid "key_discussion_statement-modal_textfield_copyright-info-label"
+msgstr "Bildrechte Info (optional)"
+
+#: utils/language_utils.py:393
+msgid "key_discussion_statement-modal_textfield_copyright-info-help-text"
+msgstr ""
+"Infos zur Urheber:in und sonstigen Rechteinhaber:innen werden in der "
+"Detailansicht unterhalb des Bildes angezeigt."
+
+#: utils/language_utils.py:394
+msgid "key_discussion-options_reset"
+msgstr "Bewertungen zurücksetzen"
+
+#: utils/language_utils.py:396
+msgid ""
+"Really remove barometer votes and argument ratings for this discussion? "
+"(This cannot be undone!)"
+msgstr ""
+"Wirklich alle Bewertungen für diese Diskussion löschen? (Kann nicht "
+"rückgängig gemacht werden)"
+
+#: utils/language_utils.py:397
+msgid "Reset discussion"
+msgstr "Bewertungen zurücksetzen"
+
+#: utils/language_utils.py:398
+msgid "key_export_column_type"
+msgstr "Typ"
+
+#: utils/language_utils.py:399
+msgid "key_export_column_title"
+msgstr "Titel"
+
+#: utils/language_utils.py:400
+msgid "key_export_column_statement_title"
+msgstr "Vorschlag Titel"
+
+#: utils/language_utils.py:401
+msgid "key_export_column_argument_title"
+msgstr "Argument Titel"
+
+#: utils/language_utils.py:402
+msgid "key_export_column_description"
+msgstr "Beschreibung"
+
+#: utils/language_utils.py:403
+msgid "key_export_column_date_and_time_created"
+msgstr "Erstellt am"
+
+#: utils/language_utils.py:404
+msgid "key_export_column_start_time"
+msgstr "Start"
+
+#: utils/language_utils.py:405
+msgid "key_export_column_end_time"
+msgstr "Ende"
+
+#: utils/language_utils.py:406
+msgid "key_export_column_creator_name"
+msgstr "Erstellt von"
+
+#: utils/language_utils.py:407
+msgid "key_export_column_average_rating"
+msgstr "Durchschnittliche Bewertung"
+
+#: utils/language_utils.py:408
+msgid "key_export_column_total_number_of_votes"
+msgstr "Anzahl aller Bewertungen"
+
+#: utils/language_utils.py:410
+msgid "key_export_column_wording_for_plus_3_rating"
+msgstr "Wording für '+3'"
+
+#: utils/language_utils.py:412
+msgid "key_export_column_number_of_votes_for_plus_3_rating"
+msgstr "Stimmen für '+3'"
+
+#: utils/language_utils.py:414
+msgid "key_export_column_wording_for_plus_2_rating"
+msgstr "Wording für '+2'"
+
+#: utils/language_utils.py:416
+msgid "key_export_column_number_of_votes_for_plus_2_rating"
+msgstr "Stimmen für '+2'"
+
+#: utils/language_utils.py:418
+msgid "key_export_column_wording_for_plus_1_rating"
+msgstr "Wording für '+1'"
+
+#: utils/language_utils.py:420
+msgid "key_export_column_number_of_votes_for_plus_1_rating"
+msgstr "Stimmen für '+1'"
+
+#: utils/language_utils.py:422
+msgid "key_export_column_wording_for_0_rating"
+msgstr "Wording für '+/- 0'"
+
+#: utils/language_utils.py:424
+msgid "key_export_column_number_of_votes_for_0_rating"
+msgstr "Stimmen für '+/- 0'"
+
+#: utils/language_utils.py:426
+msgid "key_export_column_wording_for_minus_1_rating"
+msgstr "Wording für '-1'"
+
+#: utils/language_utils.py:428
+msgid "key_export_column_wording_for_minus_2_rating"
+msgstr "Wording für '-2'"
+
+#: utils/language_utils.py:430
+msgid "key_export_column_number_of_votes_for_minus_2_rating"
+msgstr "Anzahl Stimmen für '-2'"
+
+#: utils/language_utils.py:432
+msgid "key_export_column_wording_for_minus_3_rating"
+msgstr "Wording für '-3'"
+
+#: utils/language_utils.py:434
+msgid "key_export_column_number_of_votes_for_minus_3_rating"
+msgstr "Anzahl Stimmen für '-3'"
+
+#: utils/language_utils.py:435
+msgid "key_export_client"
+msgstr "Kunde"
+
+#: utils/language_utils.py:436
+msgid "key_export_date_and_time_of_export"
+msgstr "Zeitpunkt des Exports"
+
+#: utils/language_utils.py:438
+msgid "key_export_discussion_modal_confirm_question"
+msgstr "Diskussionsinhalte exportieren und speichern?"
+
+#: utils/language_utils.py:440
+msgid "key_export_discussion_modal_btn_export"
+msgstr "Als .xlsx speichern?"
+
+#: utils/language_utils.py:442
+msgid "key_discussion-options_export"
+msgstr "Inhalte exportieren / speichern"
+
+#: utils/language_utils.py:443
+msgid "key_export_statistics"
+msgstr "Teilnahme-Statistik exportieren"
+
+#: utils/language_utils.py:445
+msgid "key_export_statistics_modal_confirm_question"
+msgstr "Statistik zum Beteiligungsverfahren exportieren und speichern?"
+
+#: utils/language_utils.py:447
+msgid "key_export_statistics_modal_btn_export"
+msgstr "Als .xlsx speichern"
+
+#: utils/language_utils.py:448
+msgid "key_export_user_stats"
+msgstr "Statistik zum Beteiligungsverfahren"
+
+#: utils/language_utils.py:450
+msgid "key_export_total_number_of_registered_users"
+msgstr "Anzahl registrierte Teilnehmer:innen"
+
+#: utils/language_utils.py:452
+msgid "key_export_number_of_users_in_age_group"
+msgstr "Teilnehmer:innen in Altersgruppe "
+
+#: utils/language_utils.py:453
+msgid "key_export_age_groups"
+msgstr "Altersgruppen"
+
+#: utils/language_utils.py:454
+msgid "key_export_age_not_provided"
+msgstr "Kein Alter angegeben"
+
+#: utils/language_utils.py:455
+msgid "key_export_gender"
+msgstr "Geschlecht"
+
+#: utils/language_utils.py:456
+msgid "key_export_female_count"
+msgstr "Teilnehmerinnen 'weiblich'"
+
+#: utils/language_utils.py:457
+msgid "key_export_male_count"
+msgstr "Teilnehmer 'männlich'"
+
+#: utils/language_utils.py:458
+msgid "key_export_gender_not_provided"
+msgstr "Teilnehmer:innen 'andere' oder 'nicht angegeben'"
+
+#: utils/language_utils.py:459
+msgid "key_export_post_code"
+msgstr "PLZ"
+
+#: utils/language_utils.py:460
+msgid "key_export_post_code_not_provided"
+msgstr "PLZ nicht angegeben"
+
+#: utils/language_utils.py:461
+msgid "key_export_city"
+msgstr "Ort"
+
+#: utils/language_utils.py:462
+msgid "key_export_city_not_provided"
+msgstr "Ort nicht angegeben"
+
+#: utils/language_utils.py:463
+msgid "key_export_organization"
+msgstr "Organisation"
+
+#: utils/language_utils.py:464
+msgid "key_export_organization_not_provided"
+msgstr "Organisation nicht angegeben"
+
+#: utils/language_utils.py:465
+msgid "key_export_position"
+msgstr "Tätigkeit/Position"
+
+#: utils/language_utils.py:466
+msgid "key_export_position_not_provided"
+msgstr "Tätigkeit/Position nicht angegeben"
+
+#: utils/language_utils.py:467
+msgid "key_export_participation"
+msgstr "Beteiligung"
+
+#: utils/language_utils.py:468
+msgid "key_export_number_of_discussions"
+msgstr "Anzahl Diskussionen (gesamt)"
+
+#: utils/language_utils.py:469
+msgid "key_export_number_of_statements"
+msgstr "Anzahl Vorschläge (gesamt)"
+
+#: utils/language_utils.py:470
+msgid "key_export_number_of_arguments"
+msgstr "Anzahl Argumente (gesamt)"
+
+#: utils/language_utils.py:471
+#| msgid "key_export_number_of_arguments"
+msgid "key_export_number_of_barometer_voting"
+msgstr "Anzahl Argumente (gesamt)"
+
+#: utils/language_utils.py:472
+#| msgid "key_export_position"
+msgid "key_export_users_with_position"
+msgstr "Anzahl User mit Tätigkeit/Position"
+
+#: utils/language_utils.py:473
+#| msgid "key_export_organization"
+msgid "key_export_users_with_organization"
+msgstr "Anzahl User mit Organisation"
+
+#: utils/language_utils.py:474
+#| msgid "key_export_user_stats"
+msgid "key_export_users_with_city"
+msgstr "Anzahl User mit Ort"
+
+#: utils/language_utils.py:475
+#| msgid "key_export_post_code"
+msgid "key_export_users_with_post_code"
+msgstr "Anzahl User mit PLZ"
+
+#: utils/mail.py:19
+msgid ""
+"Dear visitor of {{domain}}\n"
+"\n"
+"we have received your registration.\n"
+"\n"
+"Please confirm this manually by clicking on the following confirmation link:"
+msgstr ""
+"Diese Aufforderung zum Bestätigen des E-Mail links auf  {{domain}} sollte "
+"ein custom wording sein, nicht dieser Text."
+
+#: utils/mail.py:24
+msgid ""
+"Hello {{ username }},\n"
+"\n"
+"there is news on {{domain}}:"
+msgstr ""
+"Mail Text 'news' should be a dynamic custom wording, not this. {{domain}}"
+
+#: utils/mail.py:27
+msgid ""
+"Dear Administrator,\n"
+"\n"
+"a contribution to the brabbl platform has been flagged"
+msgstr "Mail Text 'flagged' should be a dynamic custom wording, not this."
+
+#: utils/mail.py:30
+msgid ""
+"Hello {{ username }},\n"
+"\n"
+"please click on this link to change your password:"
+msgstr ""
+"Mail Text 'reset password' should be a dynamic custom wording, not this."
+
+#: utils/mail.py:33
+msgid ""
+"Hello.\n"
+"\n"
+"{{ customer }} invited you on Brabbl."
+msgstr ""
+"*should be a dynamic custom wording, not this.*\n"
+"Hallo.Sie wurden eingeladen, sich beim geschützten Brabbl Account von {{ customer }} anzumelden."
+
+#: utils/mail.py:38
+msgid ""
+"Your brabbl account on {{domain}} is not active still. Please activate it by"
+" clicking on the following link. Otherwise, your account and all your "
+"arguments and votings will be deleted tonight."
+msgstr ""
+"Ihr Account für die brabbl Diskussionen auf {{domain}} ist noch nicht "
+"endgültig aktiviert. Bitte bestätigen Sie Ihre Identität und die Richtigkeit"
+" Ihrer E-Mail Adresse indem Sie auf den nachfolgenden Link klicken. Ohne "
+"diese Bestätigung wird Ihr Account einschließlich aller Beiträge und "
+"Bewertungen innerhalb der nächsten 24 Stunden gelöscht."
+
+#: utils/mail.py:90
+msgid "Your Brabbl team."
+msgstr "Mail Text 'signature' should be a dynamic custom wording, not this."
+
+#: utils/models.py:11
+msgid "Creation date"
+msgstr "Erstellungsdatum"
+
+#: utils/models.py:13
+msgid "Modified date"
+msgstr "Änderungsdatum"
+
+#: utils/models.py:23
+msgid "Last activity"
+msgstr "Letzte Aktivität"
+
+#: utils/serializers.py:102
+msgid "Picture could not be decoded."
+msgstr "Bilddatei nicht erkannt."
+
+#: utils/serializers.py:110
+msgid "Please enter a valid image file."
+msgstr "Bitte geben Sie eine gültige Bilddatei an."
+
+#~ msgid "Leave blank to make available to all customers."
+#~ msgstr "Leer lassen, um für alle Kunden verfügbar zu machen."
+
+#~ msgid "Missing brabbl API Token."
+#~ msgstr "Fehlendes brabbl API Token"
+
+#, fuzzy
+#~ msgid "Hidden argument text"
+#~ msgstr "Argument verstecken"
+
+#~ msgid "Invalid referrer domain for customer %s: %s"
+#~ msgstr "Ungültige 'Bezugnehmer'-Domain für Kunden %(customer)s: %(referrer)s"
+
+#~ msgid "sort by number of suggestions"
+#~ msgstr "Sortiert nach Zahl der Beiträge"
+
+#~ msgid "Account has not been confirmed."
+#~ msgstr "Account ist nicht aktiviert."
+
+#~ msgid "Account activation"
+#~ msgstr "Accountaktivierung"
+
+#~ msgid ""
+#~ "In a few moments you will be redirected to <a "
+#~ "href=\"%(next)s\">%(customer_url)s</a>"
+#~ msgstr ""
+#~ "Sie werden in Kürze auf <a href=\"%(next)s\">%(customer_url)s</a> "
+#~ "weitergeleitet."
+
+#~ msgid ""
+#~ "The open link is invalid or has already been used. Please call again at a "
+#~ "link."
+#~ msgstr ""
+#~ "Der verwendete Link ist ungültig oder wurde bereits verwendet. Bitte fordern"
+#~ " Sie einen neuen Link an."
+
+#~ msgid "You must log in to participate in the discussion."
+#~ msgstr "Sie müssen sich anmelden, um an der Diskussion teilzunehmen."
+
+#~ msgid "No suggestions yet. Start the discussion now!"
+#~ msgstr "Noch keine Antworten. Starten Sie die Diskussion!"
+
+#~ msgid ""
+#~ "\n"
+#~ "      Thank you very much. Your brabbl account at %(user_domain)s has been successfully activated.\n"
+#~ "    "
+#~ msgstr ""
+#~ "Vielen Dank. Ihr brabbl-Account auf %(user_domain)s wurde erfolgreich "
+#~ "aktiviert."
+
+#~ msgid "Dear Administrator"
+#~ msgstr "Lieber Administrator"
+
+#~ msgid "Your Brabbl-Team"
+#~ msgstr "Ihr Brabbl-Team"
+
+#~ msgid "Hello"
+#~ msgstr "Hallo"
+
+#~ msgid "there is news on"
+#~ msgstr "es gibt Neuigkeiten auf"
+
+#~ msgid "Enjoy the debate"
+#~ msgstr "Viel Spaß beim Diskutieren"
+
+#~ msgid "Dear visitor of"
+#~ msgstr "Sehr geehrter Besucher von"
+
+#~ msgid "we have received your registration."
+#~ msgstr "wir haben Ihre Registrierung erhalten."
+
+#~ msgid "Then you can join the discussion directly!"
+#~ msgstr "Danach können Sie direkt mitdiskutieren!"
+
+#~ msgid "All readers discussions"
+#~ msgstr "Diskussion"
+
+#~ msgid "Change discussion"
+#~ msgstr "Diskussion"
+
+#~ msgid "Change proposal"
+#~ msgstr "Kennwort ändern"
+
+#~ msgid "Create proposal"
+#~ msgstr "Kennwort ändern"
+
+#~ msgid "Create Discussion"
+#~ msgstr "Diskussion"
+
+#~ msgid "Change argument"
+#~ msgstr "Kennwort ändern"
+
+#~ msgid "Creating poll"
+#~ msgstr "Erstellungsdatum"
+
+#~ msgid "Account yet?"
+#~ msgstr "Accountaktivierung"
+
+#~ msgid "Enter an argument"
+#~ msgstr ""
+#~ "\n"
+#~ "%(counter)s neue Argument\n"
+
+#~ msgid "Only arguments"
+#~ msgstr "Kennwort ändern"
+
+#~ msgid "Create new answer"
+#~ msgstr "Kennwort ändern"
+
+#~ msgid "Still no answer. Start the discussion!"
+#~ msgstr "Argumente sind in dieser Diskussion nicht erlaubt."
+
+#~ msgid "Diskussion"
+#~ msgstr "Diskussion"
+
+#~ msgid "Meinungsbarometer and arguments"
+#~ msgstr ""
+#~ "\n"
+#~ "%(counter)s neue Argument\n"
+
+#~ msgid "password"
+#~ msgstr "Neues Kennwort"

@@ -1,0 +1,95 @@
+@import 'font.css';
+
+.ReactModal__Content {
+    transform: scale(1);
+    -webkit-transition: 0s;
+    -moz-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+}
+
+.fullform {
+
+}
+
+.ReactModal__Content {
+    max-width: 100% !important;
+}
+
+.fullform {
+    margin: 0 !important;
+    width: 100%;
+    max-width: 100% !important;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.user-list .row {
+    border-bottom: 2px solid #F5F7F7;
+    display: flex;
+}
+
+.user-list .row .user-data {
+    overflow: hidden;
+    margin-right: 5px;
+    padding-bottom: 15px;
+    order: 1;
+    width: 100%;
+}
+
+.user-list .row .user-data .avatar {
+    float: left;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.user-list .row .manage-block {
+    margin-bottom: 10px;
+    order: 2;
+}
+
+.user-list .avatar img {
+    width: 48px;
+    height: 48px;
+}
+.ReactModal__Overlay .fullform-body select {
+    min-width: 130px;
+    padding-top:0 !important;
+    padding-bottom: 0 !important;
+}
+.manage-block label {
+    float: left;
+    width: 50%;
+}
+
+.manage-block input[type=checkbox] {
+    float: right;
+    margin-left: 5px;
+}
+
+.user-list td {
+    padding: 5px;
+}
+
+.avatar img {
+    border-radius: 600px;
+}
+
+@media screen and (max-width: 480px) {
+    .user-list .row {
+        flex-wrap: wrap;
+    }
+
+    .ReactModal__Content form {
+        display: flex;
+        align-items: center;
+    }
+    .ReactModal__Content .form-field {
+        margin-right: 20px;
+    }
+    .ReactModal__Overlay .fullform-body label {
+        margin-bottom: 0;
+    }
+}

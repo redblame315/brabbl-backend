@@ -1,0 +1,15 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block submit_buttons_bottom %}
+    {% if change %}
+        {% if opts.model_name == 'wording' or opts.model_name == 'notificationwording' %}
+            <div class="submit-row">
+                <a class="button" value="" name="_duplicatebutton"
+                   onclick="if (!confirm('{% trans 'Are you really want to create copy of this object?' %}')) return false"
+                   href="{% url 'duplicate-object' model=opts.model_name pk=original.pk %}">{% trans 'Duplicate an object' %}</a>
+            </div>
+        {% endif %}
+    {% endif %}
+    {{ block.super }}
+{% endblock %}

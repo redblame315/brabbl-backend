@@ -1,0 +1,23 @@
+{
+  "name": "brabbl",
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "aglio": "^2.1.1",
+    "drakov": "^1.0.0",
+    "dredd": "^1.1.0-pre.0",
+    "gulp": "^3.9.1",
+    "gulp-aglio": "0.0.10",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-webserver": "^0.9.1"
+  },
+  "scripts": {
+    "test": "dredd"
+  },
+  "author": "Jonas und der Wolf GmbH",
+  "license": "GPL"
+}

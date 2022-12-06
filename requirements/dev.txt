@@ -1,0 +1,8 @@
+-r tests_pytest.txt
+
+psycopg2-binary==2.8.6
+
+django-debug-toolbar
+django-localdevstorage
+
+fabric3>=1.14,<1.15

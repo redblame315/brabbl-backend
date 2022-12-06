@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Roboto';
+  src:  local('Roboto'), 
+        url('../fonts/roboto-v20-latin-ext_latin-regular.eot'),
+        url('../fonts/roboto-v20-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/roboto-v20-latin-ext_latin-regular.woff') format('woff'),
+        url('../fonts/roboto-v20-latin-ext_latin-regular.woff2') format('woff2'),
+        url('../fonts/roboto-v20-latin-ext_latin-regular.ttf') format('truetype'),
+        url('../fonts/roboto-v20-latin-ext_latin-regular.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src:  local('FontAwesome'), 
+        url('../fonts/fontawesome-webfont.eot'),
+        url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fontawesome-webfont.woff') format('woff'),
+        url('../fonts/fontawesome-webfont.woff2') format('woff2'),
+        url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+        url('../fonts/fontawesome-webfont.svg') format('svg');
+}
+

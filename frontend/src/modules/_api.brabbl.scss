@@ -1,0 +1,22 @@
+a {
+  color: $red;
+
+  &:hover {
+    color: darken($red, 10%);
+  }
+}
+
+.powered-by {
+  border-top: 2px solid $light-grey;
+  margin-top: 8rem;
+  padding-top: 0.4rem;
+
+  color: $dark-grey;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  text-align: right;
+
+  a, a:hover {
+    color: $dark-grey;
+  }
+}

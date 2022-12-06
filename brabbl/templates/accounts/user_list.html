@@ -1,0 +1,94 @@
+{% extends "iframe.html" %}
+{% load static i18n url_tags getattribute user_additional_info %}
+
+{% block meta %}
+    {{ block.super }}
+    {% if success and next %}
+        <meta http-equiv="refresh" content="5; URL={{ next }}">
+    {% endif %}
+{% endblock %}
+
+{% block content_title %}
+    {% trans "User List" %}
+{% endblock %}
+{% block styles %}
+{% endblock %}
+
+{% block content_main %}
+    <div class="user-list">
+        {% for user in users %}
+            <div class="row">
+                <div class="manage-block" id="user-{{ user.id }}">
+                    <form method="post">{% csrf_token %}
+                        <input type="hidden" name="user_id" value="{{ user.id }}">
+                        <div class="form-field">
+                            <label for="is_active">{% trans "Active" %}</label>
+                            <input name="is_active"
+                                   {% if user.is_active %}checked{% endif %}
+                                   type="checkbox">
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="form-field">
+                            <select name="group">
+                                {% with user.groups.all as user_groups %}
+                                    <option value="">{% trans "User" %}</option>
+                                    {% for group in groups %}
+                                        <option value="{{ group.id }}"
+                                                {% if group in user_groups %}
+                                                selected="selected"
+                                                {% endif %}
+                                        >{{ group.name }}</option>
+                                    {% endfor %}
+                                {% endwith %}
+                            </select>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+                <div class="user-data">
+                    <div class="avatar">
+                        {% if user.image %}
+                            <img src='{% get_thumbnail user.image "128x128" %}'/>
+                        {% else %}
+                            <img src="{% static 'img/icon/user_placeholder.svg' %}" style="fill: gray;  filter: invert(0.5);"/>
+                        {% endif %}
+                    </div>
+                    <div><b>{{ user.display_name }}</b></div>
+                    <div>{% user_additional_info user additional_info display_fullname %}</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block powered-by %}{% endblock %}
+{% block javascript %}
+    <script type="text/javascript">
+        $(".manage-block form input, .manage-block form select").change(function () {
+            var data = $(this).closest('form').serializeArray();
+      
+            let sendData = {};
+            data.forEach(item => {
+                sendData[item.name] = item.value
+            })
+            if(!sendData['is_active']) sendData['is_active']='off';
+            if(sendData['group'] == '') sendData['group']=null;
+            $.ajax({
+                headers: { 
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                type: "POST",
+                url: "{% url 'v1:user-list-update' %}",
+                data: JSON.stringify(sendData),
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('X-Brabbl-Token', '{{ customer.embed_token }}')
+                    xhr.setRequestHeader('Authorization', 'Token {{ user_token }}');
+                },
+                success: function (data) {
+                },
+            });
+        });
+    </script>
+{% endblock %}

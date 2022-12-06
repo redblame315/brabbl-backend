@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load url_tags i18n %}
+
+{% block meta %}
+{% endblock %}
+
+{% block content_title %}
+    {{ wording.welcome_title|striptags }}
+{% endblock %}
+
+{% block content_main %}
+  <div>
+    <p>
+        {{ wording.welcome_text|safe }}
+    </p>
+        <form method="post">
+          {% csrf_token %}
+          {% for field in form %}
+            <div class="row form-field">
+              {{ field.errors }}
+              <label for="{{ field.auto_id }}">{{ field.label }}</label>
+              <span> </span>
+              {{ field }}
+              <span></span>
+            </div>
+          {% endfor %}
+          <div class="fullform-footer">
+            <button class="primary" type="submit">{% trans "Finish sign up" %}</button>
+          </div>
+        </form>
+  </div>
+{% endblock %}

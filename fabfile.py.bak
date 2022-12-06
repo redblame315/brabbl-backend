@@ -1,0 +1,111 @@
+import os
+from fabric.api import env, run, local, cd, settings, abort, lcd
+from fabric.contrib.console import confirm
+from fabric.colors import red
+
+
+env.project = 'brabbl'
+env.namespace = 'brabbl'
+env.repository = 'github.com/storylife/brabbl-backend.git'
+env.project_root = os.path.dirname(os.path.abspath(__file__))
+env.forward_agent = True
+
+
+# ------ environments ----------
+def staging():
+    env.environment = 'staging'
+    env.hosts = ['%(project)s-%(environment)s@api.brabbl.com' % env]
+
+def olli_staging():
+    env.environment = 'olli_staging'
+    env.hosts = ['%(project)s-%(environment)s@ghettokicker.com' % env]
+
+def production():
+    env.environment = 'production'
+    env.hosts = ['%(project)s@api.brabbl.com' % env]
+
+
+# --------- commands -----------
+def switch(branch):
+    run("echo -n %s >.current_branch" % branch)
+
+
+def current_commit():
+    # pipe through cat to avoid terminal escapes
+    return run(
+        'GIT_DIR=src/%(project)s/.git git log -1 --oneline | cat' % env).strip()
+
+
+def current():
+    print(current_commit())
+    run('cat .current_branch')
+
+
+def update_dependencies():
+    run('bin/pip install --requirement '
+        'src/%(project)s/requirements/%(environment)s.txt' % env)
+
+
+def reload(extra_msg=None):
+    run("kill -HUP `cat run/gunicorn.pid`" % env)
+
+
+def migrate():
+    run('bin/django-admin.py migrate --settings=%(project)s.conf.%(environment)s' % env)
+
+
+def deploy():
+    failed = test()
+    if failed and not confirm(red("Tests failed. Continue anyway?")):
+        abort("Aborting at user request.")
+
+    env.commit = current_commit().split(' ')[0]
+    run('bin/pip install -U -e '
+        'git+ssh://git@%(repository)s@`cat .current_branch`#egg=%(project)s' % env)
+    update_dependencies()
+    run('bin/django-admin.py collectstatic '
+        '--settings=%(project)s.conf.%(environment)s --noinput' % env)
+    migrate()
+    reload()
+
+
+def makemessages():
+    with cd('src/%(project)s/%(project)s' % env):
+        run('~/bin/django-admin.py makemessages -a -e txt,html '
+            '--settings=%(project)s.conf.%(environment)s' % env)
+
+
+# ------ local ----------
+def test_api():
+    with lcd(os.path.join(os.path.dirname(__file__), 'docs')):
+        local('npm install')
+        with settings(warn_only=True):
+            local('ps aux | grep dredd | awk \'{ print $2}\' | xargs kill -9')
+        local('npm test')
+
+
+def test(test_path=''):
+    path = env.project
+    if test_path:
+        path = '%s/%s' % (path, test_path)
+
+    with settings(warn_only=True):
+        with lcd(env.project_root):
+            result = local('py.test -q -s %s' % path, capture=False)
+    return result.failed
+
+
+def mockserver():
+    with lcd(os.path.join(os.path.dirname(__file__), 'docs')):
+        local('npm install')
+        local('gulp mock-server')
+
+
+def sync_devdb():
+    host = env['hosts'][0]
+    local('pg_dump %(project)s >%(project)s_`date +%%Y%%m%%d`.sql' % env)
+    local('dropdb %(project)s && createdb -E UTF-8 %(project)s' % env)
+    local('ssh -C %s pg_dump -U brabbl %s | psql -q %s' % (
+        host, env.project, env.project))
+    local("psql -q %(project)s -c \"update accounts_user set "
+          "email=username || '@example.com' where is_staff=false\"" % env)

@@ -1,0 +1,9 @@
+#!/bin/bash
+DIR="{{ postgresql_backup_dir }}"
+mkdir -p $DIR
+
+for db in `sudo -u postgres psql -l -t | awk '/^ [a-z]/ { print $1; }' | grep -v template`; do
+  filename=${DIR}/${db}.sql
+  sudo -u postgres pg_dump $db >$filename
+  bzip2 $filename
+done

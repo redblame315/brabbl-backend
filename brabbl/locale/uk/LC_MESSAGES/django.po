@@ -1,0 +1,2406 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 17:02+0200\n"
+"PO-Revision-Date: 2017-03-16 18:06+0202\n"
+"Last-Translator: b'  <>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Translated-Using: django-rosetta 0.7.11\n"
+
+#: accounts/admin.py:22
+msgid "User Info Settings"
+msgstr "Налаштування інофрмації користовачів"
+
+#: accounts/admin.py:82
+msgid "Personal info"
+msgstr "Персональна інформація"
+
+#: accounts/admin.py:83
+msgid "Additional info"
+msgstr "Додаткова інформація"
+
+#: accounts/admin.py:87
+msgid "Permissions"
+msgstr "Права"
+
+#: accounts/admin.py:89
+msgid "Important dates"
+msgstr "Важливі дати"
+
+#: accounts/admin.py:100
+msgid "News Email"
+msgstr "Новини по електронній пошті"
+
+#: accounts/apps.py:7 templates/accounts/user_list.html:35
+#: templates/mails/flag_notification.txt:8 utils/language_utils.py:19
+msgid "User"
+msgstr "Користувач"
+
+#: accounts/authentication.py:16
+msgid "Invalid token."
+msgstr "Невірній brabbl API токен"
+
+#: accounts/forms.py:13 accounts/models.py:96
+msgid "First Name"
+msgstr "Ім'я"
+
+#: accounts/forms.py:14 accounts/models.py:97
+msgid "Last Name"
+msgstr "Призвіще"
+
+#: accounts/forms.py:16 accounts/models.py:99 utils/language_utils.py:230
+msgid "Gender"
+msgstr "Стать"
+
+#: accounts/forms.py:18 accounts/models.py:98
+msgid "Year of birth"
+msgstr "Рік народження"
+
+#: accounts/forms.py:23 accounts/models.py:100 utils/language_utils.py:235
+msgid "Postcode"
+msgstr "Поштовий індекс"
+
+#: accounts/forms.py:24 accounts/models.py:102 utils/language_utils.py:239
+msgid "City"
+msgstr "Місто"
+
+#: accounts/forms.py:27 accounts/models.py:105 utils/language_utils.py:245
+msgid "Bundesland"
+msgstr "Регіон"
+
+#: accounts/forms.py:29 accounts/models.py:101 utils/language_utils.py:237
+msgid "Country"
+msgstr "Країна"
+
+#: accounts/forms.py:30 accounts/models.py:103 utils/language_utils.py:241
+msgid "Organization"
+msgstr "Організація"
+
+#: accounts/forms.py:31 accounts/models.py:104 utils/language_utils.py:243
+msgid "Position"
+msgstr "Посада"
+
+#: accounts/forms.py:45 accounts/models.py:208
+msgid "Allowed parameters: {{domain}}"
+msgstr "Допустимі пораметри : {{domain}}"
+
+#: accounts/forms.py:57
+msgid "Default wording should be one of available wordings"
+msgstr ""
+
+#: accounts/middleware.py:50 accounts/tests/test_middleware.py:22
+#: accounts/tests/test_middleware.py:30
+msgid "Invalid brabbl API Token."
+msgstr "Невірній brabbl API токен"
+
+#: accounts/middleware.py:60
+#, python-format
+msgid "Invalid referrer for customer %(customer)s: %(referrer)s"
+msgstr "Невірне посилання для клієнта %(customer)s: %(referrer)s"
+
+#: accounts/middleware.py:67 accounts/middleware.py:72
+#, python-format
+msgid "Invalid referrer domain for customer %(customer)s: %(referrer)s"
+msgstr "Невірний домен посилання для клієнта %(customer)s: %(referrer)s"
+
+#: accounts/models.py:171
+msgid "One domain per line."
+msgstr "Один домен в кожному рядку"
+
+#: accounts/models.py:182
+#, fuzzy
+#| msgid "One domain per line."
+msgid "One email per line."
+msgstr "Один домен в кожному рядку"
+
+#: accounts/models.py:186
+msgid "ReplyTo email"
+msgstr "ReplyTo пошта"
+
+#: accounts/models.py:189
+msgid "If left empty, the address of the moderator will be used."
+msgstr "Якщо залишити пустим, буде використано адресу модератора."
+
+#: accounts/models.py:219
+msgid "Username"
+msgstr "Ім'я користовача"
+
+#: accounts/models.py:220
+msgid "First name + Last name"
+msgstr "Ім'я + Призвісько"
+
+#: accounts/models.py:323 utils/language_utils.py:231
+msgid "Whatever"
+msgstr "будь-яка"
+
+#: accounts/models.py:324 utils/language_utils.py:232
+msgid "Male"
+msgstr "чоловіча"
+
+#: accounts/models.py:325 utils/language_utils.py:233
+msgid "Female"
+msgstr "жіноча"
+
+#: accounts/models.py:342
+msgid "Latest news mail delivery"
+msgstr "Email доставка останніх новин"
+
+#: accounts/models.py:345
+msgid "Date of activation"
+msgstr "Дата активації"
+
+#: accounts/models.py:348 utils/models.py:14
+msgid "Deletion date"
+msgstr "Дата виделення"
+
+#: accounts/models.py:352 utils/language_utils.py:183
+msgid "Profile picture"
+msgstr "Зображення профілю"
+
+#: accounts/models.py:504
+msgid "Email asking for confirmation of account."
+msgstr "Письмо з підтвердженням акаунту"
+
+#: accounts/models.py:506
+msgid "Daily Summary."
+msgstr "Щоденний звіт."
+
+#: accounts/models.py:507
+msgid "Forgot Password."
+msgstr "Встановлення паролю."
+
+#: accounts/models.py:508
+msgid "Argument flagging."
+msgstr "Маркування аргументу."
+
+#: accounts/models.py:509
+msgid "Invitation to join private account."
+msgstr ""
+
+#: accounts/models.py:510
+msgid "Non active user warning."
+msgstr "Попередження неактивного користувача."
+
+#: accounts/models.py:517 accounts/models.py:521
+msgid ""
+"Allowed parameters: {{domain}}, and {{username}}, {{firstname}}, "
+"{{lastname}} if type is not Argument flagging."
+msgstr ""
+"Допустимі параметри: {{domain}}, та {{username}}, {{firstname}}, "
+"{{lastname}} якщо тип листа не Маркування аргументу."
+
+#: accounts/serializers.py:48
+msgid "This account is inactive."
+msgstr "Цей акаунт не активован."
+
+#: accounts/serializers.py:51
+#, fuzzy
+#| msgid "This account is inactive."
+msgid "This account is not yet verified"
+msgstr "Цей акаунт не активован."
+
+#: accounts/serializers.py:54
+msgid "Password or user name is invalid."
+msgstr "Невірне ім'я користовача або пароль."
+
+#: accounts/serializers.py:57
+msgid "Username and password must be entered"
+msgstr "Треба ввести ім'я користувача та пароль"
+
+#: accounts/serializers.py:83
+msgid "Unknown e-mail."
+msgstr "Невідомий e-mail"
+
+#: accounts/serializers.py:152
+msgid "This email address is already in use."
+msgstr "Цей e-mail вже використовується."
+
+#: accounts/serializers.py:169
+msgid "This username is not available."
+msgstr "Неприпустиме ім'я користувача"
+
+#: accounts/serializers.py:215 accounts/serializers.py:218
+#, python-brace-format
+msgid "{0} is not yet invited."
+msgstr ""
+
+#: accounts/serializers.py:222 accounts/serializers.py:229
+#, fuzzy, python-brace-format
+#| msgid "{0} is already in use."
+msgid "{0} is required."
+msgstr "{0} вже використовувається."
+
+#: accounts/serializers.py:244
+#, python-brace-format
+msgid "{0} is already in use."
+msgstr "{0} вже використовувається."
+
+#: accounts/serializers.py:315 templates/iframe.html:41
+#: templates/iframe.html:48
+msgid "Auth token is not valid."
+msgstr "Невірний токен авторизації."
+
+#: accounts/serializers.py:346
+msgid "Group doesn't exist."
+msgstr "Обрана група не існує"
+
+#: accounts/serializers.py:377
+msgid "Admin invitation is not allowed"
+msgstr ""
+
+#: accounts/serializers.py:381
+#, fuzzy
+#| msgid "Auth token is not valid."
+msgid "Email is not valid"
+msgstr "Невірний токен авторизації."
+
+#: accounts/templatetags/user_additional_info.py:36
+msgid "Registration:"
+msgstr "Реєстрація:"
+
+#: accounts/views.py:84
+msgid "Welcome"
+msgstr "Вітаємо"
+
+#: accounts/views.py:86
+#, python-format
+msgid ""
+"By signing up, you agree to %s Basic Rules, Terms of Service, and Privacy "
+"Policy.<br/>\n"
+"        Have fun discussing on customer page. This text should be "
+"customizable.<br/>\n"
+"        Please update the following required fields"
+msgstr ""
+"Реєструючись, ви погоджуєтися з %s Загальними правилами, Умовами сервісу та "
+"Політекою конфіденційності"
+
+#: accounts/views.py:93
+msgid ""
+"Thank you very much. Your brabbl account at {}\n"
+"                has been successfully activated."
+msgstr "Дякуємо. Ваш brabbl аккаунт для {} був успішно активован."
+
+#: accounts/views.py:339 core/views.py:431
+#, fuzzy
+#| msgid "You do not have permission to change this user."
+msgid "You do not have permission to users"
+msgstr "У вас не достатньо прав для редагування цього користувачча"
+
+#: accounts/views.py:357
+msgid "User doesn't exist."
+msgstr "Користувач не існує"
+
+#: accounts/views.py:360
+msgid "You do not have permission to change this user."
+msgstr "У вас не достатньо прав для редагування цього користувачча"
+
+#: conf/base.py:61
+msgid "English"
+msgstr "Англійська"
+
+#: conf/base.py:62
+msgid "Deutsch"
+msgstr "Німецька"
+
+#: conf/base.py:63
+msgid "Spanish"
+msgstr "Іспанська"
+
+#: conf/base.py:64
+msgid "French"
+msgstr "Французська"
+
+#: conf/base.py:65
+msgid "Italian"
+msgstr "Італійська"
+
+#: conf/base.py:66
+msgid "Greek"
+msgstr "Грецька"
+
+#: conf/base.py:67
+msgid "Ukrainian"
+msgstr "Українська"
+
+#: conf/base.py:68
+msgid "Russian"
+msgstr "Російська"
+
+#: core/admin.py:23
+msgid "Barometer Wording"
+msgstr "Формулювання Барометру"
+
+#: core/admin.py:35
+msgid "Statement voting"
+msgstr "Голосування по заяві"
+
+#: core/admin.py:39
+msgid "Statement list header"
+msgstr "Заголовок у листі заяв"
+
+#: core/admin.py:40
+msgid "Statement header"
+msgstr "Заголовок заяви"
+
+#: core/admin.py:43
+msgid "Add button short (top)"
+msgstr "Кнопка додати коротоко (вверху)"
+
+#: core/admin.py:44
+msgid "Add button (bottom)"
+msgstr "Кнопка додати (внизу)"
+
+#: core/admin.py:45
+msgid "Survey - list header"
+msgstr "Обстеження - заголовок листа"
+
+#: core/admin.py:46
+msgid "Survey - Add answer button"
+msgstr "Обстеження - кнопка додати відповідь"
+
+#: core/admin.py:48
+msgid "Reply counter"
+msgstr "Лічильник відповідей"
+
+#: core/admin.py:72 core/admin.py:98 utils/language_utils.py:74
+msgid "Discussion"
+msgstr "Обговорення"
+
+#: core/admin.py:78 core/models.py:52 utils/language_utils.py:217
+msgid "Statement"
+msgstr "Заява"
+
+#: core/admin.py:84 core/admin.py:104
+msgid "Customer"
+msgstr "Клієнт"
+
+#: core/admin.py:138
+msgid "Properties"
+msgstr "Властивості"
+
+#: core/admin.py:144
+msgid "Time limit"
+msgstr "Термін дії"
+
+#: core/forms.py:30 core/tests/test_admin.py:31
+msgid "End time cannot be earlier than start time!"
+msgstr "Час завершення не моде буду раніше за час початку!"
+
+#: core/models.py:34 utils/language_utils.py:210
+msgid "very poor"
+msgstr "дуже погано"
+
+#: core/models.py:35 utils/language_utils.py:211
+msgid "poor"
+msgstr "погано"
+
+#: core/models.py:36 utils/language_utils.py:212
+msgid "ok"
+msgstr "задовільно"
+
+#: core/models.py:37 utils/language_utils.py:213
+msgid "good"
+msgstr "добре"
+
+#: core/models.py:38 utils/language_utils.py:214
+msgid "very good"
+msgstr "дуже добре"
+
+#: core/models.py:39 utils/language_utils.py:215
+msgid "CONTRA"
+msgstr "Супроти"
+
+#: core/models.py:40 utils/language_utils.py:216
+msgid "PRO"
+msgstr "За"
+
+#: core/models.py:41 utils/language_utils.py:166
+msgid "Contra-Argument"
+msgstr "Аргумент Супроти"
+
+#: core/models.py:42 utils/language_utils.py:167
+msgid "Pro-Argument"
+msgstr "Аргумент За"
+
+#: core/models.py:43 core/models.py:47
+msgid "Button Contra"
+msgstr "Кнопка Проти"
+
+#: core/models.py:44 core/models.py:46 core/models.py:48 core/models.py:50
+#: utils/language_utils.py:220
+msgid "Write new argument"
+msgstr "Написати новий аргумент"
+
+#: core/models.py:45 core/models.py:49
+msgid "Button Pro"
+msgstr "Кнопка За"
+
+#: core/models.py:51 core/models.py:59
+msgid "Name singular"
+msgstr "Ім'я в однині"
+
+#: core/models.py:53 core/models.py:61
+msgid "Plural name"
+msgstr "Iм'я в множині"
+
+#: core/models.py:54 utils/language_utils.py:218
+msgid "Statements"
+msgstr "Заява"
+
+#: core/models.py:55
+msgid "Top button"
+msgstr "Верхня кнопка"
+
+#: core/models.py:56 core/models.py:58 utils/language_utils.py:219
+msgid "Write new statement"
+msgstr "Додати заяву"
+
+#: core/models.py:57
+msgid "Bottom button"
+msgstr "Нижня кнопка"
+
+#: core/models.py:60 core/models.py:63 utils/language_utils.py:151
+msgid "Reply"
+msgstr "Відповідь"
+
+#: core/models.py:62 utils/language_utils.py:152
+msgid "Replies"
+msgstr "Відповідей"
+
+#: core/models.py:64
+msgid "Answer"
+msgstr "Відповісти"
+
+#: core/models.py:80
+msgid "Notification Email Verification Required"
+msgstr "Оповіщення: Підтвердження Emailу обовїязкове"
+
+#: core/models.py:81
+msgid "Notification on Logout"
+msgstr "Оповіщення після виходу"
+
+#: core/models.py:82
+msgid "Notification SignUp Required"
+msgstr "Оповіщення: Потрібна авторизация"
+
+#: core/models.py:83
+msgid "Notification Report Posted"
+msgstr "Оповіщення: Доповідь додана"
+
+#: core/models.py:84
+msgid "Notification Message Posted"
+msgstr "Оповіщення: Повідомлення додане"
+
+#: core/models.py:85
+msgid "Notification Message Updated"
+msgstr "Оповіщення: Повідомлення змінено"
+
+#: core/models.py:86
+msgid "Notification Profile Updated"
+msgstr "Оповіщення: Профіль оновлен"
+
+#: core/models.py:87
+msgid "Notification Reset Password"
+msgstr "Оповіщення: Скидання пароля"
+
+#: core/models.py:88
+#, fuzzy
+#| msgid "Hidden argument title"
+msgid "Hidden posting title"
+msgstr "Заголовок прихованого аргументу"
+
+#: core/models.py:89
+msgid "Hidden posting body"
+msgstr ""
+
+#: core/models.py:90
+#, fuzzy
+#| msgid "Notification Message Posted"
+msgid "Notification Discussion Already Completed"
+msgstr "Оповіщення: Повідомлення додане"
+
+#: core/models.py:91
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "Notification Discussion Not Started Yet"
+msgstr "Діскуссія ще не почалася"
+
+#: core/models.py:105
+msgid "Sign Up Title"
+msgstr "Заголовок реєстрації"
+
+#: core/models.py:106
+msgid "Sign Up Text"
+msgstr "Текст реєстрації"
+
+#: core/models.py:107
+msgid "Login Title"
+msgstr "Заголовок Авторизації"
+
+#: core/models.py:108
+msgid "Login Text"
+msgstr "Текст Авторизації"
+
+#: core/models.py:109
+msgid "Welcome Title"
+msgstr "Заголовок привітання"
+
+#: core/models.py:110
+msgid "Welcome Text (after Social-Auth Sign Up)"
+msgstr "Текст привітання (після авторизацію через соціальні мережі)"
+
+#: core/models.py:111
+msgid "Welcome Text (after Email Sign Up)"
+msgstr "Ласкаво просимо, текст (після реєстрації за Emailом)"
+
+#: core/models.py:112
+msgid "Barometer Start Sign"
+msgstr "Барометер, перший голос"
+
+#: core/models.py:113
+msgid "Data policy overlay title"
+msgstr ""
+
+#: core/models.py:114
+msgid "Data policy overlay body"
+msgstr ""
+
+#: core/models.py:115
+msgid "Sign up to private account failed"
+msgstr ""
+
+#: core/models.py:116
+#, fuzzy
+#| msgid "Notification SignUp Required"
+msgid "Verification required"
+msgstr "Оповіщення: Потрібна авторизация"
+
+#: core/models.py:117
+msgid "List of duplicate invitation email"
+msgstr ""
+
+#: core/models.py:118
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "Private discussions not confirmed"
+msgstr "Діскуссія ще не почалася"
+
+#: core/models.py:119
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "Private discussions not logged in"
+msgstr "Діскуссія ще не почалася"
+
+#: core/models.py:131
+msgid "First create a model to see all messages"
+msgstr "Спочатку створіть модель, щоб побачити всі повідомлення"
+
+#: core/models.py:173 core/models.py:300 utils/language_utils.py:275
+msgid "Image"
+msgstr "Зображення"
+
+#: core/models.py:186
+msgid "Wording"
+msgstr "Формулювання"
+
+#: core/models.py:206
+msgid "Barometer always shows the current voting results"
+msgstr ""
+
+#: core/models.py:208
+msgid ""
+"Barometer only shows results to users who already voted for this statement"
+msgstr ""
+
+#: core/models.py:210
+msgid ""
+"Barometer only shows results to users who already voted for this statement, "
+"and to users with 'Admin' account"
+msgstr ""
+
+#: core/models.py:264 utils/language_utils.py:250
+msgid "Show all"
+msgstr "Показувати всі"
+
+#: core/models.py:265
+msgid "Search by any tag"
+msgstr "Шукати за будь-яким тегом"
+
+#: core/models.py:266
+msgid "Search by all tags"
+msgstr "Шукати за всіма тегами одразу"
+
+#: core/models.py:284 core/models.py:398 templates/accounts/user_list.html:25
+#: utils/language_utils.py:195
+msgid "Active"
+msgstr "Активні"
+
+#: core/models.py:285 core/models.py:399
+msgid "Hidden"
+msgstr "Прихований"
+
+#: core/models.py:301
+msgid "Video"
+msgstr "Відео"
+
+#: core/permissions.py:31
+msgid "Object must be created or modified only by an administrator."
+msgstr "Об'єкт може бути додан або оновлен тільки адміністратором."
+
+#: core/permissions.py:38
+msgid "Can't be modified, because other users have already responded on it."
+msgstr "Не може бути змінен, тому що інщі користувачі вже відповіли."
+
+#: core/permissions.py:48
+msgid "Only the creator can modify this object."
+msgstr "Лише автор може редагувати цей об'єкт."
+
+#: core/serializers.py:96
+msgid "There are only whole or half numbers allowed."
+msgstr "Дозволені лише цілі та половинні числа."
+
+#: core/serializers.py:194
+msgid "Statement not found"
+msgstr "Заява не знайдена"
+
+#: core/serializers.py:215
+msgid "Arguments are not allowed in this discussion."
+msgstr "Аргументи не дозволині для цієї дискусіі."
+
+#: core/serializers.py:219
+msgid "Replies are not allowed in this discussion."
+msgstr "Аргументи не дозволeні для цієї дискусіі."
+
+#: core/serializers.py:335 core/serializers.py:764
+msgid "Discussion not found﻿"
+msgstr "Діскусія не знайдена"
+
+#: core/serializers.py:504 core/serializers.py:508
+msgid "ID is already in use."
+msgstr "Цей ID вже використовується"
+
+#: core/serializers.py:515
+msgid "`Wording` needed for Barometer."
+msgstr "\"Формулювання\" обовязкове для Барометру."
+
+#: core/serializers.py:773
+#, fuzzy
+#| msgid "Statement not found"
+msgid "Statement not found﻿"
+msgstr "Заява не знайдена"
+
+#: core/views.py:243
+msgid "Discussion has no barometer."
+msgstr "Діскуссія без барометру."
+
+#: core/views.py:341
+msgid "Discussion has no arguments."
+msgstr "Діскуссія без аргументів."
+
+#: core/views.py:344
+msgid "You can not rate hidden argument"
+msgstr "Ви не можете оцінити прихований аргумент"
+
+#: templates/404.html:4
+msgid "Not Found"
+msgstr "Не знайдено"
+
+#: templates/500.html:4
+msgid "Server Error"
+msgstr "Помилка серверу"
+
+#: templates/accounts/password_reset.html:13
+msgid "Password has been reset"
+msgstr "Пароль був стертий"
+
+#: templates/accounts/password_reset.html:15
+#: templates/mails/user_reset_password.txt:1
+msgid "Reset password"
+msgstr "Стерти пароль"
+
+#: templates/accounts/password_reset.html:23
+#, python-format
+msgid ""
+"Password of your brabbl account at %(customer_url)s has been changed "
+"successfully."
+msgstr ""
+"Пароль вашого brabbl аккаунту для  %(customer_url)s був успішно змінений."
+
+#: templates/accounts/password_reset.html:26
+msgid "In a few moments you will be redirected to"
+msgstr "За мить ви будите переправлені до"
+
+#: templates/accounts/password_reset.html:42
+msgid "New password"
+msgstr "Новий пароль"
+
+#: templates/accounts/password_reset.html:53
+msgid "Confirm password"
+msgstr "Підтвердити пароль"
+
+#: templates/accounts/password_reset.html:64
+msgid "Change password"
+msgstr "Змінити пароль"
+
+#: templates/accounts/password_reset.html:70
+msgid ""
+"The link you used is invalid or has already been used. Please request a new "
+"confirmation link."
+msgstr ""
+"Посилання яке ви використали невірне або вже використане. Будь ласка "
+"запросіть нове посилання підтвердження."
+
+#: templates/accounts/user_list.html:12
+msgid "User List"
+msgstr "Список користувачів"
+
+#: templates/accounts/welcome.html:28
+msgid "Finish sign up"
+msgstr "Завершити реєстрацію"
+
+#: templates/admin/accounts/change_form.html:9
+#: templates/admin/accounts/change_form.html:16
+#: templates/admin/core/change_form.html:9
+msgid "Are you really want to create copy of this object?"
+msgstr "Ви дійсно бажаєте скопіювати цю запис?"
+
+#: templates/admin/accounts/change_form.html:10
+#: templates/admin/accounts/change_form.html:17
+#: templates/admin/core/change_form.html:10
+msgid "Duplicate an object"
+msgstr "Зробити копію запису"
+
+#: templates/admin/core/change_list.html:9
+msgid "Are you really migrate wordings?"
+msgstr ""
+
+#: templates/admin/core/change_list.html:10
+msgid "Migrate wordings for customers"
+msgstr ""
+
+#: templates/admin/edit_inline/set_of_properties.html:18
+msgid "Delete?"
+msgstr "Видалити?"
+
+#: templates/admin/edit_inline/set_of_properties.html:32
+msgid "Change"
+msgstr "Змінити"
+
+#: templates/admin/edit_inline/set_of_properties.html:34
+msgid "View on site"
+msgstr "Подивитись на сайті"
+
+#: templates/admin/edit_inline/set_of_properties.html:81
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr "Додати %(verbose_name)s"
+
+#: templates/admin/edit_inline/set_of_properties.html:82
+msgid "Remove"
+msgstr "Видалити"
+
+#: templates/base.html:31 templates/iframe.html:31 utils/language_utils.py:173
+msgid "powered by"
+msgstr "Вироблено "
+
+#: templates/mails/flag_notification.txt:1
+msgid "Brabbl post has been flagged"
+msgstr "Brabbl пост був промаркован"
+
+#: templates/mails/flag_notification.txt:5
+msgid "Title"
+msgstr "Заголовок"
+
+#: templates/mails/flag_notification.txt:6
+msgid "Type"
+msgstr "Тип"
+
+#: templates/mails/flag_notification.txt:7
+msgid "ID"
+msgstr "ID"
+
+#: templates/mails/flag_notification.txt:9
+msgid "Reports / flagging"
+msgstr "Доповідь / Маркування"
+
+#: templates/mails/flag_notification.txt:10
+msgid "Link"
+msgstr "Посилання"
+
+#: templates/mails/invite_participants.txt:1
+#, fuzzy
+#| msgid "Brabbl-Registration on"
+msgid "Brabbl-Invitation on"
+msgstr "Brabbl-реєстрація на"
+
+#: templates/mails/news_mail.txt:1
+msgid "Brabbl - Recent Discussions on"
+msgstr "Brabbl - нещодавні дискусії"
+
+#: templates/mails/news_mail.txt:4
+#, python-format
+msgid ""
+"\n"
+"%(counter)s new Argument.\n"
+msgid_plural ""
+"\n"
+"%(counter)s new Arguments.\n"
+msgstr[0] ""
+"\n"
+"%(counter)s новий аргумент.\n"
+msgstr[1] ""
+"\n"
+"%(counter)s нові аргументи.\n"
+
+#: templates/mails/news_mail.txt:9
+#, python-format
+msgid ""
+"\n"
+"%(counter)s new Discussion.\n"
+msgid_plural ""
+"\n"
+"%(counter)s new Discussions.\n"
+msgstr[0] ""
+"\n"
+"%(counter)s нова дискусія\n"
+msgstr[1] ""
+"\n"
+"%(counter)s нові дискусії.\n"
+
+#: templates/mails/news_mail.txt:14
+#, python-format
+msgid ""
+"\n"
+"%(counter)s new Voting.\n"
+msgid_plural ""
+"\n"
+"%(counter)s new Votings.\n"
+msgstr[0] ""
+"\n"
+"%(counter)s нове голосування.\n"
+msgstr[1] ""
+"\n"
+"%(counter)s нових голосуваннь.\n"
+
+#: templates/mails/news_mail.txt:21
+msgid "Here are a few recent discussions which may interest you:"
+msgstr "Це декілька нещодавніх дискусій, які мужть вас зацікавити:"
+
+#: templates/mails/verify_registration.txt:1
+msgid "Brabbl-Registration on"
+msgstr "Brabbl-реєстрація на"
+
+#: utils/language_utils.py:23
+msgid ""
+"Thank you for your registration!\n"
+"                You will receive an email with a confirmation link.\n"
+"                Once you click this, you can join the discussion."
+msgstr ""
+"Дякуємо за реєстрацію!\n"
+"Вам буде надіслано листа з посиланням для підтвердження.\n"
+"Після переходу за цим посиланням, ви зможете приєднатися до дискусії"
+
+#: utils/language_utils.py:27
+msgid "sort by date"
+msgstr "сортувати за датою"
+
+#: utils/language_utils.py:28
+msgid "sort by personal review"
+msgstr "сортувати по особистому огляду"
+
+#: utils/language_utils.py:30
+msgid "sorted by own rating"
+msgstr "сортувати за власним рейтингом"
+
+#: utils/language_utils.py:32
+msgid "sort by average rating"
+msgstr "сортувати за середнім рейтингом"
+
+#: utils/language_utils.py:34
+msgid "You must sign in to participate in the discussion"
+msgstr "Потрібно авторизуватися, щоб прийняти участь у дискусії"
+
+#: utils/language_utils.py:37
+msgid "The profile has been updated successfully"
+msgstr "Ваш профіль був успішно оновлен."
+
+#: utils/language_utils.py:39
+msgid "Choose topic"
+msgstr "Обрати за темою"
+
+#: utils/language_utils.py:40
+msgid "Profile"
+msgstr "Профіль"
+
+#: utils/language_utils.py:41
+msgid "Logout"
+msgstr "Вийти"
+
+#: utils/language_utils.py:42
+msgid "Register"
+msgstr "Реєстрація"
+
+#: utils/language_utils.py:43
+msgid "Login"
+msgstr "Авторизація"
+
+#: utils/language_utils.py:44
+msgid "You have been logged out"
+msgstr "Ви вийшли"
+
+#: utils/language_utils.py:45
+msgid "Come back soon!"
+msgstr "До побачення!"
+
+#: utils/language_utils.py:46
+msgid "All discussions"
+msgstr "Всі дискусіі"
+
+#: utils/language_utils.py:48
+msgid "The argument has been changed"
+msgstr "Аргумент змінен"
+
+#: utils/language_utils.py:51
+msgid "Great! Your argument is online now"
+msgstr "Здорово! Ваш аргумент тепер тут"
+
+#: utils/language_utils.py:53
+msgid "Edit discussion"
+msgstr "Редагувати дискусію"
+
+#: utils/language_utils.py:54
+msgid "Edit Discussion"
+msgstr "Редагувати дискусію"
+
+#: utils/language_utils.py:55
+msgid "Create discussion"
+msgstr "Створити дискусію"
+
+#: utils/language_utils.py:57
+msgid "An email was sent with instructions on how to reset the password"
+msgstr "На вашу пошту було надіслано листа з інструкцією по скидуванню пароля"
+
+#: utils/language_utils.py:59
+msgid "Edit suggestion"
+msgstr "Редагувати пропозицію"
+
+#: utils/language_utils.py:60
+msgid "Report suggestion"
+msgstr "Відреагувати на пропозицію"
+
+#: utils/language_utils.py:61
+msgid "Add new suggestion"
+msgstr "Додати нову пропозицію"
+
+#: utils/language_utils.py:62
+msgid "Add new Discussion"
+msgstr "Додати нову дискусію"
+
+#: utils/language_utils.py:63
+msgid "Add new Survey"
+msgstr "Додати нове обстеження"
+
+#: utils/language_utils.py:64
+msgid "Update Discussion"
+msgstr "Редагувати дискусію"
+
+#: utils/language_utils.py:65
+msgid "Add new pro-argument"
+msgstr "Додати новий аргумент За"
+
+#: utils/language_utils.py:66
+msgid "Add new contra-argument"
+msgstr "Додати новий аргумент Супроти"
+
+#: utils/language_utils.py:67
+msgid "Edit argument"
+msgstr "Редагувати аргумент"
+
+#: utils/language_utils.py:68
+msgid "Publish argument"
+msgstr "Опубліковати аргумент"
+
+#: utils/language_utils.py:69
+msgid "Publish Argument"
+msgstr "Опубліковати аргумент"
+
+#: utils/language_utils.py:70
+msgid "Edit survey"
+msgstr "Редагувати обстеження"
+
+#: utils/language_utils.py:71
+msgid "Edit Survey"
+msgstr "Редагувати обстеження"
+
+#: utils/language_utils.py:72
+msgid "Add new survey"
+msgstr "Додати нове обстеження"
+
+#: utils/language_utils.py:73
+msgid "Survey"
+msgstr "Обстеження"
+
+#: utils/language_utils.py:75
+msgid "Tags"
+msgstr "Теги"
+
+#: utils/language_utils.py:76
+msgid "Settings"
+msgstr "Налаштування"
+
+#: utils/language_utils.py:77
+msgid "Create a new account"
+msgstr "Створити новий аккаунт"
+
+#: utils/language_utils.py:78
+msgid "Forgot your password?"
+msgstr "Забули пароль?"
+
+#: utils/language_utils.py:80
+msgid "Please drag a picture to the image area to change your profile picture"
+msgstr ""
+"Будь ласка перетягніть зображення до зони фото. щоб змінити зображення "
+"профілю"
+
+#: utils/language_utils.py:83
+msgid "Please drag a picture to the image area to change discussion picture"
+msgstr ""
+"Будь ласка перетягніть зображення до зони фото. щоб змінити зображення "
+"дискусii"
+
+#: utils/language_utils.py:85
+msgid "Reset Password"
+msgstr "Стерти пароль."
+
+#: utils/language_utils.py:86
+msgid "Update profile"
+msgstr "Редагувати профіль"
+
+#: utils/language_utils.py:87
+msgid "Already have an account?"
+msgstr "Вже маєте аккаунт?"
+
+#: utils/language_utils.py:88
+msgid "to"
+msgstr "до"
+
+#: utils/language_utils.py:89
+msgid "from"
+msgstr "з"
+
+#: utils/language_utils.py:90
+msgid "Edit"
+msgstr "Редагувати"
+
+#: utils/language_utils.py:91
+msgid "Add new"
+msgstr "Додати нове"
+
+#: utils/language_utils.py:92
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: utils/language_utils.py:93
+msgid "There was a server error"
+msgstr "Трапилася помилка на сервері"
+
+#: utils/language_utils.py:94
+msgid "The action could not be carried out"
+msgstr "Помилка серверу. Дія не може бути виконана"
+
+#: utils/language_utils.py:95
+msgid "Please provide a subject"
+msgstr "Будь ласка введіть тему"
+
+#: utils/language_utils.py:97
+msgid "Please provide details for your argument"
+msgstr "Будь ласка надайте деталі вашого аргументу"
+
+#: utils/language_utils.py:99
+msgid "Just arguments"
+msgstr "Тільки аргументи"
+
+#: utils/language_utils.py:100
+msgid "Just the Opiniometer"
+msgstr "Тільки Думкометер "
+
+#: utils/language_utils.py:101
+msgid "Opiniometer plus Arguments"
+msgstr "Думкометер та Аргументи"
+
+#: utils/language_utils.py:102
+msgid "Thesis statement or question"
+msgstr "Тезіс заяви або питання"
+
+#: utils/language_utils.py:104
+msgid "Please provide a thesis statement or question"
+msgstr "Будь ласка надайте тезісу заяви або питання"
+
+#: utils/language_utils.py:107
+msgid "The thesis statement / question must not exceed 160 characters"
+msgstr "Тезіс заяви або питання не може буди довше за 160 символів"
+
+#: utils/language_utils.py:110
+msgid "Please select the type of discussion"
+msgstr "Будь ласка, оберіть тип дискусії"
+
+#: utils/language_utils.py:113
+msgid "Please select the Opiniometer"
+msgstr "Будь ласка, оберіть Думкометр"
+
+#: utils/language_utils.py:116
+msgid "Please select the type of Opiniometer"
+msgstr "Будь ласка оберіть тип Думкометру"
+
+#: utils/language_utils.py:119
+msgid "Allow suggestions by admins only"
+msgstr "Дозволити пропозиції тільки адміністрації"
+
+#: utils/language_utils.py:121
+msgid "Allow suggestions by users"
+msgstr "Дозволити пропозиції всім"
+
+#: utils/language_utils.py:123
+msgid "Please provide a (unique) username"
+msgstr "Будь ласка, введіть (унікальне) ім'я користувача."
+
+#: utils/language_utils.py:125
+msgid "Please provide a password"
+msgstr "Будь ласка, введіть пароль"
+
+#: utils/language_utils.py:126
+msgid "Please provide a fist name"
+msgstr "Будь ласка, введіть ім'я"
+
+#: utils/language_utils.py:127
+msgid "Please provide a last name"
+msgstr "Будь ласка, введіть призвище"
+
+#: utils/language_utils.py:129
+msgid "Please provide an email address"
+msgstr "Будь ласка, введіть e-mail"
+
+#: utils/language_utils.py:132
+msgid "Please provide a valid email address"
+msgstr "Будь ласка, введіть вірний e-mail"
+
+#: utils/language_utils.py:134
+msgid "No email notifications"
+msgstr "Ніяких e-mail повідомлень"
+
+#: utils/language_utils.py:135
+msgid "News e-mail (frequency)"
+msgstr "Новини по email (частота)"
+
+#: utils/language_utils.py:136
+msgid "daily"
+msgstr "Щоденно"
+
+#: utils/language_utils.py:137
+msgid "weekly"
+msgstr "Щотижднево"
+
+#: utils/language_utils.py:138
+msgid "User name"
+msgstr "Ім'я користувача"
+
+#: utils/language_utils.py:139
+msgid "First name"
+msgstr "Ім'я"
+
+#: utils/language_utils.py:140
+msgid "Last name"
+msgstr "Призвіще"
+
+#: utils/language_utils.py:141
+msgid "Email Address"
+msgstr "E-mail"
+
+#: utils/language_utils.py:142
+msgid "The passwords do not match"
+msgstr "Паролі не збігаються"
+
+#: utils/language_utils.py:143
+msgid "Password"
+msgstr "Пароль"
+
+#: utils/language_utils.py:145
+msgid "Please enter a password again"
+msgstr "Будь ласка введіть пароль ще раз"
+
+#: utils/language_utils.py:147
+msgid "characters remaining"
+msgstr "залишилось символів"
+
+#: utils/language_utils.py:148
+msgid "Average opinion"
+msgstr "Середня думка"
+
+#: utils/language_utils.py:149
+msgid "What do you think?"
+msgstr "Що ви думаєте?"
+
+#: utils/language_utils.py:150
+msgid "Argument"
+msgstr "Аргумент"
+
+#: utils/language_utils.py:153
+msgid "No suggestions yet"
+msgstr "Дозволити пропозиції всім"
+
+#: utils/language_utils.py:155
+msgid "Thanks for reporting! We will review that content shortly"
+msgstr "Дякуємо за повідомлення! Ми перевіремо його у найближчий час"
+
+#: utils/language_utils.py:157
+msgid "Thank you for your message"
+msgstr "Дякуємо за ваше повідомлення"
+
+#: utils/language_utils.py:158
+msgid "We will consider the amount shortly"
+msgstr "Дякуємо за ваше повідомлення"
+
+#: utils/language_utils.py:159
+msgid "Hide proposal"
+msgstr "Сховати пропозицію"
+
+#: utils/language_utils.py:160
+msgid "Edit proposal"
+msgstr "Редагувати пропозицію"
+
+#: utils/language_utils.py:161
+msgid "Report proposal"
+msgstr "Надіслати пропозицію"
+
+#: utils/language_utils.py:162
+msgid "Add new argument"
+msgstr "Додати новий аргумент"
+
+#: utils/language_utils.py:163
+msgid "No arguments yet"
+msgstr "Досі нема жодного аргументу"
+
+#: utils/language_utils.py:164
+msgid " Start the discussion now!"
+msgstr "Почніть дискусію прям зараз!"
+
+#: utils/language_utils.py:165
+msgid "Show more arguments"
+msgstr "Показати більше аргументів"
+
+#: utils/language_utils.py:168
+msgid "Hide argument"
+msgstr "Сховати аргумент"
+
+#: utils/language_utils.py:169
+msgid "Show argument"
+msgstr "Показати аргумент"
+
+#: utils/language_utils.py:170
+msgid "Delete argument"
+msgstr "Видалити аргумент"
+
+#: utils/language_utils.py:171
+msgid "Report argument"
+msgstr "Поскаржитися"
+
+#: utils/language_utils.py:172
+msgid "Rate"
+msgstr "Рейтинг"
+
+#: utils/language_utils.py:174
+msgid "DISCUSSION"
+msgstr "ДИСКУСІЯ"
+
+#: utils/language_utils.py:175
+msgid "inconsequential"
+msgstr "несуттєво"
+
+#: utils/language_utils.py:176
+msgid "questionable"
+msgstr "сумнівно"
+
+#: utils/language_utils.py:177
+msgid "justifiable"
+msgstr "ймовірно"
+
+#: utils/language_utils.py:178
+msgid "relevant"
+msgstr "доречно"
+
+#: utils/language_utils.py:179
+msgid "convincingly"
+msgstr "переконливо"
+
+#: utils/language_utils.py:180
+msgid "Contra"
+msgstr "Супроти"
+
+#: utils/language_utils.py:181
+msgid "Pro"
+msgstr "За"
+
+#: utils/language_utils.py:182
+msgid "Votes"
+msgstr "Голоси"
+
+#: utils/language_utils.py:184
+msgid "Back"
+msgstr "Назад"
+
+#: utils/language_utils.py:185
+msgid "cancel"
+msgstr "скасувати"
+
+#: utils/language_utils.py:186
+msgid "create"
+msgstr "створити"
+
+#: utils/language_utils.py:187
+msgid "change"
+msgstr "змінити"
+
+#: utils/language_utils.py:188
+msgid "Opinion"
+msgstr "Думка"
+
+#: utils/language_utils.py:189
+msgid "Subject"
+msgstr "Тема"
+
+#: utils/language_utils.py:190
+msgid "Suggestion"
+msgstr "Пропозиція"
+
+#: utils/language_utils.py:191
+msgid "Please enter a suggestion"
+msgstr "Будь ласка введіть пропозицію"
+
+#: utils/language_utils.py:192
+msgid "by"
+msgstr "від"
+
+#: utils/language_utils.py:193
+msgid "All"
+msgstr "Всi"
+
+#: utils/language_utils.py:194
+msgid "Total"
+msgstr "Всього"
+
+#: utils/language_utils.py:196
+msgid "Not Active"
+msgstr "Не активні"
+
+#: utils/language_utils.py:197
+msgid "Filter by status"
+msgstr "Фільтрувати за статусом"
+
+#: utils/language_utils.py:198
+msgid "Completed"
+msgstr "Завершено"
+
+#: utils/language_utils.py:199
+msgid "Starts in"
+msgstr "Почнеться через"
+
+#: utils/language_utils.py:200
+msgid "Ends in"
+msgstr "Завершення через"
+
+#: utils/language_utils.py:201
+msgid "Starts"
+msgstr "Почнеться"
+
+#: utils/language_utils.py:202
+msgid "Finishes"
+msgstr "Закінчиться"
+
+#: utils/language_utils.py:203
+msgid "d"
+msgstr "д"
+
+#: utils/language_utils.py:204
+msgid "h"
+msgstr "г"
+
+#: utils/language_utils.py:205
+msgid "m"
+msgstr "х"
+
+#: utils/language_utils.py:206
+msgid "s"
+msgstr "с"
+
+#: utils/language_utils.py:207
+msgid "Start Time"
+msgstr "Дата початку"
+
+#: utils/language_utils.py:208
+msgid "End Time"
+msgstr "Дата завершення"
+
+#: utils/language_utils.py:209
+msgid "Answer(s)"
+msgstr "Відповідь(ей)"
+
+#: utils/language_utils.py:221
+msgid "Login with Facebook"
+msgstr "Авторизація через Facebook"
+
+#: utils/language_utils.py:222
+msgid "Login with Twitter"
+msgstr "Авторизація через Google"
+
+#: utils/language_utils.py:223
+msgid "Login with Google"
+msgstr "Авторизації через Google"
+
+#: utils/language_utils.py:224
+msgid "Sign up with"
+msgstr "Зареєструватися за допомогою"
+
+#: utils/language_utils.py:225
+msgid "Sign In"
+msgstr "Авторизація"
+
+#: utils/language_utils.py:226
+msgid "or via mail"
+msgstr "або за допомогою e-mail"
+
+#: utils/language_utils.py:227
+msgid "Login to participate"
+msgstr "Авторизуютесь для участі в дискусіях"
+
+#: utils/language_utils.py:228
+msgid "Year of Birth"
+msgstr "Рік народження"
+
+#: utils/language_utils.py:229
+msgid "Please provide a years of birth"
+msgstr "Будь ласка, введіть рік народження"
+
+#: utils/language_utils.py:234
+msgid "Please provide a gender"
+msgstr "Будь ласка, вкажіть стать"
+
+#: utils/language_utils.py:236
+msgid "Please provide a postcode"
+msgstr "Будь ласка, введіть поштовий індекс."
+
+#: utils/language_utils.py:238
+msgid "Please provide a country"
+msgstr "Будь ласка введіть краіну"
+
+#: utils/language_utils.py:240
+msgid "Please provide a city"
+msgstr "Будь ласка введіть місто"
+
+#: utils/language_utils.py:242
+msgid "Please provide a organization"
+msgstr "Будь ласка, введіть організацію"
+
+#: utils/language_utils.py:244
+msgid "Please provide a position"
+msgstr "Будь ласка, введіть посаду"
+
+#: utils/language_utils.py:246
+msgid "Please provide a bundesland"
+msgstr "Будь ласка, введіть місцевість"
+
+#: utils/language_utils.py:247
+msgid "Edit List"
+msgstr "Редагувати список"
+
+#: utils/language_utils.py:248
+msgid "Discussion List"
+msgstr "Лист обговорянь"
+
+#: utils/language_utils.py:249
+msgid "Save List"
+msgstr "Оновити список"
+
+#: utils/language_utils.py:251
+msgid "Show sum of tags"
+msgstr "Показати сумму тегів"
+
+#: utils/language_utils.py:252
+msgid "Show intersection of tags"
+msgstr "Показазувати перетин тегів"
+
+#: utils/language_utils.py:253
+msgid "List name"
+msgstr "Призвіще"
+
+#: utils/language_utils.py:254
+msgid "Hide tag filter for Users"
+msgstr "Приховати фільтер тегів для користовачів"
+
+#: utils/language_utils.py:256
+msgid "Tag filter in the list view will not be shown to users"
+msgstr ""
+"Фільтр тегів на сторінки лист дикуссій не буде показуватися користовачам"
+
+#: utils/language_utils.py:257
+msgid "Please provide a list name"
+msgstr "Будь ласка, введіть назву"
+
+#: utils/language_utils.py:258
+msgid "The list name must not exceed 160 characters"
+msgstr "Назва списку не може буди довше за 160 символів"
+
+#: utils/language_utils.py:259
+msgid "Content of list"
+msgstr "Вміст списку"
+
+#: utils/language_utils.py:260
+msgid "Please select the content of list"
+msgstr "Будь ласка, оберіть вміст списку"
+
+#: utils/language_utils.py:261
+msgid "Please select the Wording schema"
+msgstr "Будь ласка, оберіть схему формулювання"
+
+#: utils/language_utils.py:262
+msgid "You can enter maximum of 4 digits"
+msgstr "Ви можете ввести не більше ніж 4 цифри"
+
+#: utils/language_utils.py:263
+msgid "Add a tag"
+msgstr "Додати тег"
+
+#: utils/language_utils.py:264
+msgid "Press enter to add a tag"
+msgstr "Натисніть enter, щоб додати тег"
+
+#: utils/language_utils.py:265
+msgid "The discussion has not started yet"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:266
+msgid "Write Pro-Argument"
+msgstr "Напишіть Аргумент За"
+
+#: utils/language_utils.py:267
+msgid "Write Contra-Argument"
+msgstr "Напишіть Аргумент Супроти"
+
+#: utils/language_utils.py:268
+msgid "Update Argument"
+msgstr "Редагувати аргумент"
+
+#: utils/language_utils.py:270
+msgid "They were an email sent with instructions to reset the password"
+msgstr "На вашу пошту було надіслано листа з інструкцією по скидуванню пароля"
+
+#: utils/language_utils.py:271
+msgid "Add media"
+msgstr "Додати медіа"
+
+#: utils/language_utils.py:272
+msgid "User list"
+msgstr "Список користувачів"
+
+#: utils/language_utils.py:274
+msgid "You can also upload an image or add a Youtube link"
+msgstr "Ви також можете додати зображення або Youtube відео"
+
+#: utils/language_utils.py:276
+msgid "Content removed"
+msgstr "Контент видалений"
+
+#: utils/language_utils.py:278
+msgid "This content was inappropriate and has been removed by our staff"
+msgstr ""
+"Цей контент був недоречний, тому його було вилучено нашими співробітниками"
+
+#: utils/language_utils.py:281
+msgid ""
+"Please stick to our guidelines for good discussions and refrain from posts "
+"that are likely to be regarded as offensive or rude"
+msgstr ""
+"Будь ласка, дотримуйтесь наших принципів для хороших дискусій та утримуйтксь "
+"від постів, які можуть розглядатися як образливі або грубі"
+
+#: utils/language_utils.py:283
+msgid "User can add replies to arguments"
+msgstr "Користувачi зможуть вiдповiдати на аргументи"
+
+#: utils/language_utils.py:284
+#, fuzzy
+#| msgid "User can add replies to arguments"
+msgid "Allow replies to arguments"
+msgstr "Користувачi зможуть вiдповiдати на аргументи"
+
+#: utils/language_utils.py:285
+#, fuzzy
+#| msgid "Create discussion"
+msgid "Delete discussion"
+msgstr "Створити дискусію"
+
+#: utils/language_utils.py:287
+msgid "Really delete this discussion? (This cannot be undone!)"
+msgstr ""
+
+#: utils/language_utils.py:289
+msgid "key_discussion-modal_textfield-title_description-of-discussion"
+msgstr ""
+
+#: utils/language_utils.py:291
+msgid "key_discussion-modal_textfield-url_web-url-of-discussion"
+msgstr ""
+
+#: utils/language_utils.py:293
+msgid "key_invite-participants-modal_title-of-invite-participants"
+msgstr ""
+
+#: utils/language_utils.py:295
+msgid "key_invite-participants-modal_textfield-email_label"
+msgstr ""
+
+#: utils/language_utils.py:297
+msgid "key_invite-participants-modal_textfield-email_help-text"
+msgstr ""
+
+#: utils/language_utils.py:299
+msgid "key_invite-participants-modal_textfield-email_error-email"
+msgstr ""
+
+#: utils/language_utils.py:301
+msgid "key_invite-participants-modal_textfield-email_error-emails"
+msgstr ""
+
+#: utils/language_utils.py:303
+msgid "key_invite-participants-modal_submit-button_label"
+msgstr ""
+
+#: utils/language_utils.py:305
+msgid "key_invite-participants-modal_invitation-list_revoke-invitation-hint"
+msgstr ""
+
+#: utils/language_utils.py:307
+msgid "key_invite-participants-modal_invitation-count-title"
+msgstr ""
+
+#: utils/language_utils.py:309
+msgid "key_invite-participants-modal_alert_revoke-invitation-confirm"
+msgstr ""
+
+#: utils/language_utils.py:310
+msgid "key_survey-statement-options_edit"
+msgstr ""
+
+#: utils/language_utils.py:311
+msgid "key_survey-statement-options_report"
+msgstr ""
+
+#: utils/language_utils.py:312
+msgid "key_signup_provide-password_title"
+msgstr ""
+
+#: utils/language_utils.py:313
+msgid "key_signup_provide-password_error-text"
+msgstr ""
+
+#: utils/language_utils.py:314
+msgid "key_signup_retype-password_title"
+msgstr ""
+
+#: utils/language_utils.py:315
+msgid "key_signup_retype-password_error-text"
+msgstr ""
+
+#: utils/language_utils.py:316
+msgid "key_login_email-textfield_error-text"
+msgstr ""
+
+#: utils/language_utils.py:317
+msgid "accept_data_policy_overlay_not_checked_error"
+msgstr ""
+
+#: utils/language_utils.py:318
+msgid "key_discussion-modal_add-pdf-file_title"
+msgstr ""
+
+#: utils/language_utils.py:319
+msgid "key_discussion-modal_add-pdf-file_help"
+msgstr ""
+
+#: utils/language_utils.py:320
+msgid "key_discussion-modal_delete-pdf-hint"
+msgstr ""
+
+#: utils/language_utils.py:321
+msgid "key_discussion-modal_delete-pdf-confirm"
+msgstr ""
+
+#: utils/language_utils.py:323
+msgid "key_discussion-modal_discussion-type-section_title"
+msgstr ""
+
+#: utils/language_utils.py:325
+msgid "key_discussion-modal_discussion-type-section_pro-contra-discussion-name"
+msgstr ""
+
+#: utils/language_utils.py:326
+msgid "statement-list-item_more-button-title"
+msgstr ""
+
+#: utils/language_utils.py:327
+msgid "statement-list-item_hide-button-title"
+msgstr ""
+
+#: utils/language_utils.py:328
+#, fuzzy
+#| msgid "Argument"
+msgid "arguments"
+msgstr "Аргумент"
+
+#: utils/language_utils.py:329
+msgid "key_discussion-options_edit"
+msgstr ""
+
+#: utils/language_utils.py:330
+msgid "key_discussion-options_delete"
+msgstr ""
+
+#: utils/language_utils.py:331
+msgid "key_survey-statement-options_delete"
+msgstr ""
+
+#: utils/language_utils.py:333
+msgid "Really delete this statement? (This cannot be undone!)"
+msgstr ""
+
+#: utils/language_utils.py:334
+#, fuzzy
+#| msgid "Delete argument"
+msgid "Delete statement"
+msgstr "Видалити аргумент"
+
+#: utils/language_utils.py:336
+msgid "key_statement-modal_add-image_title"
+msgstr ""
+
+#: utils/language_utils.py:338
+msgid "key_statement-modal_add-image_help"
+msgstr ""
+
+#: utils/language_utils.py:339
+msgid "ADD PDF"
+msgstr ""
+
+#: utils/language_utils.py:340
+msgid "Add Photo"
+msgstr ""
+
+#: utils/language_utils.py:341
+#, fuzzy
+#| msgid "Add new"
+msgid "Add new idea"
+msgstr "Додати нове"
+
+#: utils/language_utils.py:342
+msgid "key_discussion_status_completed"
+msgstr ""
+
+#: utils/language_utils.py:343
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion_status_not_started"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:344
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion_status_started"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:346
+msgid "key_statement-modal_statement-title_title-label"
+msgstr ""
+
+#: utils/language_utils.py:348
+msgid "key_statement-modal_statement-description_title-label"
+msgstr ""
+
+#: utils/language_utils.py:349
+msgid "key_survey-statement-options_show"
+msgstr ""
+
+#: utils/language_utils.py:350
+msgid "key_survey-statement-options_hide"
+msgstr ""
+
+#: utils/language_utils.py:351
+msgid "Now"
+msgstr ""
+
+#: utils/language_utils.py:352
+#, fuzzy
+#| msgid "Active"
+msgid "Active Forever"
+msgstr "Активні"
+
+#: utils/language_utils.py:353
+msgid "key_discussion-modal_discussion-type-help-text"
+msgstr ""
+
+#: utils/language_utils.py:354
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-modal_start-time-help-text"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:355
+msgid "key_discussion-modal_end-time-help-text"
+msgstr ""
+
+#: utils/language_utils.py:357
+msgid "key_discussion-modal_textfield-url_web-url-of-discussion-help-text"
+msgstr ""
+
+#: utils/language_utils.py:358
+msgid "key_discussion-modal_wording-help-text"
+msgstr ""
+
+#: utils/language_utils.py:359
+msgid "key_discussion-modal_survey-option-help-text"
+msgstr ""
+
+#: utils/language_utils.py:361
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-modal_discussion-settings-help-text"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:362
+msgid "Advanced Options"
+msgstr ""
+
+#: utils/language_utils.py:364
+msgid "key_invite-participants_checkbox-is-admin-invitation"
+msgstr ""
+
+#: utils/language_utils.py:365
+msgid "Manage Participants"
+msgstr ""
+
+#: utils/language_utils.py:367
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-modal_choose-private-label"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:369
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-modal_choose-private_public-text"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:371
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-modal_choose-private-help-text"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:373
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-modal_participants-section-title"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:375
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-modal_private-discussion-no-participants"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:377
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-modal_public-discussion-text"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:379
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-modal_private-discussion-text"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:381
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-modal_choose-private_private-text"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:382
+msgid "key_user-menu_refresh-data"
+msgstr ""
+
+#: utils/language_utils.py:383
+msgid "key_barometer_disagree"
+msgstr ""
+
+#: utils/language_utils.py:384
+msgid "key_barometer_agree"
+msgstr ""
+
+#: utils/language_utils.py:385
+msgid "key_barometer_behavior"
+msgstr ""
+
+#: utils/language_utils.py:386
+msgid "key_barometer_always_show"
+msgstr ""
+
+#: utils/language_utils.py:387
+msgid "key_barometer_show_only_for_voted_user"
+msgstr ""
+
+#: utils/language_utils.py:388
+msgid "key_barometer_show_only_for_voted_user_or_admin"
+msgstr ""
+
+#: utils/language_utils.py:389
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-modal_barometer-behavior-help-text"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:391
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion_statement-modal_textfield_copyright-info-label"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:393
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion_statement-modal_textfield_copyright-info-help-text"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:394
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-options_reset"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:396
+msgid ""
+"Really remove barometer votes and argument ratings for this discussion? "
+"(This cannot be undone!)"
+msgstr ""
+
+#: utils/language_utils.py:397
+#, fuzzy
+#| msgid "Create discussion"
+msgid "Reset discussion"
+msgstr "Створити дискусію"
+
+#: utils/language_utils.py:398
+msgid "key_export_column_type"
+msgstr ""
+
+#: utils/language_utils.py:399
+msgid "key_export_column_title"
+msgstr ""
+
+#: utils/language_utils.py:400
+msgid "key_export_column_statement_title"
+msgstr ""
+
+#: utils/language_utils.py:401
+msgid "key_export_column_argument_title"
+msgstr ""
+
+#: utils/language_utils.py:402
+msgid "key_export_column_description"
+msgstr ""
+
+#: utils/language_utils.py:403
+msgid "key_export_column_date_and_time_created"
+msgstr ""
+
+#: utils/language_utils.py:404
+msgid "key_export_column_start_time"
+msgstr ""
+
+#: utils/language_utils.py:405
+msgid "key_export_column_end_time"
+msgstr ""
+
+#: utils/language_utils.py:406
+msgid "key_export_column_creator_name"
+msgstr ""
+
+#: utils/language_utils.py:407
+msgid "key_export_column_average_rating"
+msgstr ""
+
+#: utils/language_utils.py:408
+msgid "key_export_column_total_number_of_votes"
+msgstr ""
+
+#: utils/language_utils.py:410
+msgid "key_export_column_wording_for_plus_3_rating"
+msgstr ""
+
+#: utils/language_utils.py:412
+msgid "key_export_column_number_of_votes_for_plus_3_rating"
+msgstr ""
+
+#: utils/language_utils.py:414
+msgid "key_export_column_wording_for_plus_2_rating"
+msgstr ""
+
+#: utils/language_utils.py:416
+msgid "key_export_column_number_of_votes_for_plus_2_rating"
+msgstr ""
+
+#: utils/language_utils.py:418
+msgid "key_export_column_wording_for_plus_1_rating"
+msgstr ""
+
+#: utils/language_utils.py:420
+msgid "key_export_column_number_of_votes_for_plus_1_rating"
+msgstr ""
+
+#: utils/language_utils.py:422
+msgid "key_export_column_wording_for_0_rating"
+msgstr ""
+
+#: utils/language_utils.py:424
+msgid "key_export_column_number_of_votes_for_0_rating"
+msgstr ""
+
+#: utils/language_utils.py:426
+msgid "key_export_column_wording_for_minus_1_rating"
+msgstr ""
+
+#: utils/language_utils.py:428
+msgid "key_export_column_wording_for_minus_2_rating"
+msgstr ""
+
+#: utils/language_utils.py:430
+msgid "key_export_column_number_of_votes_for_minus_2_rating"
+msgstr ""
+
+#: utils/language_utils.py:432
+msgid "key_export_column_wording_for_minus_3_rating"
+msgstr ""
+
+#: utils/language_utils.py:434
+msgid "key_export_column_number_of_votes_for_minus_3_rating"
+msgstr ""
+
+#: utils/language_utils.py:435
+msgid "key_export_client"
+msgstr ""
+
+#: utils/language_utils.py:436
+msgid "key_export_date_and_time_of_export"
+msgstr ""
+
+#: utils/language_utils.py:438
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_export_discussion_modal_confirm_question"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:440
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_export_discussion_modal_btn_export"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:442
+#, fuzzy
+#| msgid "The discussion has not started yet"
+msgid "key_discussion-options_export"
+msgstr "Діскуссія ще не почалася"
+
+#: utils/language_utils.py:443
+msgid "key_export_statistics"
+msgstr ""
+
+#: utils/language_utils.py:445
+msgid "key_export_statistics_modal_confirm_question"
+msgstr ""
+
+#: utils/language_utils.py:447
+msgid "key_export_statistics_modal_btn_export"
+msgstr ""
+
+#: utils/language_utils.py:448
+msgid "key_export_user_stats"
+msgstr ""
+
+#: utils/language_utils.py:450
+msgid "key_export_total_number_of_registered_users"
+msgstr ""
+
+#: utils/language_utils.py:452
+msgid "key_export_number_of_users_in_age_group"
+msgstr ""
+
+#: utils/language_utils.py:453
+msgid "key_export_age_groups"
+msgstr ""
+
+#: utils/language_utils.py:454
+msgid "key_export_age_not_provided"
+msgstr ""
+
+#: utils/language_utils.py:455
+msgid "key_export_gender"
+msgstr ""
+
+#: utils/language_utils.py:456
+msgid "key_export_female_count"
+msgstr ""
+
+#: utils/language_utils.py:457
+msgid "key_export_male_count"
+msgstr ""
+
+#: utils/language_utils.py:458
+msgid "key_export_gender_not_provided"
+msgstr ""
+
+#: utils/language_utils.py:459
+msgid "key_export_post_code"
+msgstr ""
+
+#: utils/language_utils.py:460
+msgid "key_export_post_code_not_provided"
+msgstr ""
+
+#: utils/language_utils.py:461
+msgid "key_export_city"
+msgstr ""
+
+#: utils/language_utils.py:462
+msgid "key_export_city_not_provided"
+msgstr ""
+
+#: utils/language_utils.py:463
+#, fuzzy
+#| msgid "Organization"
+msgid "key_export_organization"
+msgstr "Організація"
+
+#: utils/language_utils.py:464
+msgid "key_export_organization_not_provided"
+msgstr ""
+
+#: utils/language_utils.py:465
+msgid "key_export_position"
+msgstr ""
+
+#: utils/language_utils.py:466
+msgid "key_export_position_not_provided"
+msgstr ""
+
+#: utils/language_utils.py:467
+msgid "key_export_participation"
+msgstr ""
+
+#: utils/language_utils.py:468
+msgid "key_export_number_of_discussions"
+msgstr ""
+
+#: utils/language_utils.py:469
+msgid "key_export_number_of_statements"
+msgstr ""
+
+#: utils/language_utils.py:470
+msgid "key_export_number_of_arguments"
+msgstr ""
+
+#: utils/language_utils.py:471
+msgid "key_export_number_of_barometer_voting"
+msgstr ""
+
+#: utils/language_utils.py:472
+#, fuzzy
+#| msgid "Organization"
+msgid "key_export_users_with_position"
+msgstr "Організація"
+
+#: utils/language_utils.py:473
+#, fuzzy
+#| msgid "Organization"
+msgid "key_export_users_with_organization"
+msgstr "Організація"
+
+#: utils/language_utils.py:474
+#, fuzzy
+#| msgid "Organization"
+msgid "key_export_users_with_city"
+msgstr "Організація"
+
+#: utils/language_utils.py:475
+msgid "key_export_users_with_post_code"
+msgstr ""
+
+#: utils/mail.py:19
+msgid ""
+"Dear visitor of {{domain}}\n"
+"\n"
+"we have received your registration.\n"
+"\n"
+"Please confirm this manually by clicking on the following confirmation link:"
+msgstr ""
+"Шановний відвідувач {{domain}}\n"
+"\n"
+"ми отримали ваш запит реєстрації.\n"
+"\n"
+"Будь ласка, підтвердіть email натиснувши на це посилання"
+
+#: utils/mail.py:24
+msgid ""
+"Hello {{ username }},\n"
+"\n"
+"there is news on {{domain}}:"
+msgstr ""
+"Вітаю, {{ username }},\n"
+"Декілька новин для тебе з {{domain}}"
+
+#: utils/mail.py:27
+msgid ""
+"Dear Administrator,\n"
+"\n"
+"a contribution to the brabbl platform has been flagged"
+msgstr ""
+"Шановний Адміністратор,\n"
+"Внесок у brabbl платформу був промаркоманий"
+
+#: utils/mail.py:30
+msgid ""
+"Hello {{ username }},\n"
+"\n"
+"please click on this link to change your password:"
+msgstr ""
+"Вітаю, {{ username }},\n"
+"\n"
+"Буль ласка, натисніть на посилання для зміни свого паролю:"
+
+#: utils/mail.py:33
+msgid ""
+"Hello.\n"
+"\n"
+"{{ customer }} invited you on Brabbl."
+msgstr ""
+
+#: utils/mail.py:38
+msgid ""
+"Your brabbl account on {{domain}} is not active still. Please activate it by "
+"clicking on the following link. Otherwise, your account and all your "
+"arguments and votings will be deleted tonight."
+msgstr ""
+"Ваш brabbl акаунт на {{domain}} досі не активован. Будь ласка перейдіть за "
+"посиланням нижче. Інакше сьогодні вночі ваш акаунт та усі ваши аргументи та "
+"голосування будуть видалені."
+
+#: utils/mail.py:90
+msgid "Your Brabbl team."
+msgstr "Ваша команда Brabbl."
+
+#: utils/models.py:11
+msgid "Creation date"
+msgstr "Дата створювання"
+
+#: utils/models.py:13
+msgid "Modified date"
+msgstr "Дата зміни"
+
+#: utils/models.py:23
+msgid "Last activity"
+msgstr "Остання активність"
+
+#: utils/serializers.py:102
+msgid "Picture could not be decoded."
+msgstr "Зображення не може буди  розшифроване."
+
+#: utils/serializers.py:110
+msgid "Please enter a valid image file."
+msgstr "Будь ласка, оберіть правильне зображення"
+
+#~ msgid "Leave blank to make available to all customers."
+#~ msgstr "Залиште пустим, щоб було доступне всім клієнтам"
+
+#~ msgid "Missing brabbl API Token."
+#~ msgstr "Невірній brabbl API токен."
+
+#~ msgid "Hidden argument text"
+#~ msgstr "Текст  прихованого аргументу"
+
+#~ msgid "Invalid referrer domain for customer %s: %s"
+#~ msgstr "Невірний домен посилання для клієнта %(customer)s: %(referrer)s"
+
+#~ msgid "Verified"
+#~ msgstr "Підтверджено"
+
+#~ msgid "sort by number of suggestions"
+#~ msgstr "сортувати за кількістю пропозицій"
+
+#~ msgid "Account has not been confirmed."
+#~ msgstr "Аккаунт не підтверджен."
+
+#~ msgid "Account activation"
+#~ msgstr "Активація аккаунту"
+
+#~ msgid ""
+#~ "In a few moments you will be redirected to <a href=\"%(next)s\">"
+#~ "%(customer_url)s</a>"
+#~ msgstr ""
+#~ "За мить ви будуте переправлені до <a href=\"%(next)s\">%(customer_url)s</"
+#~ "a>"
+
+#~ msgid ""
+#~ "The open link is invalid or has already been used. Please call again at a "
+#~ "link."
+#~ msgstr ""
+#~ "Це посилання невірне або вже використане. Будь ласка запросіть нове "
+#~ "посилання."
+
+#~ msgid "You must log in to participate in the discussion."
+#~ msgstr "Потрібно авторизуватися, щоб прийняти участь у дискусії."
+
+#~ msgid "No suggestions yet. Start the discussion now!"
+#~ msgstr "Ще нема пропозицій. Почніть дискусію прям зараз!"
+
+#~ msgid ""
+#~ "By signing up, you agree to 'customers' Basic Rules, Terms of Service, "
+#~ "and Privacy Policy."
+#~ msgstr ""
+#~ "Реєструючись ви погоджуетесь з Основними правилами, погодженнями та "
+#~ "умовами та політикою конфіденційності"
+
+#~ msgid ""
+#~ "Have fun discussing on customer page. This text should be customizable."
+#~ msgstr "Приємної участі в дискусіях"
+
+#~ msgid "Please update the following mandatory fields"
+#~ msgstr "Будь ласка заповніть наступні обов'язкові поля"
+
+#~ msgid ""
+#~ "\n"
+#~ "      Thank you very much. Your brabbl account at %(user_domain)s has "
+#~ "been successfully activated.\n"
+#~ "    "
+#~ msgstr ""
+#~ "\n"
+#~ "Дякуємо. Ваш brabbl аккаунт для %(user_domain)s був успішно активован."

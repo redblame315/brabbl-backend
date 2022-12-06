@@ -1,0 +1,32 @@
+// Colors
+$white:         #FFFFFF;
+$black:         #111111;
+$dark-grey:     #989898;
+$medium-grey:   #EAEAEA;
+$light-grey:    #F5F7F7;
+$bar-positive1: #C6EF93;
+$bar-positive2: #87E05F;
+$bar-positive3: #46D02A;
+$bar-neutral:   #FCFBBE;
+$bar-negative1: #FECC7D;
+$bar-negative2: #FF9F40;
+$bar-negative3: #FF7305;
+$red:           #D31114;
+$green:         #0F9601;
+$yellow:        #F5A71B;
+
+$text-color:    $black;
+$link-color:    $dark-grey;
+
+
+// Fonts
+$font-family-serif: Georgia, serif;
+$font-family-sans:  Arial, sans-serif;
+$font-family-icons: FontAwesome;
+
+
+// Breakpoints
+$breakpoint-large: 960px;
+// $breakpoint-ml: 700px;
+$breakpoint-medium: 480px;
+$breakpoint-small: 320px;

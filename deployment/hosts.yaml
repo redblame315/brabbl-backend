@@ -1,0 +1,19 @@
+---
+all:
+  vars:
+    ansible_ssh_user: root
+    gunicorn_port: 8000
+    certbot_admin_email: support@brabbl.com    
+    
+ungrouped:
+  hosts:
+    new_staging:
+      ansible_ssh_host: staging.brabbl.com
+      gunicorn_workers: 1
+      server_name: staging.brabbl.com
+      domain_name: staging.brabbl.com
+    production:
+      ansible_ssh_host: api.brabbl.com
+      gunicorn_workers: 5
+      server_name: api.brabbl.com
+      domain_name: api.brabbl.com

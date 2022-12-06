@@ -1,0 +1,169 @@
+---
+- hosts: all
+  gather_facts: no
+
+  handlers:
+    - name: reload nginx
+      service: name=nginx state=reloaded
+
+    - name: update supervisor
+      command: supervisorctl update
+
+    - name: restart ssh
+      service: name=ssh state=restarted
+
+    - name: restart ntp
+      service: name=ntp state=restarted
+
+  vars:
+    project: brabbl
+    environment_name: "{{ inventory_hostname }}"
+    username: "{{ project }}{% if environment_name != 'production' %}-{{ environment_name }}{% endif %}"
+    environment_root: /home/{{ username }}
+    postgresql_backup_dir: "{{ environment_root }}/db_backup"
+
+  tasks:
+  # - name: Upgrade System
+  #   apt: upgrade=dist update_cache=yes
+
+  - name: Remove unnecessary apache packages (default on Host Europe)
+    apt: name={{ item }} state=absent
+    with_items:
+      - apache2
+      - apache2-doc
+      - apache2-data
+      - apache2-utils
+      - apache2-mpm-prefork
+
+  - name: Install required packages
+    apt: name={{ item }} state=present
+    with_items:
+      - git
+      - nginx-light
+      - redis-server
+      - supervisor
+      - gettext
+      - python3-pip
+      - python3-psycopg2
+      - python3-lxml
+      - postfix
+      - postgresql
+      - ntp
+
+      # for Pillow (JPG and PNG support)
+      - python3-dev
+      - libjpeg-dev
+      - zlib1g-dev
+
+
+  # openSSL Diffie Hellman Parameters:
+      
+  # takes a long time (use length of 1024 for test provisioning)
+  # - name: Create dhparam file
+  #   command: openssl dhparam -out /etc/nginx/dhparam.pem 4096 creates=/etc/nginx/dhparam.pem
+
+  - name: Create dhparam file
+    command: openssl dhparam -out /etc/nginx/dhparam.pem 1024 creates=/etc/nginx/dhparam.pem
+
+  - name: Copy extra nginx configs
+    copy: src=files/{{ item }} dest=/etc/nginx/conf.d/{{ item }}
+    notify: reload nginx
+    with_items:
+        - ssl.conf
+        - gzip.conf
+
+  - name: Copy default nginx config
+    template: src="nginx_default.conf" dest=/etc/nginx/sites-enabled/default
+    notify: reload nginx
+
+  - name: Install virtualenv globally
+    pip: name=virtualenv state=present executable=pip3
+
+  - name: Disallow root access with password
+    lineinfile: dest=/etc/ssh/sshd_config regexp="^#?PermitRootLogin" line="PermitRootLogin without-password" state=present
+    notify: restart ssh
+
+  - name: Disallow password authentication
+    lineinfile: dest=/etc/ssh/sshd_config regexp="^#?PasswordAuthentication" line="PasswordAuthentication no" state=present
+    notify: restart ssh
+
+  - name: Configure NTP
+    copy: src=files/ntp.conf dest=/etc/ntp.conf
+    notify: restart ntp
+
+  # should be state=running?? ('started' used during debugging --> TODO: check!!)
+  - name: Make sure ntpd is running and enabled
+    service: name=ntp state=started enabled=yes
+
+  # --- Environment configuration
+  - name: Copy environment nginx config
+    template: src={{ item }} dest=/etc/nginx/sites-enabled/{{ environment_name }}
+    notify: reload nginx
+    with_first_found:
+      - files:
+        - "{{ environment_name }}/nginx.conf"
+        - "templates/nginx.conf"
+        paths:
+        - .
+
+  - name: Create environment user
+    user: name={{ username }} home={{ environment_root }} shell=/bin/bash
+
+  - name: Create SSH directory
+    file: path=/home/{{ username }}/.ssh state=directory owner={{ username }} group={{ username }}
+
+  - name: Copy authorized keys
+    copy: src=files/authorized_keys dest=/home/{{ username }}/.ssh/authorized_keys owner={{ username }} group={{ username }}
+
+  
+  - name: Update pip and create virtualenv
+    pip: name=pip virtualenv={{ environment_root }} virtualenv_site_packages=yes state=latest # executable=pip3
+    sudo: yes
+    sudo_user: "{{ username }}"
+
+  - name: Create local directories
+    file: name={{ environment_root }}/{{ item }}/ state=directory owner={{ username }} group={{ username }}
+    with_items:
+      - log
+      - run
+      - frontend
+
+  - name: Copy main supervisor config
+    template: src=templates/supervisord_default.conf dest=/etc/supervisor/supervisord.conf
+
+  - name: Copy specific supervisor config and update supervisor
+    template: src=templates/supervisord.conf dest=/etc/supervisor/conf.d/{{ username }}.conf
+    notify: update supervisor
+
+  - name: Create database user
+    postgresql_user: name={{ username }} state=present
+    sudo: yes
+    sudo_user: postgres
+
+  - name: Create database
+    postgresql_db: name={{ username }} encoding=utf-8 owner={{ username }} state=present
+    sudo: yes
+    sudo_user: postgres
+
+  - name: Add DB backup script
+    template: src=templates/db_backup dest=/etc/cron.daily/ mode=0755
+    when: environment_name == "production"
+
+  - name: Add certbot repository
+    apt_repository:
+      repo: 'ppa:certbot/certbot'
+
+  - name: Install Certbot's Nginx package
+    apt:
+      name: python-certbot-nginx
+      state: present
+    
+  - name: Check if certificate already exists.
+    stat:
+      path: /etc/letsencrypt/live/{{ domain_name }}/cert.pem
+    register: letsencrypt_cert
+
+  - name: Generate new certificate if one doesn't exist.
+    shell: "certbot certonly --nginx --noninteractive --agree-tos --email {{ certbot_admin_email }} -d {{ domain_name }} --cert-name {{ domain_name }}"
+    when: letsencrypt_cert.stat.exists == False
+    notify: reload nginx

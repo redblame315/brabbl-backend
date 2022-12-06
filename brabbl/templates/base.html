@@ -1,0 +1,40 @@
+{% load static i18n %}<!doctype html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta name="keywords" content="{% block keywords %}{% endblock %}"/>
+    <meta name="description" content="{% block description %}{% endblock %}"/>
+    {% block meta %}{% endblock %}
+
+    <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+    <link type="text/css" rel="stylesheet"
+          href="{{ THEME_LOCATION_URL }}{{ CUSTOMER_THEME }}.css">
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block styles %}{% endblock %}
+</head>
+<body class="{% block bodyclass %}{% endblock %}">
+{% block content %}
+    <div class="ReactModal__Overlay">
+        <div class="ReactModal__Content">
+            <div class="fullform">
+                <div class="fullform-header">
+                    <h1>{% block content_title %}{% endblock %}</h1>
+                </div>
+                <div class="fullform-body">
+                    {% block content_main %}{% endblock %}
+                    {% block powered-by %}
+                        <p class="powered-by">{% trans "powered by" %} <a href="http://brabbl.com/">brabbl</a></p>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascript %}{% endblock %}
+</body>
+</html>

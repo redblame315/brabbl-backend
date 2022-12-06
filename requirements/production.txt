@@ -1,0 +1,7 @@
+-r base.txt
+
+gunicorn==19.8.1
+# psycopg2-binary==2.8.6
+raven==6.9.0
+django-memcached==0.1.2
+python-memcached==1.59

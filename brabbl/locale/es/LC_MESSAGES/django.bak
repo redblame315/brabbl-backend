@@ -1,0 +1,1546 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-16 18:05+0200\n"
+"PO-Revision-Date: 2016-09-13 18:12+0200\n"
+"Last-Translator: b'Oliver Brzoska <oliver@brabbl.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.7.11\n"
+
+#: accounts/admin.py:21
+msgid "User Info Settings"
+msgstr ""
+
+#: accounts/admin.py:70
+msgid "Personal info"
+msgstr ""
+
+#: accounts/admin.py:71
+msgid "Additional info"
+msgstr ""
+
+#: accounts/admin.py:75
+msgid "Permissions"
+msgstr ""
+
+#: accounts/admin.py:77
+msgid "Important dates"
+msgstr ""
+
+#: accounts/admin.py:88
+msgid "News Email"
+msgstr ""
+
+#: accounts/apps.py:8 templates/accounts/user_list.html:35
+#: templates/mails/flag_notification.txt:8 utils/language_utils.py:19
+msgid "User"
+msgstr ""
+
+#: accounts/authentication.py:14
+msgid "Invalid token."
+msgstr ""
+
+#: accounts/forms.py:12 accounts/models.py:94
+msgid "First Name"
+msgstr ""
+
+#: accounts/forms.py:13 accounts/models.py:95
+msgid "Last Name"
+msgstr ""
+
+#: accounts/forms.py:15 accounts/models.py:97 utils/language_utils.py:230
+msgid "Gender"
+msgstr ""
+
+#: accounts/forms.py:17 accounts/models.py:96
+msgid "Year of birth"
+msgstr ""
+
+#: accounts/forms.py:22 accounts/models.py:98 utils/language_utils.py:235
+msgid "Postcode"
+msgstr ""
+
+#: accounts/forms.py:23 accounts/models.py:100 utils/language_utils.py:239
+msgid "City"
+msgstr ""
+
+#: accounts/forms.py:26 accounts/models.py:103 utils/language_utils.py:245
+msgid "Bundesland"
+msgstr ""
+
+#: accounts/forms.py:28 accounts/models.py:99 utils/language_utils.py:237
+msgid "Country"
+msgstr ""
+
+#: accounts/forms.py:29 accounts/models.py:101 utils/language_utils.py:241
+msgid "Organization"
+msgstr ""
+
+#: accounts/forms.py:30 accounts/models.py:102 utils/language_utils.py:243
+msgid "Position"
+msgstr ""
+
+#: accounts/middleware.py:48 accounts/tests/test_middleware.py:22
+#: accounts/tests/test_middleware.py:30
+msgid "Invalid brabbl API Token."
+msgstr ""
+
+#: accounts/middleware.py:57
+#, python-format
+msgid "Invalid referrer for customer %(customer)s: %(referrer)s"
+msgstr ""
+
+#: accounts/middleware.py:64 accounts/middleware.py:69
+#, python-format
+msgid "Invalid referrer domain for customer %(customer)s: %(referrer)s"
+msgstr ""
+
+#: accounts/models.py:133
+msgid "One domain per line."
+msgstr ""
+
+#: accounts/models.py:136
+msgid "ReplyTo email"
+msgstr ""
+
+#: accounts/models.py:139
+msgid "If left empty, the address of the moderator will be used."
+msgstr ""
+
+#: accounts/models.py:160
+msgid "Username"
+msgstr ""
+
+#: accounts/models.py:161
+msgid "First name + Last name"
+msgstr ""
+
+#: accounts/models.py:230 utils/language_utils.py:231
+msgid "Whatever"
+msgstr ""
+
+#: accounts/models.py:231 utils/language_utils.py:232
+msgid "Male"
+msgstr ""
+
+#: accounts/models.py:232 utils/language_utils.py:233
+msgid "Female"
+msgstr ""
+
+#: accounts/models.py:249
+msgid "Latest news mail delivery"
+msgstr ""
+
+#: accounts/models.py:252
+msgid "Date of activation"
+msgstr ""
+
+#: accounts/models.py:255 utils/models.py:14
+msgid "Deletion date"
+msgstr ""
+
+#: accounts/models.py:258 utils/language_utils.py:183
+msgid "Profile picture"
+msgstr ""
+
+#: accounts/models.py:381
+msgid "Allowed parameters: {{domain}}"
+msgstr ""
+
+#: accounts/models.py:390
+msgid "Email asking for confirmation of account."
+msgstr ""
+
+#: accounts/models.py:392
+msgid "Daily Summary."
+msgstr ""
+
+#: accounts/models.py:393
+msgid "Forgot Password."
+msgstr ""
+
+#: accounts/models.py:394
+msgid "Argument flagging."
+msgstr ""
+
+#: accounts/models.py:395
+msgid "Non active user warning."
+msgstr ""
+
+#: accounts/models.py:402 accounts/models.py:406
+msgid ""
+"Allowed parameters: {{domain}}, and {{username}}, {{firstname}}, "
+"{{lastname}} if type is not Argument flagging."
+msgstr ""
+
+#: accounts/serializers.py:43
+msgid "This account is inactive."
+msgstr ""
+
+#: accounts/serializers.py:46
+msgid "Password or user name is invalid."
+msgstr ""
+
+#: accounts/serializers.py:49
+msgid "Username and password must be entered"
+msgstr ""
+
+#: accounts/serializers.py:75
+msgid "Unknown e-mail."
+msgstr ""
+
+#: accounts/serializers.py:135
+msgid "This email address is already in use."
+msgstr ""
+
+#: accounts/serializers.py:152
+msgid "This username is not available."
+msgstr ""
+
+#: accounts/serializers.py:196
+#, python-brace-format
+msgid "{0} is already in use."
+msgstr ""
+
+#: accounts/serializers.py:230 templates/iframe.html:41
+#: templates/iframe.html.py:48
+msgid "Auth token is not valid."
+msgstr ""
+
+#: accounts/serializers.py:251
+msgid "Group doesn't exist."
+msgstr ""
+
+#: accounts/templatetags/user_additional_info.py:36
+msgid "Registration:"
+msgstr ""
+
+#: accounts/tests/test_middleware.py:16
+msgid "Missing brabbl API Token."
+msgstr ""
+
+#: accounts/views.py:76
+msgid "Welcome"
+msgstr ""
+
+#: accounts/views.py:78
+#, python-format
+msgid ""
+"By signing up, you agree to %s Basic Rules, Terms of Service, and Privacy "
+"Policy.<br/>\n"
+"        Have fun discussing on customer page. This text should be "
+"customizable.<br/>\n"
+"        Please update the following required fields"
+msgstr ""
+
+#: accounts/views.py:85
+msgid ""
+"Thank you very much. Your brabbl account at {}\n"
+"                has been successfully activated."
+msgstr ""
+
+#: accounts/views.py:295
+msgid "User doesn't exist."
+msgstr ""
+
+#: accounts/views.py:298
+msgid "You do not have permission to change this user."
+msgstr ""
+
+#: conf/base.py:59
+msgid "English"
+msgstr ""
+
+#: conf/base.py:60
+msgid "Deutsch"
+msgstr ""
+
+#: conf/base.py:61
+msgid "Spanish"
+msgstr ""
+
+#: conf/base.py:62
+msgid "French"
+msgstr ""
+
+#: conf/base.py:63
+msgid "Italian"
+msgstr ""
+
+#: conf/base.py:64
+msgid "Greek"
+msgstr ""
+
+#: conf/base.py:65
+msgid "Ukrainian"
+msgstr ""
+
+#: conf/base.py:66
+msgid "Russian"
+msgstr ""
+
+#: core/admin.py:23
+msgid "Barometer Wording"
+msgstr ""
+
+#: core/admin.py:35
+msgid "Statement voting"
+msgstr ""
+
+#: core/admin.py:39
+msgid "Statement list header"
+msgstr ""
+
+#: core/admin.py:40
+msgid "Statement header"
+msgstr ""
+
+#: core/admin.py:43
+msgid "Add button short (top)"
+msgstr ""
+
+#: core/admin.py:44
+msgid "Add button (bottom)"
+msgstr ""
+
+#: core/admin.py:45
+msgid "Survey - list header"
+msgstr ""
+
+#: core/admin.py:46
+msgid "Survey - Add answer button"
+msgstr ""
+
+#: core/admin.py:48
+msgid "Reply counter"
+msgstr ""
+
+#: core/admin.py:69 core/admin.py:94 utils/language_utils.py:74
+msgid "Discussion"
+msgstr ""
+
+#: core/admin.py:75 core/models.py:53 utils/language_utils.py:217
+msgid "Statement"
+msgstr ""
+
+#: core/admin.py:81 core/admin.py:100
+msgid "Customer"
+msgstr ""
+
+#: core/admin.py:129
+msgid "Properties"
+msgstr ""
+
+#: core/admin.py:135
+msgid "Time limit"
+msgstr ""
+
+#: core/forms.py:18 core/tests/test_admin.py:31
+msgid "End time cannot be earlier than start time!"
+msgstr ""
+
+#: core/models.py:32
+msgid "Leave blank to make available to all customers."
+msgstr ""
+
+#: core/models.py:35 utils/language_utils.py:210
+msgid "very poor"
+msgstr ""
+
+#: core/models.py:36 utils/language_utils.py:211
+msgid "poor"
+msgstr ""
+
+#: core/models.py:37 utils/language_utils.py:212
+msgid "ok"
+msgstr ""
+
+#: core/models.py:38 utils/language_utils.py:213
+msgid "good"
+msgstr ""
+
+#: core/models.py:39 utils/language_utils.py:214
+msgid "very good"
+msgstr ""
+
+#: core/models.py:40 utils/language_utils.py:215
+msgid "CONTRA"
+msgstr ""
+
+#: core/models.py:41 utils/language_utils.py:216
+msgid "PRO"
+msgstr ""
+
+#: core/models.py:42 utils/language_utils.py:166
+msgid "Contra-Argument"
+msgstr ""
+
+#: core/models.py:43 utils/language_utils.py:167
+msgid "Pro-Argument"
+msgstr ""
+
+#: core/models.py:44 core/models.py:48
+msgid "Button Contra"
+msgstr ""
+
+#: core/models.py:45 core/models.py:47 core/models.py:49 core/models.py:51
+#: utils/language_utils.py:220
+msgid "Write new argument"
+msgstr ""
+
+#: core/models.py:46 core/models.py:50
+msgid "Button Pro"
+msgstr ""
+
+#: core/models.py:52 core/models.py:60
+msgid "Name singular"
+msgstr ""
+
+#: core/models.py:54 core/models.py:62
+msgid "Plural name"
+msgstr ""
+
+#: core/models.py:55 utils/language_utils.py:218
+msgid "Statements"
+msgstr ""
+
+#: core/models.py:56
+msgid "Top button"
+msgstr ""
+
+#: core/models.py:57 core/models.py:59 utils/language_utils.py:219
+msgid "Write new statement"
+msgstr ""
+
+#: core/models.py:58
+msgid "Bottom button"
+msgstr ""
+
+#: core/models.py:61 core/models.py:64 utils/language_utils.py:151
+msgid "Reply"
+msgstr ""
+
+#: core/models.py:63 utils/language_utils.py:152
+msgid "Replies"
+msgstr ""
+
+#: core/models.py:65
+msgid "Answer"
+msgstr ""
+
+#: core/models.py:82
+msgid "Notification Email Verification Required"
+msgstr ""
+
+#: core/models.py:83
+msgid "Notification on Logout"
+msgstr ""
+
+#: core/models.py:84
+msgid "Notification SignUp Required"
+msgstr ""
+
+#: core/models.py:85
+msgid "Notification Report Posted"
+msgstr ""
+
+#: core/models.py:86
+msgid "Notification Message Posted"
+msgstr ""
+
+#: core/models.py:87
+msgid "Notification Message Updated"
+msgstr ""
+
+#: core/models.py:88
+msgid "Notification Profile Updated"
+msgstr ""
+
+#: core/models.py:89
+msgid "Notification Reset Password"
+msgstr ""
+
+#: core/models.py:102
+msgid "Sign Up Title"
+msgstr ""
+
+#: core/models.py:103
+msgid "Sign Up Text"
+msgstr ""
+
+#: core/models.py:104
+msgid "Login Title"
+msgstr ""
+
+#: core/models.py:105
+msgid "Login Text"
+msgstr ""
+
+#: core/models.py:106
+msgid "Welcome Title"
+msgstr ""
+
+#: core/models.py:107
+msgid "Welcome Text (after Social-Auth Sign Up)"
+msgstr ""
+
+#: core/models.py:108
+msgid "Welcome Text (after Email Sign Up)"
+msgstr ""
+
+#: core/models.py:109
+msgid "Barometer Start Sign"
+msgstr ""
+
+#: core/models.py:110
+msgid "Hidden argument title"
+msgstr ""
+
+#: core/models.py:111
+msgid "Hidden argument text"
+msgstr ""
+
+#: core/models.py:127
+msgid "First create a model to see all messages"
+msgstr ""
+
+#: core/models.py:164 core/models.py:249 utils/language_utils.py:275
+msgid "Image"
+msgstr ""
+
+#: core/models.py:174
+msgid "Wording"
+msgstr ""
+
+#: core/models.py:222 utils/language_utils.py:250
+msgid "Show all"
+msgstr ""
+
+#: core/models.py:223
+msgid "Search by any tag"
+msgstr ""
+
+#: core/models.py:224
+msgid "Search by all tags"
+msgstr ""
+
+#: core/models.py:250
+msgid "Video"
+msgstr ""
+
+#: core/models.py:301 templates/accounts/user_list.html:25
+#: utils/language_utils.py:195
+msgid "Active"
+msgstr ""
+
+#: core/models.py:302
+msgid "Hidden"
+msgstr ""
+
+#: core/permissions.py:31
+msgid "Object must be created or modified only by an administrator."
+msgstr ""
+
+#: core/permissions.py:38
+msgid "Can't be modified, because other users have already responded on it."
+msgstr ""
+
+#: core/permissions.py:48
+msgid "Only the creator can modify this object."
+msgstr ""
+
+#: core/serializers.py:86
+msgid "There are only whole or half numbers allowed."
+msgstr ""
+
+#: core/serializers.py:161
+msgid "Statement not found"
+msgstr ""
+
+#: core/serializers.py:176
+msgid "Arguments are not allowed in this discussion."
+msgstr ""
+
+#: core/serializers.py:180
+msgid "Replies are not allowed in this discussion."
+msgstr ""
+
+#: core/serializers.py:257
+msgid "Discussion not found﻿"
+msgstr ""
+
+#: core/serializers.py:383
+msgid "ID is already in use."
+msgstr ""
+
+#: core/serializers.py:391
+msgid "`Wording` needed for Barometer."
+msgstr ""
+
+#: core/views.py:138
+msgid "Discussion has no barometer."
+msgstr ""
+
+#: core/views.py:196
+msgid "Discussion has no arguments."
+msgstr ""
+
+#: core/views.py:199
+msgid "You can not rate hidden argument"
+msgstr ""
+
+#: templates/404.html:4
+msgid "Not Found"
+msgstr ""
+
+#: templates/500.html:4
+msgid "Server Error"
+msgstr ""
+
+#: templates/accounts/password_reset.html:13
+msgid "Password has been reset"
+msgstr ""
+
+#: templates/accounts/password_reset.html:15
+#: templates/mails/user_reset_password.txt:1
+msgid "Reset password"
+msgstr ""
+
+#: templates/accounts/password_reset.html:23
+#, python-format
+msgid ""
+"Password of your brabbl account at %(customer_url)s has been changed "
+"successfully."
+msgstr ""
+
+#: templates/accounts/password_reset.html:26
+msgid "In a few moments you will be redirected to"
+msgstr ""
+
+#: templates/accounts/password_reset.html:42
+msgid "New password"
+msgstr ""
+
+#: templates/accounts/password_reset.html:53
+msgid "Confirm password"
+msgstr ""
+
+#: templates/accounts/password_reset.html:64
+msgid "Change password"
+msgstr ""
+
+#: templates/accounts/password_reset.html:70
+msgid ""
+"The link you used is invalid or has already been used. Please request a new "
+"confirmation link."
+msgstr ""
+
+#: templates/accounts/user_list.html:12
+msgid "User List"
+msgstr ""
+
+#: templates/accounts/welcome.html:28
+msgid "Finish sign up"
+msgstr ""
+
+#: templates/admin/accounts/change_form.html:9
+#: templates/admin/core/change_form.html:9
+msgid "Are you really want to create copy of this object?"
+msgstr ""
+
+#: templates/admin/accounts/change_form.html:10
+#: templates/admin/core/change_form.html:10
+msgid "Duplicate an object"
+msgstr ""
+
+#: templates/admin/edit_inline/set_of_properties.html:18
+msgid "Delete?"
+msgstr ""
+
+#: templates/admin/edit_inline/set_of_properties.html:32
+msgid "Change"
+msgstr ""
+
+#: templates/admin/edit_inline/set_of_properties.html:34
+msgid "View on site"
+msgstr ""
+
+#: templates/admin/edit_inline/set_of_properties.html:81
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr ""
+
+#: templates/admin/edit_inline/set_of_properties.html:82
+msgid "Remove"
+msgstr ""
+
+#: templates/base.html:31 templates/iframe.html:31 utils/language_utils.py:173
+msgid "powered by"
+msgstr ""
+
+#: templates/mails/flag_notification.txt:1
+msgid "Brabbl post has been flagged"
+msgstr ""
+
+#: templates/mails/flag_notification.txt:5
+msgid "Title"
+msgstr ""
+
+#: templates/mails/flag_notification.txt:6
+msgid "Type"
+msgstr ""
+
+#: templates/mails/flag_notification.txt:7
+msgid "ID"
+msgstr ""
+
+#: templates/mails/flag_notification.txt:9
+msgid "Reports / flagging"
+msgstr ""
+
+#: templates/mails/flag_notification.txt:10
+msgid "Link"
+msgstr ""
+
+#: templates/mails/news_mail.txt:1
+msgid "Brabbl - Recent Discussions on"
+msgstr ""
+
+#: templates/mails/news_mail.txt:4
+#, python-format
+msgid ""
+"\n"
+"%(counter)s new Argument.\n"
+msgid_plural ""
+"\n"
+"%(counter)s new Arguments.\n"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/mails/news_mail.txt:9
+#, python-format
+msgid ""
+"\n"
+"%(counter)s new Discussion.\n"
+msgid_plural ""
+"\n"
+"%(counter)s new Discussions.\n"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/mails/news_mail.txt:14
+#, python-format
+msgid ""
+"\n"
+"%(counter)s new Voting.\n"
+msgid_plural ""
+"\n"
+"%(counter)s new Votings.\n"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/mails/news_mail.txt:21
+msgid "Here are a few recent discussions which may interest you:"
+msgstr ""
+
+#: templates/mails/verify_registration.txt:1
+msgid "Brabbl-Registration on"
+msgstr ""
+
+#: utils/language_utils.py:23
+msgid ""
+"Thank you for your registration!\n"
+"                You will receive an email with a confirmation link.\n"
+"                Once you click this, you can join the discussion."
+msgstr ""
+
+#: utils/language_utils.py:27
+msgid "sort by date"
+msgstr ""
+
+#: utils/language_utils.py:28
+msgid "sort by personal review"
+msgstr ""
+
+#: utils/language_utils.py:30
+msgid "sorted by own rating"
+msgstr ""
+
+#: utils/language_utils.py:32
+msgid "sort by average rating"
+msgstr ""
+
+#: utils/language_utils.py:34
+msgid "You must sign in to participate in the discussion"
+msgstr ""
+
+#: utils/language_utils.py:37
+msgid "The profile has been updated successfully"
+msgstr ""
+
+#: utils/language_utils.py:39
+msgid "Choose topic"
+msgstr ""
+
+#: utils/language_utils.py:40
+msgid "Profile"
+msgstr ""
+
+#: utils/language_utils.py:41
+msgid "Logout"
+msgstr ""
+
+#: utils/language_utils.py:42
+msgid "Register"
+msgstr ""
+
+#: utils/language_utils.py:43
+msgid "Login"
+msgstr ""
+
+#: utils/language_utils.py:44
+msgid "You have been logged out"
+msgstr ""
+
+#: utils/language_utils.py:45
+msgid "Come back soon!"
+msgstr ""
+
+#: utils/language_utils.py:46
+msgid "All discussions"
+msgstr ""
+
+#: utils/language_utils.py:48
+msgid "The argument has been changed"
+msgstr ""
+
+#: utils/language_utils.py:51
+msgid "Great! Your argument is online now"
+msgstr ""
+
+#: utils/language_utils.py:53
+msgid "Edit discussion"
+msgstr ""
+
+#: utils/language_utils.py:54
+msgid "Edit Discussion"
+msgstr ""
+
+#: utils/language_utils.py:55
+msgid "Create discussion"
+msgstr ""
+
+#: utils/language_utils.py:57
+msgid "An email was sent with instructions on how to reset the password"
+msgstr ""
+
+#: utils/language_utils.py:59
+msgid "Edit suggestion"
+msgstr ""
+
+#: utils/language_utils.py:60
+msgid "Report suggestion"
+msgstr ""
+
+#: utils/language_utils.py:61
+msgid "Add new suggestion"
+msgstr ""
+
+#: utils/language_utils.py:62
+msgid "Add new Discussion"
+msgstr ""
+
+#: utils/language_utils.py:63
+msgid "Add new Survey"
+msgstr ""
+
+#: utils/language_utils.py:64
+msgid "Update Discussion"
+msgstr ""
+
+#: utils/language_utils.py:65
+msgid "Add new pro-argument"
+msgstr ""
+
+#: utils/language_utils.py:66
+msgid "Add new contra-argument"
+msgstr ""
+
+#: utils/language_utils.py:67
+msgid "Edit argument"
+msgstr ""
+
+#: utils/language_utils.py:68
+msgid "Publish argument"
+msgstr ""
+
+#: utils/language_utils.py:69
+msgid "Publish Argument"
+msgstr ""
+
+#: utils/language_utils.py:70
+msgid "Edit survey"
+msgstr ""
+
+#: utils/language_utils.py:71
+msgid "Edit Survey"
+msgstr ""
+
+#: utils/language_utils.py:72
+msgid "Add new survey"
+msgstr ""
+
+#: utils/language_utils.py:73
+msgid "Survey"
+msgstr ""
+
+#: utils/language_utils.py:75
+msgid "Tags"
+msgstr ""
+
+#: utils/language_utils.py:76
+msgid "Settings"
+msgstr ""
+
+#: utils/language_utils.py:77
+msgid "Create a new account"
+msgstr ""
+
+#: utils/language_utils.py:78
+msgid "Forgot your password?"
+msgstr ""
+
+#: utils/language_utils.py:80
+msgid "Please drag a picture to the image area to change your profile picture"
+msgstr ""
+
+#: utils/language_utils.py:83
+msgid "Please drag a picture to the image area to change discussion picture"
+msgstr ""
+
+#: utils/language_utils.py:85
+msgid "Reset Password"
+msgstr ""
+
+#: utils/language_utils.py:86
+msgid "Update profile"
+msgstr ""
+
+#: utils/language_utils.py:87
+msgid "Already have an account?"
+msgstr ""
+
+#: utils/language_utils.py:88
+msgid "to"
+msgstr ""
+
+#: utils/language_utils.py:89
+msgid "from"
+msgstr ""
+
+#: utils/language_utils.py:90
+msgid "Edit"
+msgstr ""
+
+#: utils/language_utils.py:91
+msgid "Add new"
+msgstr ""
+
+#: utils/language_utils.py:92
+msgid "Cancel"
+msgstr ""
+
+#: utils/language_utils.py:93
+msgid "There was a server error"
+msgstr ""
+
+#: utils/language_utils.py:94
+msgid "The action could not be carried out"
+msgstr ""
+
+#: utils/language_utils.py:95
+msgid "Please provide a subject"
+msgstr ""
+
+#: utils/language_utils.py:97
+msgid "Please provide details for your argument"
+msgstr ""
+
+#: utils/language_utils.py:99
+msgid "Just arguments"
+msgstr ""
+
+#: utils/language_utils.py:100
+msgid "Just the Opiniometer"
+msgstr ""
+
+#: utils/language_utils.py:101
+msgid "Opiniometer plus Arguments"
+msgstr ""
+
+#: utils/language_utils.py:102
+msgid "Thesis statement or question"
+msgstr ""
+
+#: utils/language_utils.py:104
+msgid "Please provide a thesis statement or question"
+msgstr ""
+
+#: utils/language_utils.py:107
+msgid "The thesis statement / question must not exceed 160 characters"
+msgstr ""
+
+#: utils/language_utils.py:110
+msgid "Please select the type of discussion"
+msgstr ""
+
+#: utils/language_utils.py:113
+msgid "Please select the Opiniometer"
+msgstr ""
+
+#: utils/language_utils.py:116
+msgid "Please select the type of Opiniometer"
+msgstr ""
+
+#: utils/language_utils.py:119
+msgid "Allow suggestions by admins only"
+msgstr ""
+
+#: utils/language_utils.py:121
+msgid "Allow suggestions by users"
+msgstr ""
+
+#: utils/language_utils.py:123
+msgid "Please provide a (unique) username"
+msgstr ""
+
+#: utils/language_utils.py:125
+msgid "Please provide a password"
+msgstr ""
+
+#: utils/language_utils.py:126
+msgid "Please provide a fist name"
+msgstr ""
+
+#: utils/language_utils.py:127
+msgid "Please provide a last name"
+msgstr ""
+
+#: utils/language_utils.py:129
+msgid "Please provide an email address"
+msgstr ""
+
+#: utils/language_utils.py:132
+msgid "Please provide a valid email address"
+msgstr ""
+
+#: utils/language_utils.py:134
+msgid "No email notifications"
+msgstr ""
+
+#: utils/language_utils.py:135
+msgid "News e-mail (frequency)"
+msgstr ""
+
+#: utils/language_utils.py:136
+msgid "daily"
+msgstr ""
+
+#: utils/language_utils.py:137
+msgid "weekly"
+msgstr ""
+
+#: utils/language_utils.py:138
+msgid "User name"
+msgstr ""
+
+#: utils/language_utils.py:139
+msgid "First name"
+msgstr ""
+
+#: utils/language_utils.py:140
+msgid "Last name"
+msgstr ""
+
+#: utils/language_utils.py:141
+msgid "Email Address"
+msgstr ""
+
+#: utils/language_utils.py:142
+msgid "The passwords do not match"
+msgstr ""
+
+#: utils/language_utils.py:143
+msgid "Password"
+msgstr ""
+
+#: utils/language_utils.py:145
+msgid "Please enter a password again"
+msgstr ""
+
+#: utils/language_utils.py:147
+msgid "characters remaining"
+msgstr ""
+
+#: utils/language_utils.py:148
+msgid "Average opinion"
+msgstr ""
+
+#: utils/language_utils.py:149
+msgid "What do you think?"
+msgstr ""
+
+#: utils/language_utils.py:150
+msgid "Argument"
+msgstr ""
+
+#: utils/language_utils.py:153
+msgid "No suggestions yet"
+msgstr ""
+
+#: utils/language_utils.py:155
+msgid "Thanks for reporting! We will review that content shortly"
+msgstr ""
+
+#: utils/language_utils.py:157
+msgid "Thank you for your message"
+msgstr ""
+
+#: utils/language_utils.py:158
+msgid "We will consider the amount shortly"
+msgstr ""
+
+#: utils/language_utils.py:159
+msgid "Hide proposal"
+msgstr ""
+
+#: utils/language_utils.py:160
+msgid "Edit proposal"
+msgstr ""
+
+#: utils/language_utils.py:161
+msgid "Report proposal"
+msgstr ""
+
+#: utils/language_utils.py:162
+msgid "Add new argument"
+msgstr ""
+
+#: utils/language_utils.py:163
+msgid "No arguments yet"
+msgstr ""
+
+#: utils/language_utils.py:164
+msgid " Start the discussion now!"
+msgstr ""
+
+#: utils/language_utils.py:165
+msgid "Show more arguments"
+msgstr ""
+
+#: utils/language_utils.py:168
+msgid "Hide argument"
+msgstr ""
+
+#: utils/language_utils.py:169
+msgid "Show argument"
+msgstr ""
+
+#: utils/language_utils.py:170
+msgid "Delete argument"
+msgstr ""
+
+#: utils/language_utils.py:171
+msgid "Report argument"
+msgstr ""
+
+#: utils/language_utils.py:172
+msgid "Rate"
+msgstr ""
+
+#: utils/language_utils.py:174
+msgid "DISCUSSION"
+msgstr ""
+
+#: utils/language_utils.py:175
+msgid "inconsequential"
+msgstr ""
+
+#: utils/language_utils.py:176
+msgid "questionable"
+msgstr ""
+
+#: utils/language_utils.py:177
+msgid "justifiable"
+msgstr ""
+
+#: utils/language_utils.py:178
+msgid "relevant"
+msgstr ""
+
+#: utils/language_utils.py:179
+msgid "convincingly"
+msgstr ""
+
+#: utils/language_utils.py:180
+msgid "Contra"
+msgstr ""
+
+#: utils/language_utils.py:181
+msgid "Pro"
+msgstr ""
+
+#: utils/language_utils.py:182
+msgid "Votes"
+msgstr ""
+
+#: utils/language_utils.py:184
+msgid "Back"
+msgstr ""
+
+#: utils/language_utils.py:185
+msgid "cancel"
+msgstr ""
+
+#: utils/language_utils.py:186
+msgid "create"
+msgstr ""
+
+#: utils/language_utils.py:187
+msgid "change"
+msgstr ""
+
+#: utils/language_utils.py:188
+msgid "Opinion"
+msgstr ""
+
+#: utils/language_utils.py:189
+msgid "Subject"
+msgstr ""
+
+#: utils/language_utils.py:190
+msgid "Suggestion"
+msgstr ""
+
+#: utils/language_utils.py:191
+msgid "Please enter a suggestion"
+msgstr ""
+
+#: utils/language_utils.py:192
+msgid "by"
+msgstr ""
+
+#: utils/language_utils.py:193
+msgid "All"
+msgstr ""
+
+#: utils/language_utils.py:194
+msgid "Total"
+msgstr ""
+
+#: utils/language_utils.py:196
+msgid "Not Active"
+msgstr ""
+
+#: utils/language_utils.py:197
+msgid "Filter by status"
+msgstr ""
+
+#: utils/language_utils.py:198
+msgid "Completed"
+msgstr ""
+
+#: utils/language_utils.py:199
+msgid "Starts in"
+msgstr ""
+
+#: utils/language_utils.py:200
+msgid "Ends in"
+msgstr ""
+
+#: utils/language_utils.py:201
+msgid "Starts"
+msgstr ""
+
+#: utils/language_utils.py:202
+msgid "Finishes"
+msgstr ""
+
+#: utils/language_utils.py:203
+msgid "d"
+msgstr ""
+
+#: utils/language_utils.py:204
+msgid "h"
+msgstr ""
+
+#: utils/language_utils.py:205
+msgid "m"
+msgstr ""
+
+#: utils/language_utils.py:206
+msgid "s"
+msgstr ""
+
+#: utils/language_utils.py:207
+msgid "Start Time"
+msgstr ""
+
+#: utils/language_utils.py:208
+msgid "End Time"
+msgstr ""
+
+#: utils/language_utils.py:209
+msgid "Answer(s)"
+msgstr ""
+
+#: utils/language_utils.py:221
+msgid "Login with Facebook"
+msgstr ""
+
+#: utils/language_utils.py:222
+msgid "Login with Twitter"
+msgstr ""
+
+#: utils/language_utils.py:223
+msgid "Login with Google"
+msgstr ""
+
+#: utils/language_utils.py:224
+msgid "Sign up with"
+msgstr ""
+
+#: utils/language_utils.py:225
+msgid "Sign In"
+msgstr ""
+
+#: utils/language_utils.py:226
+msgid "or via mail"
+msgstr ""
+
+#: utils/language_utils.py:227
+msgid "Login to participate"
+msgstr ""
+
+#: utils/language_utils.py:228
+msgid "Year of Birth"
+msgstr ""
+
+#: utils/language_utils.py:229
+msgid "Please provide a years of birth"
+msgstr ""
+
+#: utils/language_utils.py:234
+msgid "Please provide a gender"
+msgstr ""
+
+#: utils/language_utils.py:236
+msgid "Please provide a postcode"
+msgstr ""
+
+#: utils/language_utils.py:238
+msgid "Please provide a country"
+msgstr ""
+
+#: utils/language_utils.py:240
+msgid "Please provide a city"
+msgstr ""
+
+#: utils/language_utils.py:242
+msgid "Please provide a organization"
+msgstr ""
+
+#: utils/language_utils.py:244
+msgid "Please provide a position"
+msgstr ""
+
+#: utils/language_utils.py:246
+msgid "Please provide a bundesland"
+msgstr ""
+
+#: utils/language_utils.py:247
+msgid "Edit List"
+msgstr ""
+
+#: utils/language_utils.py:248
+msgid "Discussion List"
+msgstr ""
+
+#: utils/language_utils.py:249
+msgid "Save List"
+msgstr ""
+
+#: utils/language_utils.py:251
+msgid "Show sum of tags"
+msgstr ""
+
+#: utils/language_utils.py:252
+msgid "Show intersection of tags"
+msgstr ""
+
+#: utils/language_utils.py:253
+msgid "List name"
+msgstr ""
+
+#: utils/language_utils.py:254
+msgid "Hide tag filter for Users"
+msgstr ""
+
+#: utils/language_utils.py:256
+msgid "Tag filter in the list view will not be shown to users"
+msgstr ""
+
+#: utils/language_utils.py:257
+msgid "Please provide a list name"
+msgstr ""
+
+#: utils/language_utils.py:258
+msgid "The list name must not exceed 160 characters"
+msgstr ""
+
+#: utils/language_utils.py:259
+msgid "Content of list"
+msgstr ""
+
+#: utils/language_utils.py:260
+msgid "Please select the content of list"
+msgstr ""
+
+#: utils/language_utils.py:261
+msgid "Please select the Wording schema"
+msgstr ""
+
+#: utils/language_utils.py:262
+msgid "You can enter maximum of 4 digits"
+msgstr ""
+
+#: utils/language_utils.py:263
+msgid "Add a tag"
+msgstr ""
+
+#: utils/language_utils.py:264
+msgid "Press enter to add a tag"
+msgstr ""
+
+#: utils/language_utils.py:265
+msgid "The discussion has not started yet"
+msgstr ""
+
+#: utils/language_utils.py:266
+msgid "Write Pro-Argument"
+msgstr ""
+
+#: utils/language_utils.py:267
+msgid "Write Contra-Argument"
+msgstr ""
+
+#: utils/language_utils.py:268
+msgid "Update Argument"
+msgstr ""
+
+#: utils/language_utils.py:270
+msgid "They were an email sent with instructions to reset the password"
+msgstr ""
+
+#: utils/language_utils.py:271
+msgid "Add media"
+msgstr ""
+
+#: utils/language_utils.py:272
+msgid "User list"
+msgstr ""
+
+#: utils/language_utils.py:274
+msgid "You can also upload an image or add a Youtube link"
+msgstr ""
+
+#: utils/language_utils.py:276
+msgid "Content removed"
+msgstr ""
+
+#: utils/language_utils.py:278
+msgid "This content was inappropriate and has been removed by our staff"
+msgstr ""
+
+#: utils/language_utils.py:281
+msgid ""
+"Please stick to our guidelines for good discussions and refrain from posts "
+"that are likely to be regarded as offensive or rude"
+msgstr ""
+
+#: utils/language_utils.py:283
+msgid "User can add replies to arguments"
+msgstr ""
+
+#: utils/mail.py:18
+msgid ""
+"Dear visitor of {{domain}}\n"
+"\n"
+"we have received your registration.\n"
+"\n"
+"Please confirm this manually by clicking on the following confirmation link:"
+msgstr ""
+
+#: utils/mail.py:23
+msgid ""
+"Hello {{ username }},\n"
+"\n"
+"there is news on {{domain}}:"
+msgstr ""
+
+#: utils/mail.py:26
+msgid ""
+"Dear Administrator,\n"
+"\n"
+"a contribution to the brabbl platform has been flagged"
+msgstr ""
+
+#: utils/mail.py:29
+msgid ""
+"Hello {{ username }},\n"
+"\n"
+"please click on this link to change your password:"
+msgstr ""
+
+#: utils/mail.py:34
+msgid ""
+"Your brabbl account on {{domain}} is not active still. Please activate it by "
+"clicking on the following link. Otherwise, your account and all your "
+"arguments and votings will be deleted tonight."
+msgstr ""
+
+#: utils/mail.py:83
+msgid "Your Brabbl team."
+msgstr ""
+
+#: utils/models.py:11
+msgid "Creation date"
+msgstr ""
+
+#: utils/models.py:13
+msgid "Modified date"
+msgstr ""
+
+#: utils/models.py:23
+msgid "Last activity"
+msgstr ""
+
+#: utils/serializers.py:101
+msgid "Picture could not be decoded."
+msgstr ""
+
+#: utils/serializers.py:109
+msgid "Please enter a valid image file."
+msgstr ""

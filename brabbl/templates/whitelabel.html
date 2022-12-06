@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <body>
+    brabbl - embedding test
+    <div id="brabbl-widget"></div>
+    <script>
+      (function() {
+       var brabbl = {
+          customerId: "123",
+          view: "list"
+       },
+       script = document.createElement('script'),
+       entry = document.getElementsByTagName('script')[0];
+       script.src = 'https://api.brabbl.com/embed/brabbl.js';
+       script.async = true;
+       entry.parentNode.insertBefore(script, entry);
+      })();
+    </script>
+  </body>
+</html>

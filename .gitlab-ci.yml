@@ -1,0 +1,30 @@
+before_script:
+  - export LC_ALL=en_US.UTF-8
+  - export ENV_PATH=$(pwd)/pyenv
+  - export PATH=$ENV_PATH/bin:$PATH
+  - export STANDARD_CACHE_DIR="${HOME}/.cache/pip"
+  - export WHEELHOUSE="${STANDARD_CACHE_DIR}/wheelhouse"
+  - export PIP_FIND_LINKS="file://${WHEELHOUSE}"
+  - export PIP_WHEEL_DIR="${WHEELHOUSE}"
+  - rm -rf $ENV_PATH
+  - /usr/local/bin/virtualenv $ENV_PATH -p /usr/local/bin/python3
+  - pip install -U setuptools
+  - pip install wheel
+  - pip install pip==8.1.1
+  - pip wheel -r requirements/base.txt
+  - pip install -r requirements/base.txt
+  - pip install -e .
+
+#test-api-docs:
+  #type: test
+  #script:
+    #- pip wheel -r requirements/tests_dredd.txt
+    #- pip install -r requirements/tests_dredd.txt
+    #- fab test_api
+
+test:
+  type: test
+  script:
+    - pip wheel -r requirements/tests_pytest.txt
+    - pip install -r requirements/tests_pytest.txt
+    - py.test --create-db --cache-clear brabbl

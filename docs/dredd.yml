@@ -1,0 +1,25 @@
+dry-run: null
+hookfiles: src/hooks/*.py
+language: python
+sandbox: false
+server: django-admin.py runserver 127.0.0.1:14567 --settings=brabbl.conf.tests_dredd
+server-wait: 5
+init: false
+custom: {}
+names: false
+only: []
+reporter: []
+output: []
+header: []
+sorted: false
+user: null
+inline-errors: false
+details: false
+method: []
+color: true
+level: info
+timestamp: false
+silent: false
+path: []
+blueprint: src/brabbl.apib
+endpoint: 'http://localhost:14567/api/v1/'

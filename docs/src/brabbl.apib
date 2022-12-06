@@ -1,0 +1,1090 @@
+FORMAT: 1A
+HOST: http://api.brabbl.com/v1
+
+# Brabbl
+
+
+# API Access
+Every customer receives its own API key. This key must be added to each Request using the `X-Brabbl-Token` Header, e.g.:
+
+        X-Brabbl-Token: 4cfad787
+
+
+# Group Account
+## Profile [/account/]
+The authentication is based on a `Access Token`.
+Clients should authenticate by passing their token key in the "Authorization"
+HTTP header, prepended with the string "Token ".  For example:
+
+        Authorization: Token <token>
+
+If not authenticated, a protected view returns code: `403` (Forbidden) or `401` (NotAuthenticated).
+
+Accounts attributes depend on customer settings. There are a lot of optional
+fields in settings can be added to account profile. Also all this files can be
+required.
+
++ Attributes (object)
+    + `id`: 2 (required, number)
+    + `customer`: 1 (required, number)
+    + `display_name`: hans.lustig (required, string)
+    + `permission` (required, array)
+    + `date_joined`: `2015-10-05T15:00:00+02:00` (required, string)
+    + `email`: hans.lustig@example.com (required, string)
+
+### Get user profile [GET]
+Return profile info of current user by the Token.
++ Request
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
++ Response 200 (application/json)
+    [
+      "id":2,
+      "customer":1,
+      "is_confirmed":true,
+      "newsmail_schedule":0,
+      "date_joined":"2017-03-28T12:54:12Z",
+      "image":{
+        "original":"http://image/path.png",
+        "small":"http://image/path16x16_q85_crop.png"
+      }
+      "username":"xahgmah",
+      "linked":[["twitter",1,"385295814"]],
+      "unlinked":["facebook","google-oauth2"],
+      "permissions":[
+        "change_user",
+        "change_argument",
+        "add_discussion",
+        "change_discussion",
+        "add_discussionlist",
+        "change_discussionlist",
+        "add_statement",
+        "change_statement",
+        "add_tag"
+        ],
+      "display_name": "peter.traurig"
+      "email": "peter.traurig@example.com",
+      ...
+    ]
+
++ Response 401
++ Response 404
+
+### Update user profile [PUT]
++ Request (application/json)
+    + Attributes (object)
+        + `email`: peter.traurig@example.com (required, string)
+        + `username`: peter.traurig (required, string)
+
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
++ Response 200 (application/json)
+    + Attributes (Profile)
+    + Body
+            {
+              "newsmail_schedule":1,
+              "image":"data:image/png;base64,iVBORw0KGgoAAAAN..."
+              "id":2,
+              "username":"xahgmah",
+              "email": "peter.traurig@example.com",
+              ...
+            }
+
+
++ Response 401
++ Response 404
+
+## Login [/account/login/]
+### Authenticate [POST]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+
+    + Attributes (object)
+        + `username`: peter.traurig (required, string)
+        + `password`: password (required, string)
+
++ Response 200 (application/json)
+    + Attributes (object)
+        + `token` (required, string)
+
+    + Body
+
+            {
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+            }
+
++ Response 401
++ Response 400
+
+## Logout [/account/logout]
+### Logout user [GET]
+Initiate user logout on the backend side
++ Request (application/json)
+    + Header
+        X-Brabbl-Token: 4cfad787
+        Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
++ Response 204
+
+## Register [/account/register/]
+### Register User [POST]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+
+    + Attributes (object)
+        + `username`: hans.lustig (required, string)
+        + `first_name`: Hans (required, string)
+        + `last_name`: Lustig (required, string)
+        + `email`: hans.lustig@example.com (required, string)
+        + `password`: hans4 (required, string)
+
++ Response 201 (application/json)
+    {
+      "username":"hans.lustig",
+      "first_name":"Hans",
+      "last_name":"Lustig",
+      "email":"hans.lustig@example.com",
+      "display_name":"hans.lustig"
+    }
+
++ Response 401
+
+
+## Reset Password [/account/reset/]
+Send recovery link to user's email.
+### Reset Password [POST]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+
+    + Attributes (object)
+        + `email`: hans.lustig@example.com (required, string)
+
++ Response 204
+
++ Response 400
++ Response 401
+
+## Update User List [/accounts/user-list-update/]
+Limited users update endpoint for Staff's Userlist view. Requires `change_user`
+permission.
+### Update users [POST]
++ Request (application/json)
+    + Header
+        X-Brabbl-Token: 4cfad787
+
+    + Attributes (object)
+        + `id`: 1 (required, number)
+        + `is_active`: true (required, boolean)
+        + `is_confirmed`: true (required, boolean)
+        + `group`: (number)
+
++ Response 200 (application/json)
+    {'status': 'OK'}
++ Response 400
++ Response 401
++ Response 403
+
+
+# Group Wording
+## Wording [/wordings/{id}/]
++ Parameters
+    + id: 2 (required, number) - ID of Wording
+
++ Attributes (object)
+    + `id`: 3 (required, number)
+    + `name`: default (required, string)
+    + `words` (required, array)
+        + name (required, string)
+        + value (required, string)
+    + `rating_1`: '1' (required, string)
+    + `rating_2`:'2' (required, string)
+    + `rating_3`:'3' (required, string)
+    + `rating_4`:'4' (required, string)
+    + `rating_5`:'5' (required, string)
+    + `list_header_contra`: '' (string)
+    + `list_header_pro`: '' (string)
+    + `header_contra`: '' (string)
+    + `header_pro`: '' (string)
+    + `button_short_new_contra`: '' (string)
+    + `button_short_new_pro`: '' (string)
+    + `button_new_contra`: '' (string)
+    + `button_new_pro`: '' (string)
+    + `survey_statement`: '' (string)
+    + `survey_statements`: '' (string)
+    + `survey_add_answer_button_top`: '' (string)
+    + `survey_add_answer_button_bottom`: '' (string)
+    + `reply_counter`: '' (string)
+    + `reply_counter_plural`: '' (string)
+    + `statement_header`: '' (string)
+    + `statement_list_header`:``
+
+
+### Get Wording [GET]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+
++ Response 200 (application/json)
+    + Attributes (Wording)
+
++ Response 401
+
+## Wordings [/wordings/]
+### List Wordings [GET]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+
++ Response 200 (application/json)
+    + Attributes (array[Wording])
+
++ Response 401
+
+
+## Notification wordings [/notification_wording/{id}/]
+List of attributes for customizing cusomer notifications and interface messages
+
+`notification_wording_messages` - messages for notifications on the top of page
+
+`markdown_wording_messages` - customizable (with html tags) messages for pages UI
++ Parameters
+    + id (required, number) - ID of Notification wording
+
++ Attributes (object)
+    + `id`: 3 (required, number)
+    + `name`: default (required, string)
+    + `notification_wording_messages` (required, array)
+        + name (required, string)
+        + value (required, string)
+    + `markdown_wording_messages` (required, array)
+        + name (required, string)
+        + value (required, string)
+
+### Retreive notification wording [GET]
+
+
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+
++ Response 200 (application/json)
+    + Body
+    {
+        "id":1,
+        "name":"Test"
+        "notification_wording_messages":[
+            {"key":"notification_registration","value":""},
+            {"key":"notification_logout","value":""},
+            {"key":"notification_signup_required","value":""},
+            {"key":"notification_report_posted","value":""},
+            {"key":"notification_message_posted","value":""},
+            {"key":"notification_message_updated","value":""},
+            {"key":"notification_profile_updated","value":""},
+            {"key":"notification_reset_password","value":""}
+        ],
+        "markdown_wording_messages":[
+            {"key":"sign_up_title","value":""},
+            {"key":"sign_up_text","value":""},
+            {"key":"login_title","value":""},
+            {"key":"login_text","value":""},
+            {"key":"welcome_title","value":""},
+            {"key":"welcome_text_social","value":""},
+            {"key":"welcome_text_email","value":""},
+            {"key":"barometer_start_sign","value":""},
+            {"key":"hidden_argument_title","value":""},
+            {"key":"hidden_argument_text","value":""}
+        ],
+    }
++ Response 401
++ Response 404
+
+# Group Tags
+## Tag [/tags/{id}/]
++ Parameters
+    + id: 2 (required, number) - ID of tag
+
++ Attributes (object)
+    + `id`: 2 (required, number)
+    + `name`: politics (required, string)
+
+
+## Tags [/tags/]
+### List Tags [GET]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+
++ Response 200 (application/json)
+    + Attributes (array[Tag])
+
++ Response 401
+
+### Create Tag [POST]
+Require `add_tag` permission
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+    + Attributes
+        + `name`: politics (required, string)
+
++ Response 201 (application/json)
+    + Attributes (Tag)
+
++ Response 401
+
+# Group Discussion List
+Properties of list of discussions (for widget with type `list`)
++ Attributes
+    + `id`: 2 (required, number)
+    + `name`: List title (required, string)
+    + `tag`: ["tag1","tag2"](required, array[Tag])
+    + `url`: http://0.0.0.0:3000/list (required, string)
+    + `search_by`: 1 (required, boolean)
+    + `hide_tag_filter_for_users`: false (required, boolean)
+## Create Discussion List [/discussion_list/]
+### Create Discussion list [POST]
+Requires `change_discussionlist` permission.
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+    + Body
+    {
+      "id":1,
+      "tags":["tag1","tag2"],
+      "url":"http://0.0.0.0:3000/list",
+      "name":"New name",
+      "search_by":1,
+      "hide_tag_filter_for_users":false
+    }
++ Response 201
+    {
+      "id":1,
+      "is_deletable":true,
+      "is_editable":true,
+      "tags":["tag1","tag2"],
+      "url":"http://0.0.0.0:3000/list",
+      "name":"New name",
+      "search_by":1,
+      "hide_tag_filter_for_users":false
+    }
+
++ Response 401
++ Response 403
+
+## Discussion List [/discussion_list/detail/?url={external_id}]
++ Parameters
+    + external_id: (required, string) - URL of current discussion list view
+
+### Get Discussion List [GET]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+
++ Response 200
+    {
+      "id":1,
+      "is_deletable":true,
+      "is_editable":true,
+      "tags":["tag1","tag2"],
+      "url":"http://0.0.0.0:3000/list",
+      "name":"New name",
+      "search_by":1,
+      "hide_tag_filter_for_users":false
+    }
++ Response 204
+
+### Update Discssion List [PATCH]
+Requires `change_discussionlist` permission.
+
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+    + Body
+    {
+      "id":1,
+      "tags":["tag1","tag2"],
+      "url":"http://0.0.0.0:3000/list",
+      "name":"New name",
+      "search_by":1,
+      "hide_tag_filter_for_users":false
+    }
++ Response 200
+    {
+      "id":1,
+      "is_deletable":true,
+      "is_editable":true,
+      "tags":["tag1","tag2"],
+      "url":"http://0.0.0.0:3000/list",
+      "name":"New name",
+      "search_by":1,
+      "hide_tag_filter_for_users":false
+    }
++ Response 401
++ Response 403
+
+# Group Discussions
+## Discussions [/discussions/]
+
+### Create Discussion [POST]
+
+Requires `add_discussion` permission.
+
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+    + Attributes (object)
+        + `external_id``: 30fc8b06 (required, string)
+        + `url`: http://example.com/1/ (required, string)
+        + `statement`: Dogs are evil (required, string)
+        + `wording`: 3 (required, number)
+        + `tags` (required, array)
+        + `multiple_statements_allowed`: false (required, boolean)
+        + `user_can_add_replies`: false (required, boolean)
+        + `has_barometer`: true (required, boolean)
+        + `has_arguments`: true (required, boolean)
+        + `image`: (string)
+        + `start_time`: (string)
+        + `end_time`: (string)
+
+    + Body
+    {
+      "end_time":"2017-03-30T21:00:00.000Z",
+      "external_id":"1",
+      "has_arguments":true,
+      "has_barometer":true,
+      "has_replies":true,
+      "image":"data":"image/png;base64,iVBORw0KGgoAAAANSUhEUgA...",
+      "multiple_statements_allowed":false,
+      "start_time":"2017-02-28T22:00:00.000Z",
+      "statement":"New discussion",
+      "tags":["foo", "bar"],
+      "url":"http://0.0.0.0:3000/#brabbl-widget",
+      "user_can_add_replies":"true",
+      "wording":"1"
+    }
+
++ Response 201 (application/json)
+    + Attributes (Discussion)
+
++ Response 400
++ Response 401
++ Response 403
+
+### List Discussions [GET]
+
+Return a list of discussions for the current customer.
+
+
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+
++ Response 200 (application/json)
+    + Attributes (array[object])
+        + `external_id`: 30fc8b06 (required, string)
+        + `statement`: Pigs are evil (required, string)
+        + `url`: http`://example.com/123 (required, string)
+        + `created_by`: hans.lustig (required, string)
+        + `created_at`: `2015-05-15T03:00:00+02:00` (required, string)
+        + `image_url`: http://example.com/article.jpg (required, string)
+        + `last_activity`: `2015-05-15T03:00:00+02:00` (required, string)
+        + `tags` (optional, array[string])
+        + `multiple_statements_allowed`: false (required, boolean)
+        + `user_can_add_replies`: false (required, boolean)
+        + `barometer` (optional, Barometer)
+        + `argument_count`: 1 (optional, number)
+        + `statement_count`: 0 (optional, number)
+        + `is_deletable`: true (required, boolean)
+        + `is_editable`: true (required, boolean)
+
++ Response 401
++ Response 403
+
+
+## Discussion [/discussions/detail/?external_id={external_id}]
+
+Discussions are referenced by an external ID. This should be an article ID or
+another type of unique string which allows discussions to be matched to a certain
+piece of content on the customer site. Discussions also reference a URL on the
+customer site - this is necessary to allow linking to the discussion from the list view.
+
+Discussions can be "simple", in which case this call only returns one `statement`
+and multiple `arguments`. If the discussion is "complex", also called a "reply list",
+it has multiple replies. In this case, the `arguments` list of each `statement` is empty.
+
+
++ Parameters
+    + external_id: 30fc8b06 (required, string) - ID of discussion defined by customer
+
++ Attributes (object)
+    + `external_id`: 30fc8b06 (required, string)
+    + `tags` (required, array[string])
+    + `url`: http://example.com/interesting-article (required, string)
+    + `statement`: Pigs are evil (required, string)
+    + `multiple_statements_allowed`: false (required, boolean)
+    + `user_can_add_replies`: false (required, boolean)
+    + `has_barometer`: true (required, boolean)
+    + `has_arguments`: true (required, boolean)
+    + `created_by`: hans.lustig (required, string)
+    + `created_at`: `2015-10-05T12:00:00+02:00` (required, string)
+    + `statements` (required, array[Statement])
+    + `is_deletable`: true (required, boolean)
+    + `is_editable`: true (required, boolean)
+
+### Get Discussion [GET]
+
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+
++ Response 200 (application/json)
+    + Attributes (Discussion)
+    + Body
+    {
+        "external_id": "1",
+        "created_by": "staff",
+        "created_at": "2017-03-30T13:30:16.819387Z",
+        "url": "http://0.0.0.0:3000/",
+        "tags": ["foo", "bar"],
+        "statement": "New discussion",
+        "statements": [
+            {
+                "id": 2,
+                "discussion_id": "1",
+                "created_by": "staff",
+                "statement": "",
+                "created_at": "2017-03-30T13:30:16.915349Z",
+                "arguments": [],
+                "barometer": {
+                    "count": 0,
+                    "rating": 0.0,
+                    "wording": [
+                        {"name": "3", "value": 3},
+                        {"name": "2", "value": 2},
+                        {"name": "1", "value": 1},
+                        {"name": "0", "value": 0},
+                        {"name": "-1", "value": -1},
+                        {"name": "-2", "value": -2},
+                        {"name": "-3", "value": -3}
+                    ]
+                },
+                "is_editable": true,
+                "image": {},
+                "is_deletable": true
+            }
+        ],
+        "multiple_statements_allowed": false,
+        "user_can_add_replies": false,
+        "has_barometer": true,
+        "has_arguments": true,
+        "has_replies": true,
+        "barometer_wording": 1,
+        "is_editable": true,
+        "is_deletable": true,
+        "start_time": "2017-02-28T22:00:00Z",
+        "image": {
+            "original": "http://path/to/image.png",
+            "small": "http://path/to/image16x16_q85_crop.png"
+        },
+        "image_url": "http://path/to/image.300x200_q85_crop.png",
+        "end_time": "2017-03-30T21:00:00Z"
+    }
+
+
++ Response 401
++ Response 404
+
+
+### Update Discussion [PATCH]
+
+Requires `change_discussion` permission.
+
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+    + Body
+    {
+        "barometer_wording": 1,
+        "created_at": "2017-03-30T13:30:16.819387Z",
+        "created_by": "staff",
+        "end_time": "2017-03-30T21:00:00.000Z",
+        "external_id": "1",
+        "has_arguments": true,
+        "has_barometer": true,
+        "has_replies": true,
+        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAD...",
+        "image_url": "http://path/to/image.300x200_q85_crop.png",
+        "is_deletable": true,
+        "is_editable": true,
+        "multiple_statements_allowed": false,
+        "start_time": "2017-02-28T22:00:00.000Z",
+        "statement": "New discussion",
+        'statements":[{"id": 2, "discussion_id": "1", "created_by": "xahgmah", "statement": "",…}],
+        "tags": ["foo", "bar"],
+        "url": "http://0.0.0.0:3000/",
+        "user_can_add_replies": "false",
+        "wording": "1"
+    }
++ Response 200 (application/json)
+    + Attributes (Discussion)
+    + Body
+    {
+    "external_id": "1",
+    "created_by": "xahgmah",
+    "created_at": "2017-03-30T13:30:16.819387Z",
+    "url": "http://0.0.0.0:3000/",
+    "tags": ["foo", "bar"],
+    "statement": "New discussion",
+    "statements": [
+        {
+            "id": 2,
+            "discussion_id": "1",
+            "created_by": "xahgmah",
+            "statement": "",
+            "created_at": "2017-03-30T13:30:16.915349Z",
+            "arguments": [],
+            "barometer": {
+                "count": 0,
+                "rating": 0.0,
+                "wording": [
+                    {"name": "3", "value": 3},
+                    {"name": "2", "value": 2},
+                    {"name": "1", "value": 1},
+                    {"name": "0", "value": 0},
+                    {"name": "-1", "value": -1},
+                    {"name": "-2", "value": -2},
+                    {"name": "-3", "value": -3}
+                ]
+            },
+            "is_editable": true,
+            "image": {},
+            "is_deletable": true
+        }
+    ],
+    "multiple_statements_allowed": false,
+    "user_can_add_replies": false,
+    "has_barometer": true,
+    "has_arguments": true,
+    "has_replies": true,
+    "barometer_wording": 1,
+    "is_editable": true,
+    "is_deletable": true,
+    "start_time": "2017-02-28T22:00:00Z", "image": {
+    "small": "http://parh/to/image.16x16_q85_crop.png",
+    "original": "http://path/to/image.png"},
+    "image_url": "http://path/to/image.png.300x200_q85_crop.png",
+    "end_time": "2017-03-30T21:00:00Z"
+}
+
++ Response 400
++ Response 401
++ Response 404
+
+### Hide Discussion [DELETE]
+
+Requires `change_discussion` permission.
+Discussion won't be deleted but marked as hidden.
+
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
++ Response 204
++ Response 401
++ Response 403
++ Response 404
+
+
+# Group Statements
+`Get Discussion` endpoint has already contained all own statements. That is why
+you don't need GET endpoint for Statements.
+
+## Statement [/statements/{id}/]
++ Parameters
+    + id: 5 (required, number) - ID of statement
+
++ Attributes (object)
+    + `id`: 1 (required, number)
+    + `statement`: Ducks are evil (required, string)
+    + `created_by`: hans.lustig (required, string)
+    + `created_at`: `2015-10-10T05:00:00+02:00` (required, string)
+    + `arguments` (required, array[Argument])
+    + `barometer` (optional, Barometer)
+    + `is_deletable`: true (required, boolean)
+    + `is_editable`: true (required, boolean)
+    + `image`: (optional, string) - Image and video are XOR required
+    + `video`: (optional, string) - One of them and only one must be filled
+    + `thumbnail`: (required, string) - Url to thumbnail of image or video for statement list view
+
+### Update Statement [PATCH]
+
+A statement can be modified by its owner only if there were no related responses.
+Admin can update statement with `change_statement` permission.
+
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+    + Attributes
+        + `title`: Dogs are awesome (optional, string)
+      + Body
+      {
+        "discussion_id": "1",
+        "statement": "New statment",
+        # Either
+        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnEAAAHg...",
+        #or
+        "video": "https://youtube.com/v/<video_id>",
+      }
++ Response 200 (application/json)
+    + Attributes (Statement)
+    + Body
+    {
+      "id":4,
+      "discussion_id":"1",
+      "created_by":"staff",
+      "statement":"New statement",
+      "created_at":"2017-03-30T14:48:10.510806Z",
+      "arguments":[],
+      "barometer":{
+        "count":0,
+        "rating":0.0,
+        "wording":[
+          {"name":"3","value":3},
+          {"name":"2","value":2},
+          {"name":"1","value":1},
+          {"name":"0","value":0},
+          {"name":"-1","value":-1},
+          {"name":"-2","value":-2},
+          {"name":"-3","value":-3}
+        ]
+      },
+      "is_editable":true,
+      "image":{
+        "original":"http://path/to/image.png",
+        "small":"http://path/to/image.16x16_q85_crop.png"
+      },
+      "video":"uGpWkWur5f8",
+      "thumbnail":"http://img.youtube.com/vi/uGpWkWur5f8/maxresdefault.jpg",
+      "is_deletable":true
+    }
++ Response 400
++ Response 401
++ Response 404
+
+### Hide Statement [DELETE]
+
+An statement can be deleted by its owner only if there were no related responses.
+Requires `change_statement` permission.
+This endpoint doesn't delete statment. Statement just marks as `hidden`.
+
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
++ Response 204
++ Response 401
++ Response 403
++ Response 404
+
+
+## Statements [/statements/]
+### Create Statement [POST]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+    + Attributes (object)
+        + `discussion_id`: 30fc8b06 (required, number)
+        + `statement`: Ducks are evil (required, string)
+
+    + Body
+    {
+      "discussion_id": "30fc8b06",
+      "statement": "Ducks are evil"
+      # Either
+      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAnEAAAHg...",
+      #or
+      "video": "https://youtube.com/v/<video_id>",
+    }
+
++ Response 201 (application/json)
+    + Body
+    {
+      "id":4,
+      "discussion_id":"1",
+      "created_by":"staff",
+      "statement":"New statement",
+      "created_at":"2017-03-30T14:48:10.510806Z",
+      "arguments":[],
+      "barometer":{
+        "count":0,
+        "rating":0.0,
+        "wording":[
+          {"name":"3","value":3},
+          {"name":"2","value":2},
+          {"name":"1","value":1},
+          {"name":"0","value":0},
+          {"name":"-1","value":-1},
+          {"name":"-2","value":-2},
+          {"name":"-3","value":-3}
+        ]
+      },
+      "is_editable":true,
+      "image":{
+        "original":"http://path/to/image.png",
+        "small":"http://path/to/image.16x16_q85_crop.png"
+      },
+      "video":"uGpWkWur5f8",
+      "thumbnail":"http://img.youtube.com/vi/uGpWkWur5f8/maxresdefault.jpg",
+      "is_deletable":true
+    }
+
++ Response 401
++ Response 400
++ Response 403
+
+
+## Barometer [/statements/{statement_id}/vote/]
++ Parameters
+    + statement_id: 127 (required, number) - ID of statement
+
++ Attributes (Rating)
+    + `wording` (required, array)
+        + key: 1 (required, string)
+        + value: ja (required, string)
+
+
+### Vote for statement [POST]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+    + Attributes (object)
+        + `rating`: 1 (required, number)
+
++ Response 201 (application/json)
+    + Attributes (Barometer)
+
++ Response 401
++ Response 400
++ Response 403
+
+
+# Group Arguments
+## Arguments [/arguments/]
+### Create Argument [POST]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+    + Attributes (object)
+        + `statement_id`: 1 (required, number) - statement that this attribute belongs to
+        + `title`: Cats are evil (required, string)
+        + `text`: Aenean ut eros et (required, string)
+        + `is_pro`: true (required, boolean)
+        + `reply_to`: 1 (optional, number) - id of argument this one is replying to
+
++ Response 201 (application/json)
+    + Attributes (Argument)
+    + Body
+    {
+      "reated_at":"2017-03-31T14:54:02.708605Z",,
+      "created_by":"username",
+      "id":3,
+      "is_deletable":true,
+      "is_editable":true,
+      "is_pro":false,
+      "rating":{"count": 0, "rating": 3},
+      "reply_count":0,
+      "reply_to":null,
+      "statement_id":3,
+      "status":1,
+      "text":"Argument body",
+      "title":"Argument title",
+    }
++ Response 401
++ Response 400
++ Response 403
+
+## Argument [/arguments/{id}/]
++ Parameters
+    + id: 156 (required, number) - ID of argument
+
++ Attributes(object)
+    + `id`: 123 (required, number)
+    + `statement_id`: 1 (required, number) - statement that this attribute belongs to
+    + `created_at`: `2015-05-05T05:55:00+02:00` (required, string)
+    + `created_by`: hans.lustig (required, string)
+    + `is_pro`: true (required, boolean)
+    + `title`: Birds are nice (required, string)
+    + `text`: It is my sincere belief that birds are quite agreeable. (required, string)
+    + `reply_count`: 5 (optional, number)
+    + `rating` (required, Rating)
+    + `is_deletable`: true (required, boolean)
+    + `is_editable`: true (required, boolean)
+
+
+### Get Argument [GET]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+
++ Response 200 (application/json)
+    + Attributes (Argument)
+
++ Response 401
++ Response 400
++ Response 403
+
+### Update Argument [PATCH]
+
+An argument can be modified by its owner only if there were no related responses.
+Requires `change_argument` permission.
+
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+    + Attributes
+        + `title`: Dogs are nice (optional, string)
+        + `text`:  Lorem ipson dolor emil panem ipsor. (optional, string)
+
++ Response 200 (application/json)
+    + Attributes (Argument)
+
++ Response 400
++ Response 401
++ Response 403
++ Response 404
+
+
+### Delete Argument [DELETE]
+
+An argument can be deleted by its owner only if there were no related responses.
+Requires `change_argument` permission.
+This endpoint doesn't delete argument. Argument just marks as `hidden`.
+
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
++ Response 204
++ Response 401
++ Response 403
++ Response 404
+
+
+## Replies [/arguments/{id}/replies/]
++ Parameters
+    + id: 5 (required, number) - ID of argument
+
+### Get Replies [GET]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+
++ Response 200 (application/json)
+    + Attributes (array[Argument])
+
++ Response 401
++ Response 400
++ Response 403
+
+
+## Rating [/arguments/{id}/rate/]
++ Parameters
+    + id: 5 (required, number) - ID of argument
+
++ Attributes (object)
+    + `count`: 122 (required, number)
+    + `rating`: 2.1 (required, number)
+    + `user_rating`: 1 (optional, number)
+
+### Rate Argument [POST]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+    + Attributes (object)
+        + `rating`: 1.5 (required, number)
+
++ Response 201 (application/json)
+    + Attributes (Rating)
+
++ Response 401
++ Response 400
++ Response 403
+
+
+# Group Flagging
+## Flag [/flag/]
+### Flag Argument [POST]
++ Request (application/json)
+    + Header
+
+            X-Brabbl-Token: 4cfad787
+            Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+    + Attributes (object)
+        + `type`: statement (required, enum)
+            + statement (string)
+            + argument (string)
+        + `id`: 5 (required, number)
+
++ Response 204
+
++ Response 401
++ Response 403

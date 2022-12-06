@@ -1,0 +1,3 @@
+-r base_tests.txt
+
+dredd-hooks==0.0.2
