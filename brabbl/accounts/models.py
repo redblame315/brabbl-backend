@@ -373,6 +373,8 @@ class User(AbstractUser):
 
     is_confirmed = models.BooleanField(default=True)
 
+    undiscussion_ids = models.CharField(max_length=128, blank=True, null=True, default='')
+
     objects = managers.UserManager()
 
     REQUIRED_FIELDS = ['email']

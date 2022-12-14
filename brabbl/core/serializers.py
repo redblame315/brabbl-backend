@@ -546,6 +546,15 @@ class DiscussionSerializer(BaseDiscussionSerializer, serializers.ModelSerializer
                 external_id = validated_data['external_id']
             del(validated_data['external_id'])
 
+        #TODO:add undiscussion_ids to the user [Blame 12.13]        
+        cur_users = User.objects.filter(customer=customer)
+        for cur_user in cur_users:
+            if cur_user.undiscussion_ids is '':
+                cur_user.undiscussion_ids += external_id
+            else: 
+                cur_user.undiscussion_ids += "," + external_id                 
+            cur_user.save()
+
         discussion = models.Discussion.objects.create(
             customer=customer,
             created_by=user,

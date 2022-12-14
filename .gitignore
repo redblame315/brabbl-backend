@@ -82,3 +82,8 @@ static_files/
 # ------------------------- dynamically created?
 assets/style.css
 deployment/assets
+
+#virtualenv
+Scripts
+share
+Lib

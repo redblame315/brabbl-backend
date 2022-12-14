@@ -129,6 +129,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'brabbl',
+        'USER': 'postgres',
+        'PASSWORD': 'kshpassword',
         'CONN_MAX_AGE': 300,
     },
 }
