@@ -14,7 +14,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
 from datetime import timedelta, datetime
 
-from brabbl.accounts.models import Customer, EmailGroup, EmailTemplate
+from brabbl.accounts.models import Customer, EmailGroup, EmailTemplate, User
 from django.contrib.auth import get_user_model
 from brabbl.utils.serializers import MultipleSerializersViewMixin
 from brabbl.utils.language_utils import frontend_interface_messages
@@ -101,12 +101,24 @@ class DiscussionViewSet(MultipleSerializersViewMixin,
         request parameter.
         """
         queryset = self.filter_queryset(self.get_queryset())
-
+        external_id=self.request.GET.get('external_id')
         obj = get_object_or_404(
-            queryset, external_id=self.request.GET.get('external_id'))
+            queryset, external_id=external_id)
 
         # May raise a permission denied
         self.check_object_permissions(self.request, obj)
+
+        if(self.request.user.is_anonymous is not True):        
+            user = User.objects.get(pk=self.request.user.id)
+            undiscussion_ids = user.undiscussion_ids
+            split_ids = undiscussion_ids.split(",")
+            user.undiscussion_ids = ''
+            for split_id in split_ids:
+                if split_id != external_id:
+                    user.undiscussion_ids += split_id + ','
+
+            user.undiscussion_ids = user.undiscussion_ids[:-1]            
+            user.save()
 
         return obj
 
