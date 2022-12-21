@@ -100,6 +100,7 @@ class DiscussionViewSet(MultipleSerializersViewMixin,
         Gets the discussion by the external id passed in through the `external_id`
         request parameter.
         """
+        print(self.action)
         queryset = self.filter_queryset(self.get_queryset())
         external_id=self.request.GET.get('external_id')
         obj = get_object_or_404(
@@ -109,18 +110,25 @@ class DiscussionViewSet(MultipleSerializersViewMixin,
         self.check_object_permissions(self.request, obj)
 
         if(self.request.user.is_anonymous is not True):        
-            user = User.objects.get(pk=self.request.user.id)
-            undiscussion_ids = user.undiscussion_ids
-            split_ids = undiscussion_ids.split(",")
-            user.undiscussion_ids = ''
-            for split_id in split_ids:
-                if split_id != external_id:
-                    user.undiscussion_ids += split_id + ','
-
-            user.undiscussion_ids = user.undiscussion_ids[:-1]            
-            user.save()
-
+            if self.action == 'destroy':
+                users = User.objects.filter(customer_id=self.request.user.customer_id)
+                print(users)
+                for user in users:
+                    self.refresh_undiscussion_ids(user, external_id)
+            else:
+                user = User.objects.get(pk=self.request.user.id)
+                self.refresh_undiscussion_ids(user, external_id)
         return obj
+
+    def refresh_undiscussion_ids(self, user, external_id):
+        undiscussion_ids = user.undiscussion_ids
+        split_ids = undiscussion_ids.split(",")
+        user.undiscussion_ids = ''
+        for split_id in split_ids:
+            if split_id != external_id:
+                user.undiscussion_ids += split_id + ','
+        user.undiscussion_ids = user.undiscussion_ids[:-1]            
+        user.save()
 
     def get_queryset(self):
         if hasattr(self.request, 'user'):
