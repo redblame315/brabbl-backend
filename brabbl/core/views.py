@@ -12,6 +12,8 @@ from django.views.generic import View
 from django.shortcuts import get_object_or_404, redirect
 from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
+from django.core.mail import send_mail
+from django.conf import settings
 from datetime import timedelta, datetime
 
 from brabbl.accounts.models import Customer, EmailGroup, EmailTemplate, User
@@ -85,6 +87,24 @@ class DiscussionListViewSet(mixins.RetrieveModelMixin, mixins.CreateModelMixin, 
         serializer = self.get_serializer(instance)
         return Response(serializer.data)
 
+class NewsNotificationViewSet(viewsets.GenericViewSet):
+    def list(self, request):
+        # users = User.objects.all()
+        # for user in users:
+        #     send_mail("New Discussions", user.undiscussion_ids, settings.DEFAULT_FROM_EMAIL, [user.email])
+        send_mail("test message", "Thank you for your help", settings.DEFAULT_FROM_EMAIL, ['redblame315@gmail.com'])
+        return Response(
+            {"Send mail successfully"},
+            status=status.HTTP_200_OK,
+        )
+
+
+    def create(self, request):
+        print("NewsNotification__create")
+        return Response(
+            {},
+            status=status.HTTP_200_OK,
+        )
 
 class DiscussionViewSet(MultipleSerializersViewMixin,
                         viewsets.ModelViewSet):
@@ -100,7 +120,6 @@ class DiscussionViewSet(MultipleSerializersViewMixin,
         Gets the discussion by the external id passed in through the `external_id`
         request parameter.
         """
-        print(self.action)
         queryset = self.filter_queryset(self.get_queryset())
         external_id=self.request.GET.get('external_id')
         obj = get_object_or_404(
@@ -112,7 +131,6 @@ class DiscussionViewSet(MultipleSerializersViewMixin,
         if(self.request.user.is_anonymous is not True):        
             if self.action == 'destroy':
                 users = User.objects.filter(customer_id=self.request.user.customer_id)
-                print(users)
                 for user in users:
                     self.refresh_undiscussion_ids(user, external_id)
             else:

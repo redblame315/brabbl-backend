@@ -45,7 +45,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'brabbl.accounts.middleware.CustomerMiddleware',
+    # 'brabbl.accounts.middleware.CustomerMiddleware',
     'brabbl.accounts.middleware.AdminLocaleURLMiddleware',
     'brabbl.accounts.middleware.SocialAuthExceptionMiddleware',
 ]
@@ -154,7 +154,7 @@ LOGIN_URL = '/api/v1/account/login/'
 
 # ---- brabbl-specific settings ------
 SESSION_COOKIE_SECURE = False
-DEFAULT_FROM_EMAIL = 'support@brabbl.com'
+# DEFAULT_FROM_EMAIL = 'support@brabbl.com'
 DEFAULT_USER_RATING = 3
 
 # users need to confirm their email after this amount of days

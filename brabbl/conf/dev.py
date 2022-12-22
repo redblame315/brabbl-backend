@@ -5,7 +5,16 @@ DEBUG = True
 SITE_DOMAIN = 'localhost:8000'
 ALLOWED_HOSTS = ['*']
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "by1990315@gmail.com"
+EMAIL_HOST_PASSWORD = "dqiqanacwwmblhph"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'media')
 
 STATICFILES_DIRS += (

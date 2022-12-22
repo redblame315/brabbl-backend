@@ -22,6 +22,8 @@ from brabbl.accounts.models import Customer
 class CustomerMiddleware(MiddlewareMixin):
 
     def process_request(self, request):
+        host = request.META.get('HTTP_HOST', '')
+        print(host)
         if '/auth/disconnect/' in request.path or '/auth/login/' in request.path:
             try:
                 user = Token.objects.get(
@@ -33,6 +35,7 @@ class CustomerMiddleware(MiddlewareMixin):
                 user.backend = 'django.contrib.auth.backends.ModelBackend'
                 login(request, user)
 
+        
         if '/api/' not in request.path:
             return None
 

@@ -11,6 +11,7 @@ router.register(r'notification_wording',
                 basename='notification_wording')
 router.register(r'discussion_list', views.DiscussionListViewSet, basename='discussion_list')
 router.register(r'discussions', views.DiscussionViewSet, basename='discussion')
+router.register(r'news', views.NewsNotificationViewSet, basename='news')
 router.register(r'statements', views.StatementViewSet, basename='statement')
 router.register(r'arguments', views.ArgumentViewSet, basename='argument')
 router.register(r'flag', views.FlagAPIView, basename='flag')
