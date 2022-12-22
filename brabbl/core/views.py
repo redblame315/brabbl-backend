@@ -105,7 +105,7 @@ class NewsNotificationViewSet(viewsets.GenericViewSet):
                 html_content += '<h1>' + discussion.statement + '</h1>'
                 if(discussion.description is not None):
                     html_content += '<b>' + discussion.description + '</b>'
-                html_content += '<p>' + discussion.created_at + '</p>'
+                # html_content += '<p>' + discussion.created_at + '</p>'
             
             msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
             msg.attach_alternative(html_content, "text/html")
