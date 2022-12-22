@@ -12,7 +12,7 @@ from django.views.generic import View
 from django.shortcuts import get_object_or_404, redirect
 from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMultiAlternatives
 from django.conf import settings
 from datetime import timedelta, datetime
 
@@ -21,6 +21,7 @@ from django.contrib.auth import get_user_model
 from brabbl.utils.serializers import MultipleSerializersViewMixin
 from brabbl.utils.language_utils import frontend_interface_messages
 from brabbl.utils.string import duplicate_name
+from brabbl.core.models import Discussion
 
 from . import serializers, models, permissions
 
@@ -89,10 +90,28 @@ class DiscussionListViewSet(mixins.RetrieveModelMixin, mixins.CreateModelMixin, 
 
 class NewsNotificationViewSet(viewsets.GenericViewSet):
     def list(self, request):
-        # users = User.objects.all()
-        # for user in users:
-        #     send_mail("New Discussions", user.undiscussion_ids, settings.DEFAULT_FROM_EMAIL, [user.email])
-        send_mail("test message", "Thank you for your help", settings.DEFAULT_FROM_EMAIL, ['redblame315@gmail.com'])
+        users = User.objects.all()
+        for user in users:
+            subject, from_email, to = "New Disussions", settings.DEFAULT_FROM_EMAIL, user.email
+            text_content = 'Here you can read new discussion list.'
+            html_content = '<h>New Discussions</h>'
+
+            if(user.undiscussion_ids == ''):
+                continue
+            
+            undiscussion_list = user.undiscussion_ids.split(",")
+            for undiscussion in undiscussion_list:
+                discussion = Discussion.objects.get(external_id=undiscussion)
+                html_content += '<h1>' + discussion.statement + '</h1>'
+                html_content += '<b>' + discussion.description + '</b>'
+                html_content += '<p>' + discussion.create_at + '</p>'
+            
+            msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+            msg.attach_alternative(html_content, "text/html")
+            msg.send()
+
+            # send_mail("New Discussions", user.undiscussion_ids, settings.DEFAULT_FROM_EMAIL, [user.email])
+        
         return Response(
             {"Send mail successfully"},
             status=status.HTTP_200_OK,
