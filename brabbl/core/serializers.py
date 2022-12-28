@@ -218,11 +218,23 @@ class ArgumentSerializer(serializers.ModelSerializer):
             raise exceptions.PermissionDenied(
                 _("Replies are not allowed in this discussion."))
 
-        return models.Argument.objects.create(
+        argument = models.Argument.objects.create(
             statement=statement,
             created_by=user,
             **validated_data
         )
+
+        # TODO: add news argument [Blame]
+        customer_users = User.objects.filter(customer=customer)
+        for customer_user in customer_users:
+            if customer_user.id != user.id:
+                models.News.objects.create(
+                    user=customer_user,
+                    discussion=statement.discussion,
+                    statement=statement,
+                    argument=argument)
+
+        return argument
 
 
 class UpdateArgumentSerializer(serializers.ModelSerializer):
@@ -351,6 +363,16 @@ class StatementSerializer(NonNullSerializerMixin,
             created_by=user,
             **validated_data
         )
+
+        print("statement create")
+        #TODO: add news statement [Blame 12/28]
+        customer_users = User.objects.filter(customer=customer)
+        for customer_user in customer_users:
+            if customer_user.id != user.id:
+                models.News.objects.create(
+                    user=customer_user,
+                    discussion=discussion,
+                    statement=statement)
 
         # add pdfs
         if pdfs:
@@ -547,13 +569,13 @@ class DiscussionSerializer(BaseDiscussionSerializer, serializers.ModelSerializer
             del(validated_data['external_id'])
 
         #TODO:add undiscussion_ids to the user [Blame 12.13]        
-        cur_users = User.objects.filter(customer=customer)
-        for cur_user in cur_users:
-            if cur_user.undiscussion_ids is '':
-                cur_user.undiscussion_ids += external_id
-            else: 
-                cur_user.undiscussion_ids += "," + external_id                 
-            cur_user.save()
+        # cur_users = User.objects.filter(customer=customer)
+        # for cur_user in cur_users:
+        #     if cur_user.undiscussion_ids is '':
+        #         cur_user.undiscussion_ids += external_id
+        #     else: 
+        #         cur_user.undiscussion_ids += "," + external_id                 
+        #     cur_user.save()        
 
         discussion = models.Discussion.objects.create(
             customer=customer,
@@ -561,6 +583,15 @@ class DiscussionSerializer(BaseDiscussionSerializer, serializers.ModelSerializer
             external_id=external_id,
             **validated_data
         )
+
+        #TODO: add news discussion [Blame 12/28]
+        customer_users = User.objects.filter(customer=customer)
+        for customer_user in customer_users:
+            if customer_user.id != user.id:
+                models.News.objects.create(
+                    user=customer_user,
+                    discussion=discussion
+                )
 
         # add tags
         for tag in tags:

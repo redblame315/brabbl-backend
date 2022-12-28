@@ -162,7 +162,6 @@ class WordingValue(models.Model):
     def __str__(self):
         return self.name
 
-
 class Discussion(LastActivityMixin,
                  TimestampedModelMixin,
                  models.Model):
@@ -253,6 +252,12 @@ class Discussion(LastActivityMixin,
         statements = self.statements.all()
         for statement in statements:
             statement.delete()
+
+        #TODO: delete related news [Blame]
+        news_discusssions = self.news_discussions.all()
+        for news_discussion in news_discusssions:
+            news_discussion.delete()
+
         super().delete(*args, **kwargs)
 
 
@@ -340,6 +345,13 @@ class Statement(LastActivityMixin,
         pdfs = self.statement_associated_files.all()
         for pdf in pdfs:
             pdf.delete()
+
+        print("statement delete")
+        #TODO: delete related news [Blame]
+        news_statements = self.news_statements.all()
+        for news_statement in news_statements:
+            news_statement.delete()
+
         super().delete(*args, **kwargs)
 
 
@@ -445,6 +457,13 @@ class Argument(LastActivityMixin,
     def discussion(self):
         return self.statement.discussion
 
+    def delete(self, *args, **kwargs):    
+        #TODO: delete related news [Blame]    
+        news_arguments = self.news_arguments.all()
+        for news_argument in news_arguments:
+            news_argument.delete()
+            
+        super().delete(*args, **kwargs)
 
 class Rating(TimestampedModelMixin, models.Model):
     argument = models.ForeignKey(
@@ -465,3 +484,13 @@ class Flag(TimestampedModelMixin, models.Model):
 
     class Meta:
         unique_together = ('content_type', 'object_id', 'user')
+
+class News(models.Model):
+    user = models.ForeignKey(User, related_name='news_users', on_delete=models.CASCADE)
+    discussion = models.ForeignKey(Discussion, related_name='news_discussions', on_delete=models.CASCADE, null=True)
+    statement = models.ForeignKey(Statement, related_name='news_statements', on_delete=models.CASCADE, null=True)
+    argument = models.ForeignKey(Argument, related_name='news_arguments', on_delete=models.CASCADE, null=True)
+    vote = models.PositiveIntegerField(default=0, null=False)
+
+    class Meta:
+        unique_together = ('user', 'discussion', 'statement', 'argument')

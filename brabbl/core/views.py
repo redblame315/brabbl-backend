@@ -21,7 +21,7 @@ from django.contrib.auth import get_user_model
 from brabbl.utils.serializers import MultipleSerializersViewMixin
 from brabbl.utils.language_utils import frontend_interface_messages
 from brabbl.utils.string import duplicate_name
-from brabbl.core.models import Discussion
+from brabbl.core.models import Discussion, News
 
 from . import serializers, models, permissions
 
@@ -148,14 +148,13 @@ class DiscussionViewSet(MultipleSerializersViewMixin,
         # May raise a permission denied
         self.check_object_permissions(self.request, obj)
 
-        if(self.request.user.is_anonymous is not True):        
-            if self.action == 'destroy':
-                users = User.objects.filter(customer_id=self.request.user.customer_id)
-                for user in users:
-                    self.refresh_undiscussion_ids(user, external_id)
-            else:
-                user = User.objects.get(pk=self.request.user.id)
-                self.refresh_undiscussion_ids(user, external_id)
+        if(self.request.user.is_anonymous is not True):                                           
+            user = User.objects.get(pk=self.request.user.id)
+            discussion = Discussion.objects.get(external_id=external_id)
+            news = News.objects.filter(user=user,discussion=discussion)
+            if(news.count() > 0):
+                news.delete()
+            #self.refresh_undiscussion_ids(user, external_id)
         return obj
 
     def refresh_undiscussion_ids(self, user, external_id):
@@ -310,6 +309,16 @@ class StatementViewSet(MultipleSerializersViewMixin,
                 user=user,
                 value=serializer.validated_data['rating']
             )
+
+            #TODO: add news vote [Blame 12/28]
+            customer_users = User.objects.filter(customer=user.customer)
+            for customer_user in customer_users:
+                if customer_user.id != user.id:
+                    models.News.objects.create(
+                        user=customer_user,
+                        discussion=statement.discussion,
+                        statement=statement,
+                        vote=1)
         else:
             vote.value = serializer.validated_data['rating']
             vote.save()

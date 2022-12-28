@@ -45,7 +45,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'brabbl.accounts.middleware.CustomerMiddleware',
+    'brabbl.accounts.middleware.CustomerMiddleware',
     'brabbl.accounts.middleware.AdminLocaleURLMiddleware',
     'brabbl.accounts.middleware.SocialAuthExceptionMiddleware',
 ]
