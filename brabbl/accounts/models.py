@@ -449,21 +449,23 @@ class User(AbstractUser):
         from brabbl.utils.news import get_news_info
         from django.core.mail import send_mail, EmailMultiAlternatives
         from django.conf import settings
-        
+
         html_data = ""
         news_data = get_news_info(self)
-        for attr,value in news_data.__dict__.items():
+        print(news_data)
+        for attr,value in news_data.items():
+            print(attr)
             discussion = Discussion.objects.get(pk=attr)
             html_data += "<h3>" +  discussion.statement + "</h3>"
-            html_data += "<a href='" + discussion.source_url + "'/>"
+            html_data += "<a href='" + str(discussion.source_url) + "'/>"
             html_news_data = ""
             statement_count = argument_count = vote_count = 0
 
-            for attr1, value1 in value:
+            for attr1, value1 in value.items():
                 if(attr1 == "new"):
                     html_news_data += "New Discussion, "
                 else: 
-                    for attr2, value2 in value1:
+                    for attr2, value2 in value1.items():
                         if attr2 == "new":
                             statement_count += 1
                         elif attr2 == "argument":
@@ -472,19 +474,21 @@ class User(AbstractUser):
                             vote_count += value2
 
             if(statement_count > 0):
-                html_news_data += "New " + statement_count + " Statements, "
+                html_news_data += "New " + str(statement_count) + " Statements, "
             if(argument_count > 0):
-                html_news_data += "New " + argument_count + " Arguments, "
+                html_news_data += "New " + str(argument_count) + " Arguments, "
             if(vote_count > 0):
-                html_news_data += "New " + vote_count + " Votes, "
-            html_news_data = html_news_data[0,-2]
+                html_news_data += "New " + str(vote_count) + " Votes, "
+            html_news_data = html_news_data[0:-2]
             html_data += "<p>" + html_news_data + "</p>"
         
-        subject, from_email, to = "New Disussions", settings.DEFAULT_FROM_EMAIL, self.email
-        text_content = 'Here you can read new discussion list.'
-        msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
-        msg.attach_alternative(html_data, "text/html")
-        msg.send()
+        print("html_data: " + html_data)
+        if(html_data != ""):
+            subject, from_email, to = "New Disussions", settings.DEFAULT_FROM_EMAIL, self.email
+            text_content = 'Here you can read new discussion list.'
+            msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+            msg.attach_alternative(html_data, "text/html")
+            msg.send()
 
     def send_newsmail(self, force=False):
         from brabbl.core.models import Argument, Statement, Discussion
