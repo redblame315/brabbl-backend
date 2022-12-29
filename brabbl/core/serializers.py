@@ -439,7 +439,7 @@ class ListDiscussionSerializer(NonNullSerializerMixin,
 
     class Meta:
         model = models.Discussion
-        fields = ('external_id', 'url', 'description', 'created_by', 'created_at', 'image',
+        fields = ('id', 'external_id', 'url', 'description', 'created_by', 'created_at', 'image',
                   'last_activity', 'tags', 'multiple_statements_allowed', 'statement',
                   'has_barometer', 'has_arguments', 'has_replies', 'discussion_wording',
                   'user_can_add_replies', 'argument_count', 'statement_count',
@@ -481,7 +481,7 @@ class DiscussionSerializer(BaseDiscussionSerializer, serializers.ModelSerializer
 
     class Meta:
         model = models.Discussion
-        fields = ('external_id', 'created_by', 'created_at',
+        fields = ('id', 'external_id', 'created_by', 'created_at',
                   'url', 'description', 'tags',
                   'statement', 'statements', 'wording',
                   'multiple_statements_allowed', 'user_can_add_replies',
@@ -489,7 +489,7 @@ class DiscussionSerializer(BaseDiscussionSerializer, serializers.ModelSerializer
                   'is_editable', 'is_deletable', 'start_time', 'image',
                   'end_time', 'pdfs', 'author', 'is_private', 'users', 'discussion_users',
                   'barometer_behavior', 'copyright_info')
-        read_only_fields = ('created_by', 'statements', 'pdfs', 'author', 'discussion_users')
+        read_only_fields = ('id', 'created_by', 'statements', 'pdfs', 'author', 'discussion_users')
 
     def get_fields(self, *args, **kwargs):
         fields = super().get_fields(*args, **kwargs)
@@ -567,15 +567,6 @@ class DiscussionSerializer(BaseDiscussionSerializer, serializers.ModelSerializer
             if validated_data['external_id']:
                 external_id = validated_data['external_id']
             del(validated_data['external_id'])
-
-        #TODO:add undiscussion_ids to the user [Blame 12.13]        
-        # cur_users = User.objects.filter(customer=customer)
-        # for cur_user in cur_users:
-        #     if cur_user.undiscussion_ids is '':
-        #         cur_user.undiscussion_ids += external_id
-        #     else: 
-        #         cur_user.undiscussion_ids += "," + external_id                 
-        #     cur_user.save()        
 
         discussion = models.Discussion.objects.create(
             customer=customer,

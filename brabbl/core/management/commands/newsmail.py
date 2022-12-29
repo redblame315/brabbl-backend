@@ -7,5 +7,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         for user in User.objects.filter(is_active=True):
-            if user.newsmail_schedule in [User.DAILY, User.WEEKLY]:
-                user.send_newsmail()
+            user.send_newsmail() 
+        # for user in User.objects.filter(is_active=True):
+        #     if user.newsmail_schedule in [User.DAILY, User.WEEKLY]:
+        #         user.send_newsmail()
+

@@ -6,13 +6,16 @@ from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
+from rest_framework.renderers import JSONRenderer
 from rest_framework import generics, views
+import json;
 
 from django.views.generic import View
 from django.shortcuts import get_object_or_404, redirect
 from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
 from django.core.mail import send_mail, EmailMultiAlternatives
+from django.core import serializers
 from django.conf import settings
 from datetime import timedelta, datetime
 
@@ -21,6 +24,7 @@ from django.contrib.auth import get_user_model
 from brabbl.utils.serializers import MultipleSerializersViewMixin
 from brabbl.utils.language_utils import frontend_interface_messages
 from brabbl.utils.string import duplicate_name
+from brabbl.utils.news import get_news_info
 from brabbl.core.models import Discussion, News
 
 from . import serializers, models, permissions
@@ -89,7 +93,7 @@ class DiscussionListViewSet(mixins.RetrieveModelMixin, mixins.CreateModelMixin, 
         return Response(serializer.data)
 
 class NewsNotificationViewSet(viewsets.GenericViewSet):
-    def list(self, request):
+    def send_message(self, request):
         users = User.objects.all()
         for user in users:
             subject, from_email, to = "New Disussions", settings.DEFAULT_FROM_EMAIL, user.email
@@ -111,20 +115,19 @@ class NewsNotificationViewSet(viewsets.GenericViewSet):
             msg.attach_alternative(html_content, "text/html")
             msg.send()
 
-            # send_mail("New Discussions", user.undiscussion_ids, settings.DEFAULT_FROM_EMAIL, [user.email])
         
         return Response(
             {"Send mail successfully"},
             status=status.HTTP_200_OK,
         )
 
+    def list(self,request):
+        if(request.user.is_anonymous is True):
+            return Response({})
 
-    def create(self, request):
-        print("NewsNotification__create")
-        return Response(
-            {},
-            status=status.HTTP_200_OK,
-        )
+        news_data = get_news_info(request.user)
+        
+        return Response(news_data)
 
 class DiscussionViewSet(MultipleSerializersViewMixin,
                         viewsets.ModelViewSet):
