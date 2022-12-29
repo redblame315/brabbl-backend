@@ -457,7 +457,7 @@ class User(AbstractUser):
             print(attr)
             discussion = Discussion.objects.get(pk=attr)
             html_data += "<h3>" +  discussion.statement + "</h3>"
-            html_data += "<a href='" + str(discussion.source_url) + "'><<<<<<<<<Go to Brabbl Site>>>>>>>" + "</a>"
+            html_data += "<a href='" + str(discussion.source_url) + "'>--------------Go to Brabbl Site---------------" + "</a>"
             html_news_data = ""
             statement_count = argument_count = vote_count = 0
 
@@ -481,7 +481,7 @@ class User(AbstractUser):
                 html_news_data += "New " + str(vote_count) + " Votes, "
             html_news_data = html_news_data[0:-2]
             html_data += "<p>" + html_news_data + "</p>"
-            html_data += "------------------------------------------------------<br>"
+            html_data += "------------------------------------------------------<br><br>"
         
         print("html_data: " + html_data)
         if(html_data != ""):
