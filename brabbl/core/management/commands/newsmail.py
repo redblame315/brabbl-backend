@@ -6,6 +6,7 @@ class Command(BaseCommand):
     help = 'Sends the newsletter'
 
     def handle(self, *args, **options):
+        print("This is newsmail.py")
         for user in User.objects.filter(is_active=True):
             user.send_newsmail() 
         # for user in User.objects.filter(is_active=True):
