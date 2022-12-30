@@ -453,18 +453,19 @@ class User(AbstractUser):
         html_data = ""
         news_data = get_news_info(self)
         print(news_data)
-        for attr,value in news_data.items():
+        for attr, value in news_data.items():
             print(attr)
             discussion = Discussion.objects.get(pk=attr)
-            html_data += "<h3>" +  discussion.statement + "</h3>"
-            html_data += "<a href='" + str(discussion.source_url) + "'>--------------Go to Brabbl Site---------------" + "</a>"
+            html_data += "<h3>" + discussion.statement + "</h3>"
+            html_data += "<a href='" + str(discussion.source_url)
+            html_data += "'>--------------Go to Brabbl Site---------------" + "</a>"
             html_news_data = ""
             statement_count = argument_count = vote_count = 0
 
             for attr1, value1 in value.items():
                 if(attr1 == "new"):
                     html_news_data += "New Discussion, "
-                else: 
+                else:
                     for attr2, value2 in value1.items():
                         if attr2 == "new":
                             statement_count += 1
@@ -482,8 +483,7 @@ class User(AbstractUser):
             html_news_data = html_news_data[0:-2]
             html_data += "<p>" + html_news_data + "</p>"
             html_data += "------------------------------------------------------<br><br>"
-        
-        print("html_data: " + html_data)
+
         if(html_data != ""):
             subject, from_email, to = "New Disussions", settings.DEFAULT_FROM_EMAIL, self.email
             text_content = 'Here you can read new discussion list.'

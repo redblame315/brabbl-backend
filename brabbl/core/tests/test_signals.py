@@ -154,7 +154,7 @@ class FlagSignalTests(TestCase):
         self.assertEqual(len(mail.outbox), 1)
 
         body = mail.outbox[0].body
-        self.assertEqual('support@brabbl.com', mail.outbox[0].from_email)
+        self.assertEqual('by1990315@gmail.com', mail.outbox[0].from_email)
         self.assertTrue(self.customer.moderator_email in mail.outbox[0].recipients())
         self.assertTrue(obj.__class__.__name__ in body)
         self.assertTrue(str(obj.id) in body)

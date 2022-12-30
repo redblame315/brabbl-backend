@@ -6,10 +6,8 @@ class Command(BaseCommand):
     help = 'Sends the newsletter'
 
     def handle(self, *args, **options):
-        print("This is newsmail.py")
         for user in User.objects.filter(is_active=True):
-            user.send_newsemail() 
+            user.send_newsemail()
         # for user in User.objects.filter(is_active=True):
         #     if user.newsmail_schedule in [User.DAILY, User.WEEKLY]:
         #         user.send_newsmail()
-

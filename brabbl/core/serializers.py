@@ -365,7 +365,7 @@ class StatementSerializer(NonNullSerializerMixin,
         )
 
         print("statement create")
-        #TODO: add news statement [Blame 12/28]
+        # TODO: add news statement [Blame 12/28]
         customer_users = User.objects.filter(customer=customer)
         for customer_user in customer_users:
             if customer_user.id != user.id:
@@ -575,7 +575,7 @@ class DiscussionSerializer(BaseDiscussionSerializer, serializers.ModelSerializer
             **validated_data
         )
 
-        #TODO: add news discussion [Blame 12/28]
+        # TODO: add news discussion [Blame 12/28]
         customer_users = User.objects.filter(customer=customer)
         for customer_user in customer_users:
             if customer_user.id != user.id:

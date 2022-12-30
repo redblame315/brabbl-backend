@@ -35,7 +35,6 @@ class CustomerMiddleware(MiddlewareMixin):
                 user.backend = 'django.contrib.auth.backends.ModelBackend'
                 login(request, user)
 
-        
         if '/api/' not in request.path:
             return None
 

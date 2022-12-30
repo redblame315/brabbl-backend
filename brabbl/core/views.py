@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from rest_framework.renderers import JSONRenderer
 from rest_framework import generics, views
-import json;
+import json
 
 from django.views.generic import View
 from django.shortcuts import get_object_or_404, redirect
@@ -92,6 +92,7 @@ class DiscussionListViewSet(mixins.RetrieveModelMixin, mixins.CreateModelMixin, 
         serializer = self.get_serializer(instance)
         return Response(serializer.data)
 
+
 class NewsNotificationViewSet(viewsets.GenericViewSet):
     def send_message(self, request):
         users = User.objects.all()
@@ -102,7 +103,7 @@ class NewsNotificationViewSet(viewsets.GenericViewSet):
 
             if(user.undiscussion_ids == ''):
                 continue
-            
+
             undiscussion_list = user.undiscussion_ids.split(",")
             for undiscussion in undiscussion_list:
                 discussion = Discussion.objects.get(external_id=undiscussion)
@@ -110,24 +111,24 @@ class NewsNotificationViewSet(viewsets.GenericViewSet):
                 if(discussion.description is not None):
                     html_content += '<b>' + discussion.description + '</b>'
                 # html_content += '<p>' + discussion.created_at + '</p>'
-            
+
             msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
             msg.attach_alternative(html_content, "text/html")
             msg.send()
 
-        
         return Response(
             {"Send mail successfully"},
             status=status.HTTP_200_OK,
         )
 
-    def list(self,request):
+    def list(self, request):
         if(request.user.is_anonymous is True):
             return Response({})
 
         news_data = get_news_info(request.user)
-        
+
         return Response(news_data)
+
 
 class DiscussionViewSet(MultipleSerializersViewMixin,
                         viewsets.ModelViewSet):
@@ -144,20 +145,20 @@ class DiscussionViewSet(MultipleSerializersViewMixin,
         request parameter.
         """
         queryset = self.filter_queryset(self.get_queryset())
-        external_id=self.request.GET.get('external_id')
+        external_id = self.request.GET.get('external_id')
         obj = get_object_or_404(
             queryset, external_id=external_id)
 
         # May raise a permission denied
         self.check_object_permissions(self.request, obj)
 
-        if(self.request.user.is_anonymous is not True):                                           
+        if(self.request.user.is_anonymous is not True):
             user = User.objects.get(pk=self.request.user.id)
             discussion = Discussion.objects.get(external_id=external_id)
-            news = News.objects.filter(user=user,discussion=discussion)
+            news = News.objects.filter(user=user, discussion=discussion)
             if(news.count() > 0):
                 news.delete()
-            #self.refresh_undiscussion_ids(user, external_id)
+            # self.refresh_undiscussion_ids(user, external_id)
         return obj
 
     def refresh_undiscussion_ids(self, user, external_id):
@@ -167,7 +168,7 @@ class DiscussionViewSet(MultipleSerializersViewMixin,
         for split_id in split_ids:
             if split_id != external_id:
                 user.undiscussion_ids += split_id + ','
-        user.undiscussion_ids = user.undiscussion_ids[:-1]            
+        user.undiscussion_ids = user.undiscussion_ids[:-1]
         user.save()
 
     def get_queryset(self):
@@ -313,7 +314,7 @@ class StatementViewSet(MultipleSerializersViewMixin,
                 value=serializer.validated_data['rating']
             )
 
-            #TODO: add news vote [Blame 12/28]
+            # TODO: add news vote [Blame 12/28]
             customer_users = User.objects.filter(customer=user.customer)
             for customer_user in customer_users:
                 if customer_user.id != user.id:

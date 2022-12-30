@@ -1,0 +1,2469 @@
+============================= test session starts =============================
+platform win32 -- Python 3.7.9, pytest-5.3.5, py-1.11.0, pluggy-0.13.1
+Django settings: brabbl.conf.tests (from ini file)
+rootdir: F:\WebDev\brabbl-backend, inifile: pytest.ini, testpaths: brabbl
+plugins: Faker-15.3.4, cov-2.8.1, django-3.7.0, html-2.0.1, metadata-2.0.4, pep8-1.0.6
+collected 392 items
+
+brabbl\accounts\tests\test_commands.py F                                 [  0%]
+brabbl\accounts\tests\test_data_policy.py ..                             [  0%]
+brabbl\accounts\tests\test_psa.py .                                      [  1%]
+brabbl\__init__.py .                                                     [  1%]
+brabbl\manage.py .                                                       [  1%]
+brabbl\settings.py .                                                     [  1%]
+brabbl\urls.py .                                                         [  2%]
+brabbl\wsgi.py .                                                         [  2%]
+brabbl\accounts\admin.py .                                               [  2%]
+brabbl\accounts\apps.py .                                                [  2%]
+brabbl\accounts\authentication.py .                                      [  3%]
+brabbl\accounts\forms.py .                                               [  3%]
+brabbl\accounts\managers.py .                                            [  3%]
+brabbl\accounts\middleware.py F                                          [  3%]
+brabbl\accounts\models.py F                                              [  4%]
+brabbl\accounts\pipeline.py .                                            [  4%]
+brabbl\accounts\serializers.py .                                         [  4%]
+brabbl\accounts\signals.py .                                             [  4%]
+brabbl\accounts\social.py .                                              [  5%]
+brabbl\accounts\urls.py .                                                [  5%]
+brabbl\accounts\views.py .                                               [  5%]
+brabbl\accounts\templatetags\user_additional_info.py .                   [  5%]
+brabbl\accounts\tests\factories.py .                                     [  6%]
+brabbl\accounts\tests\test_admin.py ..                                   [  6%]
+brabbl\accounts\tests\test_api.py ...................................... [ 16%]
+................................                                         [ 24%]
+brabbl\accounts\tests\test_commands.py .                                 [ 24%]
+brabbl\accounts\tests\test_data_policy.py .                              [ 25%]
+brabbl\accounts\tests\test_managers.py ...                               [ 25%]
+brabbl\accounts\tests\test_middleware.py .....                           [ 27%]
+brabbl\accounts\tests\test_model.py .......                              [ 28%]
+brabbl\accounts\tests\test_psa.py ....                                   [ 29%]
+brabbl\accounts\tests\test_signals.py ..                                 [ 30%]
+brabbl\accounts\tests\test_views.py ........                             [ 32%]
+brabbl\api\fixtures.py .                                                 [ 32%]
+brabbl\api\urls.py .                                                     [ 32%]
+brabbl\api\management\commands\populate_database.py .                    [ 33%]
+brabbl\conf\base.py .                                                    [ 33%]
+brabbl\conf\base_public.py .                                             [ 33%]
+brabbl\conf\dev.py .                                                     [ 33%]
+brabbl\conf\new_staging.py .                                             [ 34%]
+brabbl\conf\production.py .                                              [ 34%]
+brabbl\conf\testing.py .                                                 [ 34%]
+brabbl\conf\tests.py .                                                   [ 34%]
+brabbl\conf\tests_ci.py .                                                [ 35%]
+brabbl\conf\tests_dredd.py .                                             [ 35%]
+brabbl\core\admin.py .                                                   [ 35%]
+brabbl\core\apps.py .                                                    [ 35%]
+brabbl\core\context_processors.py .                                      [ 36%]
+brabbl\core\forms.py .                                                   [ 36%]
+brabbl\core\managers.py .                                                [ 36%]
+brabbl\core\models.py F                                                  [ 36%]
+brabbl\core\permissions.py .                                             [ 37%]
+brabbl\core\serializers.py F                                             [ 37%]
+brabbl\core\signals.py .                                                 [ 37%]
+brabbl\core\tasks.py .                                                   [ 38%]
+brabbl\core\urls.py .                                                    [ 38%]
+brabbl\core\views.py F                                                   [ 38%]
+brabbl\core\management\commands\delete_non_confirmed_users.py .          [ 38%]
+brabbl\core\management\commands\newsmail.py F                            [ 39%]
+brabbl\core\management\commands\non_confirmed_users_warning_letter.py .  [ 39%]
+brabbl\core\templatetags\getattribute.py .                               [ 39%]
+brabbl\core\templatetags\url_tags.py .                                   [ 39%]
+brabbl\core\tests\factories.py .                                         [ 40%]
+brabbl\core\tests\test_admin.py ..                                       [ 40%]
+brabbl\core\tests\test_api.py .......................................... [ 51%]
+.....................................F...............F.................. [ 69%]
+..........................................................               [ 84%]
+brabbl\core\tests\test_management.py ...                                 [ 85%]
+brabbl\core\tests\test_managers.py ....                                  [ 86%]
+brabbl\core\tests\test_models.py ..F..                                   [ 87%]
+brabbl\core\tests\test_signals.py .......FFFF                            [ 90%]
+brabbl\core\tests\test_views.py .......                                  [ 92%]
+brabbl\utils\admin.py .                                                  [ 92%]
+brabbl\utils\http.py .                                                   [ 92%]
+brabbl\utils\language_utils.py .                                         [ 92%]
+brabbl\utils\log.py .                                                    [ 93%]
+brabbl\utils\mail.py .                                                   [ 93%]
+brabbl\utils\math.py .                                                   [ 93%]
+brabbl\utils\models.py .                                                 [ 93%]
+brabbl\utils\news.py F                                                   [ 94%]
+brabbl\utils\rating.py .                                                 [ 94%]
+brabbl\utils\serializers.py .                                            [ 94%]
+brabbl\utils\string.py .                                                 [ 94%]
+brabbl\utils\test.py .                                                   [ 95%]
+brabbl\utils\tests\test_math.py ..                                       [ 95%]
+brabbl\utils\tests\test_string.py ...                                    [ 96%]
+brabbl\accounts\__init__.py .                                            [ 96%]
+brabbl\accounts\templatetags\__init__.py .                               [ 96%]
+brabbl\accounts\tests\__init__.py .                                      [ 97%]
+brabbl\api\__init__.py .                                                 [ 97%]
+brabbl\api\management\__init__.py .                                      [ 97%]
+brabbl\api\management\commands\__init__.py .                             [ 97%]
+brabbl\conf\__init__.py .                                                [ 98%]
+brabbl\core\__init__.py .                                                [ 98%]
+brabbl\core\management\__init__.py .                                     [ 98%]
+brabbl\core\management\commands\__init__.py .                            [ 98%]
+brabbl\core\templatetags\__init__.py .                                   [ 99%]
+brabbl\core\tests\__init__.py .                                          [ 99%]
+brabbl\utils\__init__.py .                                               [ 99%]
+brabbl\utils\tests\__init__.py .                                         [100%]
+
+================================== FAILURES ===================================
+__________________________ test_sending_newsletters ___________________________
+
+    @pytest.mark.django_db
+    def test_sending_newsletters():
+        call_command('newsmail')
+        assert len(mail.outbox) == 0
+        UserFactory(newsmail_schedule=User.NEVER)
+        user_daily = UserFactory(newsmail_schedule=User.DAILY)
+        user_weekly = UserFactory(newsmail_schedule=User.WEEKLY)
+        # reset last sent date
+        User.objects.update(last_sent=None)
+        call_command('newsmail')
+        # assert len(mail.outbox) == 2
+    
+        receivers = [m.to[0] for m in mail.outbox]
+>       assert [user_daily.email, user_weekly.email] == receivers
+E       AssertionError: assert ['user-1@exam...@example.com'] == []
+E         Left contains 2 more items, first extra item: 'user-1@example.com'
+E         Use -v to get the full diff
+
+brabbl\accounts\tests\test_commands.py:21: AssertionError
+---------------------------- Captured stdout call -----------------------------
+{}
+{}
+{}
+_________________________________ PEP8-check __________________________________
+F:\WebDev\brabbl-backend\brabbl\accounts\middleware.py:38:1: W293 blank line contains whitespace
+
+^
+F:\WebDev\brabbl-backend\brabbl\accounts\middleware.py:39:9: E303 too many blank lines (2)
+        if '/api/' not in request.path:
+        ^
+
+_________________________________ PEP8-check __________________________________
+F:\WebDev\brabbl-backend\brabbl\accounts\models.py:456:17: E231 missing whitespace after ','
+        for attr,value in news_data.items():
+                ^
+F:\WebDev\brabbl-backend\brabbl\accounts\models.py:459:34: E222 multiple spaces after operator
+            html_data += "<h3>" +  discussion.statement + "</h3>"
+                                 ^
+F:\WebDev\brabbl-backend\brabbl\accounts\models.py:460:121: E501 line too long (127 > 120 characters)
+            html_data += "<a href='" + str(discussion.source_url) + "'>--------------Go to Brabbl Site---------------" + "</a>"
+                                                                                                                        ^
+F:\WebDev\brabbl-backend\brabbl\accounts\models.py:467:22: W291 trailing whitespace
+                else:
+                     ^
+F:\WebDev\brabbl-backend\brabbl\accounts\models.py:485:1: W293 blank line contains whitespace
+
+^
+
+_________________________________ PEP8-check __________________________________
+F:\WebDev\brabbl-backend\brabbl\core\models.py:165:1: E302 expected 2 blank lines, found 1
+class Discussion(LastActivityMixin,
+^
+F:\WebDev\brabbl-backend\brabbl\core\models.py:256:9: E265 block comment should start with '# '
+        #TODO: delete related news [Blame]
+        ^
+F:\WebDev\brabbl-backend\brabbl\core\models.py:350:9: E265 block comment should start with '# '
+        #TODO: delete related news [Blame]
+        ^
+F:\WebDev\brabbl-backend\brabbl\core\models.py:460:39: W291 trailing whitespace
+    def delete(self, *args, **kwargs):
+                                      ^
+F:\WebDev\brabbl-backend\brabbl\core\models.py:461:9: E265 block comment should start with '# '
+        #TODO: delete related news [Blame]
+        ^
+F:\WebDev\brabbl-backend\brabbl\core\models.py:461:43: W291 trailing whitespace
+        #TODO: delete related news [Blame]
+                                          ^
+F:\WebDev\brabbl-backend\brabbl\core\models.py:465:1: W293 blank line contains whitespace
+
+^
+F:\WebDev\brabbl-backend\brabbl\core\models.py:468:1: E302 expected 2 blank lines, found 1
+class Rating(TimestampedModelMixin, models.Model):
+^
+F:\WebDev\brabbl-backend\brabbl\core\models.py:488:1: E302 expected 2 blank lines, found 1
+class News(models.Model):
+^
+F:\WebDev\brabbl-backend\brabbl\core\models.py:496:1: W391 blank line at end of file
+        unique_together = ('user', 'discussion', 'statement', 'argument')
+^
+
+_________________________________ PEP8-check __________________________________
+F:\WebDev\brabbl-backend\brabbl\core\serializers.py:368:9: E265 block comment should start with '# '
+        #TODO: add news statement [Blame 12/28]
+        ^
+F:\WebDev\brabbl-backend\brabbl\core\serializers.py:578:9: E265 block comment should start with '# '
+        #TODO: add news discussion [Blame 12/28]
+        ^
+
+_________________________________ PEP8-check __________________________________
+F:\WebDev\brabbl-backend\brabbl\core\views.py:11:12: E703 statement ends with a semicolon
+import json;
+           ^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:95:1: E302 expected 2 blank lines, found 1
+class NewsNotificationViewSet(viewsets.GenericViewSet):
+^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:105:1: W293 blank line contains whitespace
+
+^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:113:1: W293 blank line contains whitespace
+
+^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:118:1: W293 blank line contains whitespace
+
+^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:119:9: E303 too many blank lines (2)
+        return Response(
+        ^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:124:18: E231 missing whitespace after ','
+    def list(self,request):
+                 ^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:129:1: W293 blank line contains whitespace
+
+^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:132:1: E302 expected 2 blank lines, found 1
+class DiscussionViewSet(MultipleSerializersViewMixin,
+^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:147:20: E225 missing whitespace around operator
+        external_id=self.request.GET.get('external_id')
+                   ^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:154:56: W291 trailing whitespace
+        if(self.request.user.is_anonymous is not True):
+                                                       ^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:157:49: E231 missing whitespace after ','
+            news = News.objects.filter(user=user,discussion=discussion)
+                                                ^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:160:13: E265 block comment should start with '# '
+            #self.refresh_undiscussion_ids(user, external_id)
+            ^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:170:59: W291 trailing whitespace
+        user.undiscussion_ids = user.undiscussion_ids[:-1]
+                                                          ^
+F:\WebDev\brabbl-backend\brabbl\core\views.py:316:13: E265 block comment should start with '# '
+            #TODO: add news vote [Blame 12/28]
+            ^
+
+_________________________________ PEP8-check __________________________________
+F:\WebDev\brabbl-backend\brabbl\core\management\commands\newsmail.py:10:34: W291 trailing whitespace
+            user.send_newsemail()
+                                 ^
+F:\WebDev\brabbl-backend\brabbl\core\management\commands\newsmail.py:14:1: W391 blank line at end of file
+
+^
+
+________________________ StatementAPITest.test_create _________________________
+
+self = <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF505CF48>
+
+    def _new_conn(self):
+        """ Establish a socket connection and set nodelay settings on it.
+    
+        :return: New socket connection.
+        """
+        extra_kw = {}
+        if self.source_address:
+            extra_kw['source_address'] = self.source_address
+    
+        if self.socket_options:
+            extra_kw['socket_options'] = self.socket_options
+    
+        try:
+            conn = connection.create_connection(
+>               (self._dns_host, self.port), self.timeout, **extra_kw)
+
+lib\site-packages\urllib3\connection.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+address = ('img.youtube.com', 443), timeout = None, source_address = None
+socket_options = [(6, 1, 1)]
+
+    def create_connection(address, timeout=socket._GLOBAL_DEFAULT_TIMEOUT,
+                          source_address=None, socket_options=None):
+        """Connect to *address* and return the socket object.
+    
+        Convenience function.  Connect to *address* (a 2-tuple ``(host,
+        port)``) and return the socket object.  Passing the optional
+        *timeout* parameter will set the timeout on the socket instance
+        before attempting to connect.  If no *timeout* is supplied, the
+        global default timeout setting returned by :func:`getdefaulttimeout`
+        is used.  If *source_address* is set it must be a tuple of (host, port)
+        for the socket to bind as a source address before making the connection.
+        An host of '' or port 0 tells the OS to use the default.
+        """
+    
+        host, port = address
+        if host.startswith('['):
+            host = host.strip('[]')
+        err = None
+    
+        # Using the value from allowed_gai_family() in the context of getaddrinfo lets
+        # us select whether to work with IPv4 DNS records, IPv6 records, or both.
+        # The original create_connection function always returns all records.
+        family = allowed_gai_family()
+    
+>       for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+
+lib\site-packages\urllib3\util\connection.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+host = 'img.youtube.com', port = 443, family = <AddressFamily.AF_UNSPEC: 0>
+type = <SocketKind.SOCK_STREAM: 1>, proto = 0, flags = 0
+
+    def getaddrinfo(host, port, family=0, type=0, proto=0, flags=0):
+        """Resolve host and port into list of address info entries.
+    
+        Translate the host/port argument into a sequence of 5-tuples that contain
+        all the necessary arguments for creating a socket connected to that service.
+        host is a domain name, a string representation of an IPv4/v6 address or
+        None. port is a string service name such as 'http', a numeric port number or
+        None. By passing None as the value of host and port, you can pass NULL to
+        the underlying C API.
+    
+        The family, type and proto arguments can be optionally specified in order to
+        narrow the list of addresses returned. Passing zero as a value for each of
+        these arguments selects the full range of results.
+        """
+        # We override this function since we want to translate the numeric family
+        # and socket type values to enum constants.
+        addrlist = []
+>       for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+E       socket.gaierror: [Errno 11001] getaddrinfo failed
+
+C:\Program Files\Python37\lib\socket.py:752: gaierror
+
+During handling of the above exception, another exception occurred:
+
+self = <urllib3.connectionpool.HTTPSConnectionPool object at 0x000001BCF505C4C8>
+method = 'HEAD', url = '/vi/TKukepIA34w/maxresdefault.jpg', body = None
+headers = {'User-Agent': 'python-requests/2.19.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+retries = Retry(total=0, connect=None, read=False, redirect=None, status=None)
+redirect = False, assert_same_host = False
+timeout = <urllib3.util.timeout.Timeout object at 0x000001BCF505C708>
+pool_timeout = None, release_conn = False, chunked = False, body_pos = None
+response_kw = {'decode_content': False, 'preload_content': False}, conn = None
+release_this_conn = True, err = None, clean_exit = False
+timeout_obj = <urllib3.util.timeout.Timeout object at 0x000001BCF505CE88>
+is_new_proxy_conn = False
+
+    def urlopen(self, method, url, body=None, headers=None, retries=None,
+                redirect=True, assert_same_host=True, timeout=_Default,
+                pool_timeout=None, release_conn=None, chunked=False,
+                body_pos=None, **response_kw):
+        """
+        Get a connection from the pool and perform an HTTP request. This is the
+        lowest level call for making a request, so you'll need to specify all
+        the raw details.
+    
+        .. note::
+    
+           More commonly, it's appropriate to use a convenience method provided
+           by :class:`.RequestMethods`, such as :meth:`request`.
+    
+        .. note::
+    
+           `release_conn` will only behave as expected if
+           `preload_content=False` because we want to make
+           `preload_content=False` the default behaviour someday soon without
+           breaking backwards compatibility.
+    
+        :param method:
+            HTTP request method (such as GET, POST, PUT, etc.)
+    
+        :param body:
+            Data to send in the request body (useful for creating
+            POST requests, see HTTPConnectionPool.post_url for
+            more convenience).
+    
+        :param headers:
+            Dictionary of custom headers to send, such as User-Agent,
+            If-None-Match, etc. If None, pool headers are used. If provided,
+            these headers completely replace any pool-specific headers.
+    
+        :param retries:
+            Configure the number of retries to allow before raising a
+            :class:`~urllib3.exceptions.MaxRetryError` exception.
+    
+            Pass ``None`` to retry until you receive a response. Pass a
+            :class:`~urllib3.util.retry.Retry` object for fine-grained control
+            over different types of retries.
+            Pass an integer number to retry connection errors that many times,
+            but no other types of errors. Pass zero to never retry.
+    
+            If ``False``, then retries are disabled and any exception is raised
+            immediately. Also, instead of raising a MaxRetryError on redirects,
+            the redirect response will be returned.
+    
+        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.
+    
+        :param redirect:
+            If True, automatically handle redirects (status codes 301, 302,
+            303, 307, 308). Each redirect counts as a retry. Disabling retries
+            will disable redirect, too.
+    
+        :param assert_same_host:
+            If ``True``, will make sure that the host of the pool requests is
+            consistent else will raise HostChangedError. When False, you can
+            use the pool on an HTTP proxy and request foreign hosts.
+    
+        :param timeout:
+            If specified, overrides the default timeout for this one
+            request. It may be a float (in seconds) or an instance of
+            :class:`urllib3.util.Timeout`.
+    
+        :param pool_timeout:
+            If set and the pool is set to block=True, then this method will
+            block for ``pool_timeout`` seconds and raise EmptyPoolError if no
+            connection is available within the time period.
+    
+        :param release_conn:
+            If False, then the urlopen call will not release the connection
+            back into the pool once a response is received (but will release if
+            you read the entire contents of the response such as when
+            `preload_content=True`). This is useful if you're not preloading
+            the response's content immediately. You will need to call
+            ``r.release_conn()`` on the response ``r`` to return the connection
+            back into the pool. If None, it takes the value of
+            ``response_kw.get('preload_content', True)``.
+    
+        :param chunked:
+            If True, urllib3 will send the body using chunked transfer
+            encoding. Otherwise, urllib3 will send the body using the standard
+            content-length form. Defaults to False.
+    
+        :param int body_pos:
+            Position to seek to in file-like body in the event of a retry or
+            redirect. Typically this won't need to be set because urllib3 will
+            auto-populate the value when needed.
+    
+        :param \\**response_kw:
+            Additional parameters are passed to
+            :meth:`urllib3.response.HTTPResponse.from_httplib`
+        """
+        if headers is None:
+            headers = self.headers
+    
+        if not isinstance(retries, Retry):
+            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)
+    
+        if release_conn is None:
+            release_conn = response_kw.get('preload_content', True)
+    
+        # Check host
+        if assert_same_host and not self.is_same_host(url):
+            raise HostChangedError(self, url, retries)
+    
+        conn = None
+    
+        # Track whether `conn` needs to be released before
+        # returning/raising/recursing. Update this variable if necessary, and
+        # leave `release_conn` constant throughout the function. That way, if
+        # the function recurses, the original value of `release_conn` will be
+        # passed down into the recursive call, and its value will be respected.
+        #
+        # See issue #651 [1] for details.
+        #
+        # [1] <https://github.com/shazow/urllib3/issues/651>
+        release_this_conn = release_conn
+    
+        # Merge the proxy headers. Only do this in HTTP. We have to copy the
+        # headers dict so we can safely change it without those changes being
+        # reflected in anyone else's copy.
+        if self.scheme == 'http':
+            headers = headers.copy()
+            headers.update(self.proxy_headers)
+    
+        # Must keep the exception bound to a separate variable or else Python 3
+        # complains about UnboundLocalError.
+        err = None
+    
+        # Keep track of whether we cleanly exited the except block. This
+        # ensures we do proper cleanup in finally.
+        clean_exit = False
+    
+        # Rewind body position, if needed. Record current position
+        # for future rewinds in the event of a redirect/retry.
+        body_pos = set_file_position(body, body_pos)
+    
+        try:
+            # Request a connection from the queue.
+            timeout_obj = self._get_timeout(timeout)
+            conn = self._get_conn(timeout=pool_timeout)
+    
+            conn.timeout = timeout_obj.connect_timeout
+    
+            is_new_proxy_conn = self.proxy is not None and not getattr(conn, 'sock', None)
+            if is_new_proxy_conn:
+                self._prepare_proxy(conn)
+    
+            # Make the request on the httplib connection object.
+            httplib_response = self._make_request(conn, method, url,
+                                                  timeout=timeout_obj,
+                                                  body=body, headers=headers,
+>                                                 chunked=chunked)
+
+lib\site-packages\urllib3\connectionpool.py:600: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <urllib3.connectionpool.HTTPSConnectionPool object at 0x000001BCF505C4C8>
+conn = <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF505CF48>
+method = 'HEAD', url = '/vi/TKukepIA34w/maxresdefault.jpg'
+timeout = <urllib3.util.timeout.Timeout object at 0x000001BCF505CE88>
+chunked = False
+httplib_request_kw = {'body': None, 'headers': {'User-Agent': 'python-requests/2.19.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}}
+timeout_obj = <urllib3.util.timeout.Timeout object at 0x000001BCF486E3C8>
+
+    def _make_request(self, conn, method, url, timeout=_Default, chunked=False,
+                      **httplib_request_kw):
+        """
+        Perform a request on a given urllib connection object taken from our
+        pool.
+    
+        :param conn:
+            a connection from one of our connection pools
+    
+        :param timeout:
+            Socket timeout in seconds for the request. This can be a
+            float or integer, which will set the same timeout value for
+            the socket connect and the socket read, or an instance of
+            :class:`urllib3.util.Timeout`, which gives you more fine-grained
+            control over your timeouts.
+        """
+        self.num_requests += 1
+    
+        timeout_obj = self._get_timeout(timeout)
+        timeout_obj.start_connect()
+        conn.timeout = timeout_obj.connect_timeout
+    
+        # Trigger any extra validation we need to do.
+        try:
+>           self._validate_conn(conn)
+
+lib\site-packages\urllib3\connectionpool.py:343: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <urllib3.connectionpool.HTTPSConnectionPool object at 0x000001BCF505C4C8>
+conn = <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF505CF48>
+
+    def _validate_conn(self, conn):
+        """
+        Called right before a request is made, after the socket is created.
+        """
+        super(HTTPSConnectionPool, self)._validate_conn(conn)
+    
+        # Force connect early to allow us to validate the connection.
+        if not getattr(conn, 'sock', None):  # AppEngine might not have  `.sock`
+>           conn.connect()
+
+lib\site-packages\urllib3\connectionpool.py:849: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF505CF48>
+
+    def connect(self):
+        # Add certificate verification
+>       conn = self._new_conn()
+
+lib\site-packages\urllib3\connection.py:314: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF505CF48>
+
+    def _new_conn(self):
+        """ Establish a socket connection and set nodelay settings on it.
+    
+        :return: New socket connection.
+        """
+        extra_kw = {}
+        if self.source_address:
+            extra_kw['source_address'] = self.source_address
+    
+        if self.socket_options:
+            extra_kw['socket_options'] = self.socket_options
+    
+        try:
+            conn = connection.create_connection(
+                (self._dns_host, self.port), self.timeout, **extra_kw)
+    
+        except SocketTimeout as e:
+            raise ConnectTimeoutError(
+                self, "Connection to %s timed out. (connect timeout=%s)" %
+                (self.host, self.timeout))
+    
+        except SocketError as e:
+            raise NewConnectionError(
+>               self, "Failed to establish a new connection: %s" % e)
+E           urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF505CF48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+lib\site-packages\urllib3\connection.py:180: NewConnectionError
+
+During handling of the above exception, another exception occurred:
+
+self = <requests.adapters.HTTPAdapter object at 0x000001BCF505C3C8>
+request = <PreparedRequest [HEAD]>, stream = False
+timeout = <urllib3.util.timeout.Timeout object at 0x000001BCF505C708>
+verify = True, cert = None, proxies = OrderedDict()
+
+    def send(self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None):
+        """Sends PreparedRequest object. Returns Response object.
+    
+        :param request: The :class:`PreparedRequest <PreparedRequest>` being sent.
+        :param stream: (optional) Whether to stream the request content.
+        :param timeout: (optional) How long to wait for the server to send
+            data before giving up, as a float, or a :ref:`(connect timeout,
+            read timeout) <timeouts>` tuple.
+        :type timeout: float or tuple or urllib3 Timeout object
+        :param verify: (optional) Either a boolean, in which case it controls whether
+            we verify the server's TLS certificate, or a string, in which case it
+            must be a path to a CA bundle to use
+        :param cert: (optional) Any user-provided SSL certificate to be trusted.
+        :param proxies: (optional) The proxies dictionary to apply to the request.
+        :rtype: requests.Response
+        """
+    
+        conn = self.get_connection(request.url, proxies)
+    
+        self.cert_verify(conn, request.url, verify, cert)
+        url = self.request_url(request, proxies)
+        self.add_headers(request, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+    
+        chunked = not (request.body is None or 'Content-Length' in request.headers)
+    
+        if isinstance(timeout, tuple):
+            try:
+                connect, read = timeout
+                timeout = TimeoutSauce(connect=connect, read=read)
+            except ValueError as e:
+                # this may raise a string formatting error.
+                err = ("Invalid timeout {0}. Pass a (connect, read) "
+                       "timeout tuple, or a single float to set "
+                       "both timeouts to the same value".format(timeout))
+                raise ValueError(err)
+        elif isinstance(timeout, TimeoutSauce):
+            pass
+        else:
+            timeout = TimeoutSauce(connect=timeout, read=timeout)
+    
+        try:
+            if not chunked:
+                resp = conn.urlopen(
+                    method=request.method,
+                    url=url,
+                    body=request.body,
+                    headers=request.headers,
+                    redirect=False,
+                    assert_same_host=False,
+                    preload_content=False,
+                    decode_content=False,
+                    retries=self.max_retries,
+>                   timeout=timeout
+                )
+
+lib\site-packages\requests\adapters.py:445: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <urllib3.connectionpool.HTTPSConnectionPool object at 0x000001BCF505C4C8>
+method = 'HEAD', url = '/vi/TKukepIA34w/maxresdefault.jpg', body = None
+headers = {'User-Agent': 'python-requests/2.19.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+retries = Retry(total=0, connect=None, read=False, redirect=None, status=None)
+redirect = False, assert_same_host = False
+timeout = <urllib3.util.timeout.Timeout object at 0x000001BCF505C708>
+pool_timeout = None, release_conn = False, chunked = False, body_pos = None
+response_kw = {'decode_content': False, 'preload_content': False}, conn = None
+release_this_conn = True, err = None, clean_exit = False
+timeout_obj = <urllib3.util.timeout.Timeout object at 0x000001BCF505CE88>
+is_new_proxy_conn = False
+
+    def urlopen(self, method, url, body=None, headers=None, retries=None,
+                redirect=True, assert_same_host=True, timeout=_Default,
+                pool_timeout=None, release_conn=None, chunked=False,
+                body_pos=None, **response_kw):
+        """
+        Get a connection from the pool and perform an HTTP request. This is the
+        lowest level call for making a request, so you'll need to specify all
+        the raw details.
+    
+        .. note::
+    
+           More commonly, it's appropriate to use a convenience method provided
+           by :class:`.RequestMethods`, such as :meth:`request`.
+    
+        .. note::
+    
+           `release_conn` will only behave as expected if
+           `preload_content=False` because we want to make
+           `preload_content=False` the default behaviour someday soon without
+           breaking backwards compatibility.
+    
+        :param method:
+            HTTP request method (such as GET, POST, PUT, etc.)
+    
+        :param body:
+            Data to send in the request body (useful for creating
+            POST requests, see HTTPConnectionPool.post_url for
+            more convenience).
+    
+        :param headers:
+            Dictionary of custom headers to send, such as User-Agent,
+            If-None-Match, etc. If None, pool headers are used. If provided,
+            these headers completely replace any pool-specific headers.
+    
+        :param retries:
+            Configure the number of retries to allow before raising a
+            :class:`~urllib3.exceptions.MaxRetryError` exception.
+    
+            Pass ``None`` to retry until you receive a response. Pass a
+            :class:`~urllib3.util.retry.Retry` object for fine-grained control
+            over different types of retries.
+            Pass an integer number to retry connection errors that many times,
+            but no other types of errors. Pass zero to never retry.
+    
+            If ``False``, then retries are disabled and any exception is raised
+            immediately. Also, instead of raising a MaxRetryError on redirects,
+            the redirect response will be returned.
+    
+        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.
+    
+        :param redirect:
+            If True, automatically handle redirects (status codes 301, 302,
+            303, 307, 308). Each redirect counts as a retry. Disabling retries
+            will disable redirect, too.
+    
+        :param assert_same_host:
+            If ``True``, will make sure that the host of the pool requests is
+            consistent else will raise HostChangedError. When False, you can
+            use the pool on an HTTP proxy and request foreign hosts.
+    
+        :param timeout:
+            If specified, overrides the default timeout for this one
+            request. It may be a float (in seconds) or an instance of
+            :class:`urllib3.util.Timeout`.
+    
+        :param pool_timeout:
+            If set and the pool is set to block=True, then this method will
+            block for ``pool_timeout`` seconds and raise EmptyPoolError if no
+            connection is available within the time period.
+    
+        :param release_conn:
+            If False, then the urlopen call will not release the connection
+            back into the pool once a response is received (but will release if
+            you read the entire contents of the response such as when
+            `preload_content=True`). This is useful if you're not preloading
+            the response's content immediately. You will need to call
+            ``r.release_conn()`` on the response ``r`` to return the connection
+            back into the pool. If None, it takes the value of
+            ``response_kw.get('preload_content', True)``.
+    
+        :param chunked:
+            If True, urllib3 will send the body using chunked transfer
+            encoding. Otherwise, urllib3 will send the body using the standard
+            content-length form. Defaults to False.
+    
+        :param int body_pos:
+            Position to seek to in file-like body in the event of a retry or
+            redirect. Typically this won't need to be set because urllib3 will
+            auto-populate the value when needed.
+    
+        :param \\**response_kw:
+            Additional parameters are passed to
+            :meth:`urllib3.response.HTTPResponse.from_httplib`
+        """
+        if headers is None:
+            headers = self.headers
+    
+        if not isinstance(retries, Retry):
+            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)
+    
+        if release_conn is None:
+            release_conn = response_kw.get('preload_content', True)
+    
+        # Check host
+        if assert_same_host and not self.is_same_host(url):
+            raise HostChangedError(self, url, retries)
+    
+        conn = None
+    
+        # Track whether `conn` needs to be released before
+        # returning/raising/recursing. Update this variable if necessary, and
+        # leave `release_conn` constant throughout the function. That way, if
+        # the function recurses, the original value of `release_conn` will be
+        # passed down into the recursive call, and its value will be respected.
+        #
+        # See issue #651 [1] for details.
+        #
+        # [1] <https://github.com/shazow/urllib3/issues/651>
+        release_this_conn = release_conn
+    
+        # Merge the proxy headers. Only do this in HTTP. We have to copy the
+        # headers dict so we can safely change it without those changes being
+        # reflected in anyone else's copy.
+        if self.scheme == 'http':
+            headers = headers.copy()
+            headers.update(self.proxy_headers)
+    
+        # Must keep the exception bound to a separate variable or else Python 3
+        # complains about UnboundLocalError.
+        err = None
+    
+        # Keep track of whether we cleanly exited the except block. This
+        # ensures we do proper cleanup in finally.
+        clean_exit = False
+    
+        # Rewind body position, if needed. Record current position
+        # for future rewinds in the event of a redirect/retry.
+        body_pos = set_file_position(body, body_pos)
+    
+        try:
+            # Request a connection from the queue.
+            timeout_obj = self._get_timeout(timeout)
+            conn = self._get_conn(timeout=pool_timeout)
+    
+            conn.timeout = timeout_obj.connect_timeout
+    
+            is_new_proxy_conn = self.proxy is not None and not getattr(conn, 'sock', None)
+            if is_new_proxy_conn:
+                self._prepare_proxy(conn)
+    
+            # Make the request on the httplib connection object.
+            httplib_response = self._make_request(conn, method, url,
+                                                  timeout=timeout_obj,
+                                                  body=body, headers=headers,
+                                                  chunked=chunked)
+    
+            # If we're going to release the connection in ``finally:``, then
+            # the response doesn't need to know about the connection. Otherwise
+            # it will also try to release it and we'll have a double-release
+            # mess.
+            response_conn = conn if not release_conn else None
+    
+            # Pass method to Response for length checking
+            response_kw['request_method'] = method
+    
+            # Import httplib's response into our own wrapper object
+            response = self.ResponseCls.from_httplib(httplib_response,
+                                                     pool=self,
+                                                     connection=response_conn,
+                                                     retries=retries,
+                                                     **response_kw)
+    
+            # Everything went great!
+            clean_exit = True
+    
+        except queue.Empty:
+            # Timed out by queue.
+            raise EmptyPoolError(self, "No pool connections are available.")
+    
+        except (TimeoutError, HTTPException, SocketError, ProtocolError,
+                BaseSSLError, SSLError, CertificateError) as e:
+            # Discard the connection for these exceptions. It will be
+            # replaced during the next _get_conn() call.
+            clean_exit = False
+            if isinstance(e, (BaseSSLError, CertificateError)):
+                e = SSLError(e)
+            elif isinstance(e, (SocketError, NewConnectionError)) and self.proxy:
+                e = ProxyError('Cannot connect to proxy.', e)
+            elif isinstance(e, (SocketError, HTTPException)):
+                e = ProtocolError('Connection aborted.', e)
+    
+            retries = retries.increment(method, url, error=e, _pool=self,
+>                                       _stacktrace=sys.exc_info()[2])
+
+lib\site-packages\urllib3\connectionpool.py:638: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Retry(total=0, connect=None, read=False, redirect=None, status=None)
+method = 'HEAD', url = '/vi/TKukepIA34w/maxresdefault.jpg', response = None
+error = NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF505CF48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')
+_pool = <urllib3.connectionpool.HTTPSConnectionPool object at 0x000001BCF505C4C8>
+_stacktrace = <traceback object at 0x000001BCF5067848>
+
+    def increment(self, method=None, url=None, response=None, error=None,
+                  _pool=None, _stacktrace=None):
+        """ Return a new Retry object with incremented retry counters.
+    
+        :param response: A response object, or None, if the server did not
+            return a response.
+        :type response: :class:`~urllib3.response.HTTPResponse`
+        :param Exception error: An error encountered during the request, or
+            None if the response was received successfully.
+    
+        :return: A new ``Retry`` object.
+        """
+        if self.total is False and error:
+            # Disabled, indicate to re-raise the error.
+            raise six.reraise(type(error), error, _stacktrace)
+    
+        total = self.total
+        if total is not None:
+            total -= 1
+    
+        connect = self.connect
+        read = self.read
+        redirect = self.redirect
+        status_count = self.status
+        cause = 'unknown'
+        status = None
+        redirect_location = None
+    
+        if error and self._is_connection_error(error):
+            # Connect retry?
+            if connect is False:
+                raise six.reraise(type(error), error, _stacktrace)
+            elif connect is not None:
+                connect -= 1
+    
+        elif error and self._is_read_error(error):
+            # Read retry?
+            if read is False or not self._is_method_retryable(method):
+                raise six.reraise(type(error), error, _stacktrace)
+            elif read is not None:
+                read -= 1
+    
+        elif response and response.get_redirect_location():
+            # Redirect retry?
+            if redirect is not None:
+                redirect -= 1
+            cause = 'too many redirects'
+            redirect_location = response.get_redirect_location()
+            status = response.status
+    
+        else:
+            # Incrementing because of a server error like a 500 in
+            # status_forcelist and a the given method is in the whitelist
+            cause = ResponseError.GENERIC_ERROR
+            if response and response.status:
+                if status_count is not None:
+                    status_count -= 1
+                cause = ResponseError.SPECIFIC_ERROR.format(
+                    status_code=response.status)
+                status = response.status
+    
+        history = self.history + (RequestHistory(method, url, error, status, redirect_location),)
+    
+        new_retry = self.new(
+            total=total,
+            connect=connect, read=read, redirect=redirect, status=status_count,
+            history=history)
+    
+        if new_retry.is_exhausted():
+>           raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E           urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='img.youtube.com', port=443): Max retries exceeded with url: /vi/TKukepIA34w/maxresdefault.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF505CF48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+lib\site-packages\urllib3\util\retry.py:398: MaxRetryError
+
+During handling of the above exception, another exception occurred:
+
+self = <brabbl.core.tests.test_api.StatementAPITest testMethod=test_create>
+
+    def test_create(self):
+        self.assertEqual(self.discussion.statements.all().count(), 0)
+>       response = super().test_create()
+
+brabbl\core\tests\test_api.py:635: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+brabbl\utils\test.py:131: in test_create
+    return self.create(data=self.get_create_data())
+brabbl\utils\test.py:115: in create
+    response = self.client.post(self.get_create_url(), data=data, format="json")
+lib\site-packages\rest_framework\test.py:207: in post
+    return self.generic('POST', path, data, content_type, **extra)
+lib\site-packages\rest_framework\test.py:232: in generic
+    method, path, data, content_type, secure, **extra)
+lib\site-packages\django\test\client.py:422: in generic
+    return self.request(**r)
+brabbl\utils\test.py:38: in request
+    return super(BrabblClient, self).request(**kwargs)
+lib\site-packages\rest_framework\test.py:235: in request
+    request = super().request(**kwargs)
+lib\site-packages\django\test\client.py:503: in request
+    raise exc_value
+lib\site-packages\django\core\handlers\exception.py:34: in inner
+    response = get_response(request)
+lib\site-packages\django\core\handlers\base.py:115: in _get_response
+    response = self.process_exception_by_middleware(e, request)
+lib\site-packages\django\core\handlers\base.py:113: in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+lib\site-packages\django\views\decorators\csrf.py:54: in wrapped_view
+    return view_func(*args, **kwargs)
+lib\site-packages\rest_framework\viewsets.py:114: in view
+    return self.dispatch(request, *args, **kwargs)
+lib\site-packages\rest_framework\views.py:505: in dispatch
+    response = self.handle_exception(exc)
+lib\site-packages\rest_framework\views.py:465: in handle_exception
+    self.raise_uncaught_exception(exc)
+lib\site-packages\rest_framework\views.py:476: in raise_uncaught_exception
+    raise exc
+lib\site-packages\rest_framework\views.py:502: in dispatch
+    response = handler(request, *args, **kwargs)
+lib\site-packages\rest_framework\mixins.py:19: in create
+    self.perform_create(serializer)
+brabbl\core\views.py:273: in perform_create
+    super().perform_create(serializer)
+lib\site-packages\rest_framework\mixins.py:24: in perform_create
+    serializer.save()
+lib\site-packages\rest_framework\serializers.py:212: in save
+    self.instance = self.create(validated_data)
+brabbl\core\serializers.py:364: in create
+    **validated_data
+lib\site-packages\django\db\models\manager.py:82: in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+lib\site-packages\django\db\models\query.py:422: in create
+    obj.save(force_insert=True, using=self.db)
+brabbl\core\models.py:339: in save
+    super().save(*args, **kwargs)
+lib\site-packages\django\db\models\base.py:744: in save
+    force_update=force_update, update_fields=update_fields)
+lib\site-packages\django\db\models\base.py:769: in save_base
+    update_fields=update_fields,
+lib\site-packages\django\dispatch\dispatcher.py:175: in send
+    for receiver in self._live_receivers(sender)
+lib\site-packages\django\dispatch\dispatcher.py:174: in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+brabbl\core\signals.py:122: in image_video_xor_add
+    instance.thumbnail = YoutubeBackend(instance.video).thumbnail
+lib\site-packages\embed_video\backends.py:192: in thumbnail
+    return self.get_thumbnail_url()
+lib\site-packages\embed_video\backends.py:349: in get_thumbnail_url
+    if int(requests.head(temp_thumbnail_url).status_code) < 400:
+lib\site-packages\requests\api.py:98: in head
+    return request('head', url, **kwargs)
+lib\site-packages\requests\api.py:58: in request
+    return session.request(method=method, url=url, **kwargs)
+lib\site-packages\requests\sessions.py:512: in request
+    resp = self.send(prep, **send_kwargs)
+lib\site-packages\requests\sessions.py:622: in send
+    r = adapter.send(request, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <requests.adapters.HTTPAdapter object at 0x000001BCF505C3C8>
+request = <PreparedRequest [HEAD]>, stream = False
+timeout = <urllib3.util.timeout.Timeout object at 0x000001BCF505C708>
+verify = True, cert = None, proxies = OrderedDict()
+
+    def send(self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None):
+        """Sends PreparedRequest object. Returns Response object.
+    
+        :param request: The :class:`PreparedRequest <PreparedRequest>` being sent.
+        :param stream: (optional) Whether to stream the request content.
+        :param timeout: (optional) How long to wait for the server to send
+            data before giving up, as a float, or a :ref:`(connect timeout,
+            read timeout) <timeouts>` tuple.
+        :type timeout: float or tuple or urllib3 Timeout object
+        :param verify: (optional) Either a boolean, in which case it controls whether
+            we verify the server's TLS certificate, or a string, in which case it
+            must be a path to a CA bundle to use
+        :param cert: (optional) Any user-provided SSL certificate to be trusted.
+        :param proxies: (optional) The proxies dictionary to apply to the request.
+        :rtype: requests.Response
+        """
+    
+        conn = self.get_connection(request.url, proxies)
+    
+        self.cert_verify(conn, request.url, verify, cert)
+        url = self.request_url(request, proxies)
+        self.add_headers(request, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+    
+        chunked = not (request.body is None or 'Content-Length' in request.headers)
+    
+        if isinstance(timeout, tuple):
+            try:
+                connect, read = timeout
+                timeout = TimeoutSauce(connect=connect, read=read)
+            except ValueError as e:
+                # this may raise a string formatting error.
+                err = ("Invalid timeout {0}. Pass a (connect, read) "
+                       "timeout tuple, or a single float to set "
+                       "both timeouts to the same value".format(timeout))
+                raise ValueError(err)
+        elif isinstance(timeout, TimeoutSauce):
+            pass
+        else:
+            timeout = TimeoutSauce(connect=timeout, read=timeout)
+    
+        try:
+            if not chunked:
+                resp = conn.urlopen(
+                    method=request.method,
+                    url=url,
+                    body=request.body,
+                    headers=request.headers,
+                    redirect=False,
+                    assert_same_host=False,
+                    preload_content=False,
+                    decode_content=False,
+                    retries=self.max_retries,
+                    timeout=timeout
+                )
+    
+            # Send the request.
+            else:
+                if hasattr(conn, 'proxy_pool'):
+                    conn = conn.proxy_pool
+    
+                low_conn = conn._get_conn(timeout=DEFAULT_POOL_TIMEOUT)
+    
+                try:
+                    low_conn.putrequest(request.method,
+                                        url,
+                                        skip_accept_encoding=True)
+    
+                    for header, value in request.headers.items():
+                        low_conn.putheader(header, value)
+    
+                    low_conn.endheaders()
+    
+                    for i in request.body:
+                        low_conn.send(hex(len(i))[2:].encode('utf-8'))
+                        low_conn.send(b'\r\n')
+                        low_conn.send(i)
+                        low_conn.send(b'\r\n')
+                    low_conn.send(b'0\r\n\r\n')
+    
+                    # Receive the response from the server
+                    try:
+                        # For Python 2.7+ versions, use buffering of HTTP
+                        # responses
+                        r = low_conn.getresponse(buffering=True)
+                    except TypeError:
+                        # For compatibility with Python 2.6 versions and back
+                        r = low_conn.getresponse()
+    
+                    resp = HTTPResponse.from_httplib(
+                        r,
+                        pool=conn,
+                        connection=low_conn,
+                        preload_content=False,
+                        decode_content=False
+                    )
+                except:
+                    # If we hit any problems here, clean up the connection.
+                    # Then, reraise so that we can handle the actual exception.
+                    low_conn.close()
+                    raise
+    
+        except (ProtocolError, socket.error) as err:
+            raise ConnectionError(err, request=request)
+    
+        except MaxRetryError as e:
+            if isinstance(e.reason, ConnectTimeoutError):
+                # TODO: Remove this in 3.0.0: see #2811
+                if not isinstance(e.reason, NewConnectionError):
+                    raise ConnectTimeout(e, request=request)
+    
+            if isinstance(e.reason, ResponseError):
+                raise RetryError(e, request=request)
+    
+            if isinstance(e.reason, _ProxyError):
+                raise ProxyError(e, request=request)
+    
+            if isinstance(e.reason, _SSLError):
+                # This branch is for urllib3 v1.22 and later.
+                raise SSLError(e, request=request)
+    
+>           raise ConnectionError(e, request=request)
+E           requests.exceptions.ConnectionError: HTTPSConnectionPool(host='img.youtube.com', port=443): Max retries exceeded with url: /vi/TKukepIA34w/maxresdefault.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF505CF48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+lib\site-packages\requests\adapters.py:513: ConnectionError
+---------------------------- Captured stdout call -----------------------------
+
+------------------------------ Captured log call ------------------------------
+ERROR    django.request:log.py:228 Internal Server Error: /api/v1/statements/
+Traceback (most recent call last):
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\util\connection.py", line 56, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Program Files\Python37\lib\socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connectionpool.py", line 849, in _validate_conn
+    conn.connect()
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connection.py", line 314, in connect
+    conn = self._new_conn()
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF505CF48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\WebDev\brabbl-backend\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='img.youtube.com', port=443): Max retries exceeded with url: /vi/TKukepIA34w/maxresdefault.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF505CF48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "F:\WebDev\brabbl-backend\brabbl\core\views.py", line 273, in perform_create
+    super().perform_create(serializer)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "F:\WebDev\brabbl-backend\brabbl\core\serializers.py", line 364, in create
+    **validated_data
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\db\models\query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "F:\WebDev\brabbl-backend\brabbl\core\models.py", line 339, in save
+    super().save(*args, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\db\models\base.py", line 744, in save
+    force_update=force_update, update_fields=update_fields)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields,
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\dispatch\dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\dispatch\dispatcher.py", line 174, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "F:\WebDev\brabbl-backend\brabbl\core\signals.py", line 122, in image_video_xor_add
+    instance.thumbnail = YoutubeBackend(instance.video).thumbnail
+  File "F:\WebDev\brabbl-backend\lib\site-packages\embed_video\backends.py", line 192, in thumbnail
+    return self.get_thumbnail_url()
+  File "F:\WebDev\brabbl-backend\lib\site-packages\embed_video\backends.py", line 349, in get_thumbnail_url
+    if int(requests.head(temp_thumbnail_url).status_code) < 400:
+  File "F:\WebDev\brabbl-backend\lib\site-packages\requests\api.py", line 98, in head
+    return request('head', url, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='img.youtube.com', port=443): Max retries exceeded with url: /vi/TKukepIA34w/maxresdefault.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF505CF48>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+______________ StatementAPITest.test_multiple_statements_allowed ______________
+
+self = <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF4193348>
+
+    def _new_conn(self):
+        """ Establish a socket connection and set nodelay settings on it.
+    
+        :return: New socket connection.
+        """
+        extra_kw = {}
+        if self.source_address:
+            extra_kw['source_address'] = self.source_address
+    
+        if self.socket_options:
+            extra_kw['socket_options'] = self.socket_options
+    
+        try:
+            conn = connection.create_connection(
+>               (self._dns_host, self.port), self.timeout, **extra_kw)
+
+lib\site-packages\urllib3\connection.py:171: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+address = ('img.youtube.com', 443), timeout = None, source_address = None
+socket_options = [(6, 1, 1)]
+
+    def create_connection(address, timeout=socket._GLOBAL_DEFAULT_TIMEOUT,
+                          source_address=None, socket_options=None):
+        """Connect to *address* and return the socket object.
+    
+        Convenience function.  Connect to *address* (a 2-tuple ``(host,
+        port)``) and return the socket object.  Passing the optional
+        *timeout* parameter will set the timeout on the socket instance
+        before attempting to connect.  If no *timeout* is supplied, the
+        global default timeout setting returned by :func:`getdefaulttimeout`
+        is used.  If *source_address* is set it must be a tuple of (host, port)
+        for the socket to bind as a source address before making the connection.
+        An host of '' or port 0 tells the OS to use the default.
+        """
+    
+        host, port = address
+        if host.startswith('['):
+            host = host.strip('[]')
+        err = None
+    
+        # Using the value from allowed_gai_family() in the context of getaddrinfo lets
+        # us select whether to work with IPv4 DNS records, IPv6 records, or both.
+        # The original create_connection function always returns all records.
+        family = allowed_gai_family()
+    
+>       for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+
+lib\site-packages\urllib3\util\connection.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+host = 'img.youtube.com', port = 443, family = <AddressFamily.AF_UNSPEC: 0>
+type = <SocketKind.SOCK_STREAM: 1>, proto = 0, flags = 0
+
+    def getaddrinfo(host, port, family=0, type=0, proto=0, flags=0):
+        """Resolve host and port into list of address info entries.
+    
+        Translate the host/port argument into a sequence of 5-tuples that contain
+        all the necessary arguments for creating a socket connected to that service.
+        host is a domain name, a string representation of an IPv4/v6 address or
+        None. port is a string service name such as 'http', a numeric port number or
+        None. By passing None as the value of host and port, you can pass NULL to
+        the underlying C API.
+    
+        The family, type and proto arguments can be optionally specified in order to
+        narrow the list of addresses returned. Passing zero as a value for each of
+        these arguments selects the full range of results.
+        """
+        # We override this function since we want to translate the numeric family
+        # and socket type values to enum constants.
+        addrlist = []
+>       for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+E       socket.gaierror: [Errno 11001] getaddrinfo failed
+
+C:\Program Files\Python37\lib\socket.py:752: gaierror
+
+During handling of the above exception, another exception occurred:
+
+self = <urllib3.connectionpool.HTTPSConnectionPool object at 0x000001BCF4193E08>
+method = 'HEAD', url = '/vi/TKukepIA34w/maxresdefault.jpg', body = None
+headers = {'User-Agent': 'python-requests/2.19.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+retries = Retry(total=0, connect=None, read=False, redirect=None, status=None)
+redirect = False, assert_same_host = False
+timeout = <urllib3.util.timeout.Timeout object at 0x000001BCF4356A48>
+pool_timeout = None, release_conn = False, chunked = False, body_pos = None
+response_kw = {'decode_content': False, 'preload_content': False}, conn = None
+release_this_conn = True, err = None, clean_exit = False
+timeout_obj = <urllib3.util.timeout.Timeout object at 0x000001BCF4193408>
+is_new_proxy_conn = False
+
+    def urlopen(self, method, url, body=None, headers=None, retries=None,
+                redirect=True, assert_same_host=True, timeout=_Default,
+                pool_timeout=None, release_conn=None, chunked=False,
+                body_pos=None, **response_kw):
+        """
+        Get a connection from the pool and perform an HTTP request. This is the
+        lowest level call for making a request, so you'll need to specify all
+        the raw details.
+    
+        .. note::
+    
+           More commonly, it's appropriate to use a convenience method provided
+           by :class:`.RequestMethods`, such as :meth:`request`.
+    
+        .. note::
+    
+           `release_conn` will only behave as expected if
+           `preload_content=False` because we want to make
+           `preload_content=False` the default behaviour someday soon without
+           breaking backwards compatibility.
+    
+        :param method:
+            HTTP request method (such as GET, POST, PUT, etc.)
+    
+        :param body:
+            Data to send in the request body (useful for creating
+            POST requests, see HTTPConnectionPool.post_url for
+            more convenience).
+    
+        :param headers:
+            Dictionary of custom headers to send, such as User-Agent,
+            If-None-Match, etc. If None, pool headers are used. If provided,
+            these headers completely replace any pool-specific headers.
+    
+        :param retries:
+            Configure the number of retries to allow before raising a
+            :class:`~urllib3.exceptions.MaxRetryError` exception.
+    
+            Pass ``None`` to retry until you receive a response. Pass a
+            :class:`~urllib3.util.retry.Retry` object for fine-grained control
+            over different types of retries.
+            Pass an integer number to retry connection errors that many times,
+            but no other types of errors. Pass zero to never retry.
+    
+            If ``False``, then retries are disabled and any exception is raised
+            immediately. Also, instead of raising a MaxRetryError on redirects,
+            the redirect response will be returned.
+    
+        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.
+    
+        :param redirect:
+            If True, automatically handle redirects (status codes 301, 302,
+            303, 307, 308). Each redirect counts as a retry. Disabling retries
+            will disable redirect, too.
+    
+        :param assert_same_host:
+            If ``True``, will make sure that the host of the pool requests is
+            consistent else will raise HostChangedError. When False, you can
+            use the pool on an HTTP proxy and request foreign hosts.
+    
+        :param timeout:
+            If specified, overrides the default timeout for this one
+            request. It may be a float (in seconds) or an instance of
+            :class:`urllib3.util.Timeout`.
+    
+        :param pool_timeout:
+            If set and the pool is set to block=True, then this method will
+            block for ``pool_timeout`` seconds and raise EmptyPoolError if no
+            connection is available within the time period.
+    
+        :param release_conn:
+            If False, then the urlopen call will not release the connection
+            back into the pool once a response is received (but will release if
+            you read the entire contents of the response such as when
+            `preload_content=True`). This is useful if you're not preloading
+            the response's content immediately. You will need to call
+            ``r.release_conn()`` on the response ``r`` to return the connection
+            back into the pool. If None, it takes the value of
+            ``response_kw.get('preload_content', True)``.
+    
+        :param chunked:
+            If True, urllib3 will send the body using chunked transfer
+            encoding. Otherwise, urllib3 will send the body using the standard
+            content-length form. Defaults to False.
+    
+        :param int body_pos:
+            Position to seek to in file-like body in the event of a retry or
+            redirect. Typically this won't need to be set because urllib3 will
+            auto-populate the value when needed.
+    
+        :param \\**response_kw:
+            Additional parameters are passed to
+            :meth:`urllib3.response.HTTPResponse.from_httplib`
+        """
+        if headers is None:
+            headers = self.headers
+    
+        if not isinstance(retries, Retry):
+            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)
+    
+        if release_conn is None:
+            release_conn = response_kw.get('preload_content', True)
+    
+        # Check host
+        if assert_same_host and not self.is_same_host(url):
+            raise HostChangedError(self, url, retries)
+    
+        conn = None
+    
+        # Track whether `conn` needs to be released before
+        # returning/raising/recursing. Update this variable if necessary, and
+        # leave `release_conn` constant throughout the function. That way, if
+        # the function recurses, the original value of `release_conn` will be
+        # passed down into the recursive call, and its value will be respected.
+        #
+        # See issue #651 [1] for details.
+        #
+        # [1] <https://github.com/shazow/urllib3/issues/651>
+        release_this_conn = release_conn
+    
+        # Merge the proxy headers. Only do this in HTTP. We have to copy the
+        # headers dict so we can safely change it without those changes being
+        # reflected in anyone else's copy.
+        if self.scheme == 'http':
+            headers = headers.copy()
+            headers.update(self.proxy_headers)
+    
+        # Must keep the exception bound to a separate variable or else Python 3
+        # complains about UnboundLocalError.
+        err = None
+    
+        # Keep track of whether we cleanly exited the except block. This
+        # ensures we do proper cleanup in finally.
+        clean_exit = False
+    
+        # Rewind body position, if needed. Record current position
+        # for future rewinds in the event of a redirect/retry.
+        body_pos = set_file_position(body, body_pos)
+    
+        try:
+            # Request a connection from the queue.
+            timeout_obj = self._get_timeout(timeout)
+            conn = self._get_conn(timeout=pool_timeout)
+    
+            conn.timeout = timeout_obj.connect_timeout
+    
+            is_new_proxy_conn = self.proxy is not None and not getattr(conn, 'sock', None)
+            if is_new_proxy_conn:
+                self._prepare_proxy(conn)
+    
+            # Make the request on the httplib connection object.
+            httplib_response = self._make_request(conn, method, url,
+                                                  timeout=timeout_obj,
+                                                  body=body, headers=headers,
+>                                                 chunked=chunked)
+
+lib\site-packages\urllib3\connectionpool.py:600: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <urllib3.connectionpool.HTTPSConnectionPool object at 0x000001BCF4193E08>
+conn = <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF4193348>
+method = 'HEAD', url = '/vi/TKukepIA34w/maxresdefault.jpg'
+timeout = <urllib3.util.timeout.Timeout object at 0x000001BCF4193408>
+chunked = False
+httplib_request_kw = {'body': None, 'headers': {'User-Agent': 'python-requests/2.19.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}}
+timeout_obj = <urllib3.util.timeout.Timeout object at 0x000001BCF4193248>
+
+    def _make_request(self, conn, method, url, timeout=_Default, chunked=False,
+                      **httplib_request_kw):
+        """
+        Perform a request on a given urllib connection object taken from our
+        pool.
+    
+        :param conn:
+            a connection from one of our connection pools
+    
+        :param timeout:
+            Socket timeout in seconds for the request. This can be a
+            float or integer, which will set the same timeout value for
+            the socket connect and the socket read, or an instance of
+            :class:`urllib3.util.Timeout`, which gives you more fine-grained
+            control over your timeouts.
+        """
+        self.num_requests += 1
+    
+        timeout_obj = self._get_timeout(timeout)
+        timeout_obj.start_connect()
+        conn.timeout = timeout_obj.connect_timeout
+    
+        # Trigger any extra validation we need to do.
+        try:
+>           self._validate_conn(conn)
+
+lib\site-packages\urllib3\connectionpool.py:343: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <urllib3.connectionpool.HTTPSConnectionPool object at 0x000001BCF4193E08>
+conn = <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF4193348>
+
+    def _validate_conn(self, conn):
+        """
+        Called right before a request is made, after the socket is created.
+        """
+        super(HTTPSConnectionPool, self)._validate_conn(conn)
+    
+        # Force connect early to allow us to validate the connection.
+        if not getattr(conn, 'sock', None):  # AppEngine might not have  `.sock`
+>           conn.connect()
+
+lib\site-packages\urllib3\connectionpool.py:849: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF4193348>
+
+    def connect(self):
+        # Add certificate verification
+>       conn = self._new_conn()
+
+lib\site-packages\urllib3\connection.py:314: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF4193348>
+
+    def _new_conn(self):
+        """ Establish a socket connection and set nodelay settings on it.
+    
+        :return: New socket connection.
+        """
+        extra_kw = {}
+        if self.source_address:
+            extra_kw['source_address'] = self.source_address
+    
+        if self.socket_options:
+            extra_kw['socket_options'] = self.socket_options
+    
+        try:
+            conn = connection.create_connection(
+                (self._dns_host, self.port), self.timeout, **extra_kw)
+    
+        except SocketTimeout as e:
+            raise ConnectTimeoutError(
+                self, "Connection to %s timed out. (connect timeout=%s)" %
+                (self.host, self.timeout))
+    
+        except SocketError as e:
+            raise NewConnectionError(
+>               self, "Failed to establish a new connection: %s" % e)
+E           urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF4193348>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+lib\site-packages\urllib3\connection.py:180: NewConnectionError
+
+During handling of the above exception, another exception occurred:
+
+self = <requests.adapters.HTTPAdapter object at 0x000001BCF43568C8>
+request = <PreparedRequest [HEAD]>, stream = False
+timeout = <urllib3.util.timeout.Timeout object at 0x000001BCF4356A48>
+verify = True, cert = None, proxies = OrderedDict()
+
+    def send(self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None):
+        """Sends PreparedRequest object. Returns Response object.
+    
+        :param request: The :class:`PreparedRequest <PreparedRequest>` being sent.
+        :param stream: (optional) Whether to stream the request content.
+        :param timeout: (optional) How long to wait for the server to send
+            data before giving up, as a float, or a :ref:`(connect timeout,
+            read timeout) <timeouts>` tuple.
+        :type timeout: float or tuple or urllib3 Timeout object
+        :param verify: (optional) Either a boolean, in which case it controls whether
+            we verify the server's TLS certificate, or a string, in which case it
+            must be a path to a CA bundle to use
+        :param cert: (optional) Any user-provided SSL certificate to be trusted.
+        :param proxies: (optional) The proxies dictionary to apply to the request.
+        :rtype: requests.Response
+        """
+    
+        conn = self.get_connection(request.url, proxies)
+    
+        self.cert_verify(conn, request.url, verify, cert)
+        url = self.request_url(request, proxies)
+        self.add_headers(request, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+    
+        chunked = not (request.body is None or 'Content-Length' in request.headers)
+    
+        if isinstance(timeout, tuple):
+            try:
+                connect, read = timeout
+                timeout = TimeoutSauce(connect=connect, read=read)
+            except ValueError as e:
+                # this may raise a string formatting error.
+                err = ("Invalid timeout {0}. Pass a (connect, read) "
+                       "timeout tuple, or a single float to set "
+                       "both timeouts to the same value".format(timeout))
+                raise ValueError(err)
+        elif isinstance(timeout, TimeoutSauce):
+            pass
+        else:
+            timeout = TimeoutSauce(connect=timeout, read=timeout)
+    
+        try:
+            if not chunked:
+                resp = conn.urlopen(
+                    method=request.method,
+                    url=url,
+                    body=request.body,
+                    headers=request.headers,
+                    redirect=False,
+                    assert_same_host=False,
+                    preload_content=False,
+                    decode_content=False,
+                    retries=self.max_retries,
+>                   timeout=timeout
+                )
+
+lib\site-packages\requests\adapters.py:445: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <urllib3.connectionpool.HTTPSConnectionPool object at 0x000001BCF4193E08>
+method = 'HEAD', url = '/vi/TKukepIA34w/maxresdefault.jpg', body = None
+headers = {'User-Agent': 'python-requests/2.19.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'}
+retries = Retry(total=0, connect=None, read=False, redirect=None, status=None)
+redirect = False, assert_same_host = False
+timeout = <urllib3.util.timeout.Timeout object at 0x000001BCF4356A48>
+pool_timeout = None, release_conn = False, chunked = False, body_pos = None
+response_kw = {'decode_content': False, 'preload_content': False}, conn = None
+release_this_conn = True, err = None, clean_exit = False
+timeout_obj = <urllib3.util.timeout.Timeout object at 0x000001BCF4193408>
+is_new_proxy_conn = False
+
+    def urlopen(self, method, url, body=None, headers=None, retries=None,
+                redirect=True, assert_same_host=True, timeout=_Default,
+                pool_timeout=None, release_conn=None, chunked=False,
+                body_pos=None, **response_kw):
+        """
+        Get a connection from the pool and perform an HTTP request. This is the
+        lowest level call for making a request, so you'll need to specify all
+        the raw details.
+    
+        .. note::
+    
+           More commonly, it's appropriate to use a convenience method provided
+           by :class:`.RequestMethods`, such as :meth:`request`.
+    
+        .. note::
+    
+           `release_conn` will only behave as expected if
+           `preload_content=False` because we want to make
+           `preload_content=False` the default behaviour someday soon without
+           breaking backwards compatibility.
+    
+        :param method:
+            HTTP request method (such as GET, POST, PUT, etc.)
+    
+        :param body:
+            Data to send in the request body (useful for creating
+            POST requests, see HTTPConnectionPool.post_url for
+            more convenience).
+    
+        :param headers:
+            Dictionary of custom headers to send, such as User-Agent,
+            If-None-Match, etc. If None, pool headers are used. If provided,
+            these headers completely replace any pool-specific headers.
+    
+        :param retries:
+            Configure the number of retries to allow before raising a
+            :class:`~urllib3.exceptions.MaxRetryError` exception.
+    
+            Pass ``None`` to retry until you receive a response. Pass a
+            :class:`~urllib3.util.retry.Retry` object for fine-grained control
+            over different types of retries.
+            Pass an integer number to retry connection errors that many times,
+            but no other types of errors. Pass zero to never retry.
+    
+            If ``False``, then retries are disabled and any exception is raised
+            immediately. Also, instead of raising a MaxRetryError on redirects,
+            the redirect response will be returned.
+    
+        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.
+    
+        :param redirect:
+            If True, automatically handle redirects (status codes 301, 302,
+            303, 307, 308). Each redirect counts as a retry. Disabling retries
+            will disable redirect, too.
+    
+        :param assert_same_host:
+            If ``True``, will make sure that the host of the pool requests is
+            consistent else will raise HostChangedError. When False, you can
+            use the pool on an HTTP proxy and request foreign hosts.
+    
+        :param timeout:
+            If specified, overrides the default timeout for this one
+            request. It may be a float (in seconds) or an instance of
+            :class:`urllib3.util.Timeout`.
+    
+        :param pool_timeout:
+            If set and the pool is set to block=True, then this method will
+            block for ``pool_timeout`` seconds and raise EmptyPoolError if no
+            connection is available within the time period.
+    
+        :param release_conn:
+            If False, then the urlopen call will not release the connection
+            back into the pool once a response is received (but will release if
+            you read the entire contents of the response such as when
+            `preload_content=True`). This is useful if you're not preloading
+            the response's content immediately. You will need to call
+            ``r.release_conn()`` on the response ``r`` to return the connection
+            back into the pool. If None, it takes the value of
+            ``response_kw.get('preload_content', True)``.
+    
+        :param chunked:
+            If True, urllib3 will send the body using chunked transfer
+            encoding. Otherwise, urllib3 will send the body using the standard
+            content-length form. Defaults to False.
+    
+        :param int body_pos:
+            Position to seek to in file-like body in the event of a retry or
+            redirect. Typically this won't need to be set because urllib3 will
+            auto-populate the value when needed.
+    
+        :param \\**response_kw:
+            Additional parameters are passed to
+            :meth:`urllib3.response.HTTPResponse.from_httplib`
+        """
+        if headers is None:
+            headers = self.headers
+    
+        if not isinstance(retries, Retry):
+            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)
+    
+        if release_conn is None:
+            release_conn = response_kw.get('preload_content', True)
+    
+        # Check host
+        if assert_same_host and not self.is_same_host(url):
+            raise HostChangedError(self, url, retries)
+    
+        conn = None
+    
+        # Track whether `conn` needs to be released before
+        # returning/raising/recursing. Update this variable if necessary, and
+        # leave `release_conn` constant throughout the function. That way, if
+        # the function recurses, the original value of `release_conn` will be
+        # passed down into the recursive call, and its value will be respected.
+        #
+        # See issue #651 [1] for details.
+        #
+        # [1] <https://github.com/shazow/urllib3/issues/651>
+        release_this_conn = release_conn
+    
+        # Merge the proxy headers. Only do this in HTTP. We have to copy the
+        # headers dict so we can safely change it without those changes being
+        # reflected in anyone else's copy.
+        if self.scheme == 'http':
+            headers = headers.copy()
+            headers.update(self.proxy_headers)
+    
+        # Must keep the exception bound to a separate variable or else Python 3
+        # complains about UnboundLocalError.
+        err = None
+    
+        # Keep track of whether we cleanly exited the except block. This
+        # ensures we do proper cleanup in finally.
+        clean_exit = False
+    
+        # Rewind body position, if needed. Record current position
+        # for future rewinds in the event of a redirect/retry.
+        body_pos = set_file_position(body, body_pos)
+    
+        try:
+            # Request a connection from the queue.
+            timeout_obj = self._get_timeout(timeout)
+            conn = self._get_conn(timeout=pool_timeout)
+    
+            conn.timeout = timeout_obj.connect_timeout
+    
+            is_new_proxy_conn = self.proxy is not None and not getattr(conn, 'sock', None)
+            if is_new_proxy_conn:
+                self._prepare_proxy(conn)
+    
+            # Make the request on the httplib connection object.
+            httplib_response = self._make_request(conn, method, url,
+                                                  timeout=timeout_obj,
+                                                  body=body, headers=headers,
+                                                  chunked=chunked)
+    
+            # If we're going to release the connection in ``finally:``, then
+            # the response doesn't need to know about the connection. Otherwise
+            # it will also try to release it and we'll have a double-release
+            # mess.
+            response_conn = conn if not release_conn else None
+    
+            # Pass method to Response for length checking
+            response_kw['request_method'] = method
+    
+            # Import httplib's response into our own wrapper object
+            response = self.ResponseCls.from_httplib(httplib_response,
+                                                     pool=self,
+                                                     connection=response_conn,
+                                                     retries=retries,
+                                                     **response_kw)
+    
+            # Everything went great!
+            clean_exit = True
+    
+        except queue.Empty:
+            # Timed out by queue.
+            raise EmptyPoolError(self, "No pool connections are available.")
+    
+        except (TimeoutError, HTTPException, SocketError, ProtocolError,
+                BaseSSLError, SSLError, CertificateError) as e:
+            # Discard the connection for these exceptions. It will be
+            # replaced during the next _get_conn() call.
+            clean_exit = False
+            if isinstance(e, (BaseSSLError, CertificateError)):
+                e = SSLError(e)
+            elif isinstance(e, (SocketError, NewConnectionError)) and self.proxy:
+                e = ProxyError('Cannot connect to proxy.', e)
+            elif isinstance(e, (SocketError, HTTPException)):
+                e = ProtocolError('Connection aborted.', e)
+    
+            retries = retries.increment(method, url, error=e, _pool=self,
+>                                       _stacktrace=sys.exc_info()[2])
+
+lib\site-packages\urllib3\connectionpool.py:638: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Retry(total=0, connect=None, read=False, redirect=None, status=None)
+method = 'HEAD', url = '/vi/TKukepIA34w/maxresdefault.jpg', response = None
+error = NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF4193348>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')
+_pool = <urllib3.connectionpool.HTTPSConnectionPool object at 0x000001BCF4193E08>
+_stacktrace = <traceback object at 0x000001BCF41933C8>
+
+    def increment(self, method=None, url=None, response=None, error=None,
+                  _pool=None, _stacktrace=None):
+        """ Return a new Retry object with incremented retry counters.
+    
+        :param response: A response object, or None, if the server did not
+            return a response.
+        :type response: :class:`~urllib3.response.HTTPResponse`
+        :param Exception error: An error encountered during the request, or
+            None if the response was received successfully.
+    
+        :return: A new ``Retry`` object.
+        """
+        if self.total is False and error:
+            # Disabled, indicate to re-raise the error.
+            raise six.reraise(type(error), error, _stacktrace)
+    
+        total = self.total
+        if total is not None:
+            total -= 1
+    
+        connect = self.connect
+        read = self.read
+        redirect = self.redirect
+        status_count = self.status
+        cause = 'unknown'
+        status = None
+        redirect_location = None
+    
+        if error and self._is_connection_error(error):
+            # Connect retry?
+            if connect is False:
+                raise six.reraise(type(error), error, _stacktrace)
+            elif connect is not None:
+                connect -= 1
+    
+        elif error and self._is_read_error(error):
+            # Read retry?
+            if read is False or not self._is_method_retryable(method):
+                raise six.reraise(type(error), error, _stacktrace)
+            elif read is not None:
+                read -= 1
+    
+        elif response and response.get_redirect_location():
+            # Redirect retry?
+            if redirect is not None:
+                redirect -= 1
+            cause = 'too many redirects'
+            redirect_location = response.get_redirect_location()
+            status = response.status
+    
+        else:
+            # Incrementing because of a server error like a 500 in
+            # status_forcelist and a the given method is in the whitelist
+            cause = ResponseError.GENERIC_ERROR
+            if response and response.status:
+                if status_count is not None:
+                    status_count -= 1
+                cause = ResponseError.SPECIFIC_ERROR.format(
+                    status_code=response.status)
+                status = response.status
+    
+        history = self.history + (RequestHistory(method, url, error, status, redirect_location),)
+    
+        new_retry = self.new(
+            total=total,
+            connect=connect, read=read, redirect=redirect, status=status_count,
+            history=history)
+    
+        if new_retry.is_exhausted():
+>           raise MaxRetryError(_pool, url, error or ResponseError(cause))
+E           urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='img.youtube.com', port=443): Max retries exceeded with url: /vi/TKukepIA34w/maxresdefault.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF4193348>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+lib\site-packages\urllib3\util\retry.py:398: MaxRetryError
+
+During handling of the above exception, another exception occurred:
+
+self = <brabbl.core.tests.test_api.StatementAPITest testMethod=test_multiple_statements_allowed>
+
+    def test_multiple_statements_allowed(self):
+        # create first statement
+>       self.create()
+
+brabbl\core\tests\test_api.py:641: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+brabbl\utils\test.py:115: in create
+    response = self.client.post(self.get_create_url(), data=data, format="json")
+lib\site-packages\rest_framework\test.py:207: in post
+    return self.generic('POST', path, data, content_type, **extra)
+lib\site-packages\rest_framework\test.py:232: in generic
+    method, path, data, content_type, secure, **extra)
+lib\site-packages\django\test\client.py:422: in generic
+    return self.request(**r)
+brabbl\utils\test.py:38: in request
+    return super(BrabblClient, self).request(**kwargs)
+lib\site-packages\rest_framework\test.py:235: in request
+    request = super().request(**kwargs)
+lib\site-packages\django\test\client.py:503: in request
+    raise exc_value
+lib\site-packages\django\core\handlers\exception.py:34: in inner
+    response = get_response(request)
+lib\site-packages\django\core\handlers\base.py:115: in _get_response
+    response = self.process_exception_by_middleware(e, request)
+lib\site-packages\django\core\handlers\base.py:113: in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+lib\site-packages\django\views\decorators\csrf.py:54: in wrapped_view
+    return view_func(*args, **kwargs)
+lib\site-packages\rest_framework\viewsets.py:114: in view
+    return self.dispatch(request, *args, **kwargs)
+lib\site-packages\rest_framework\views.py:505: in dispatch
+    response = self.handle_exception(exc)
+lib\site-packages\rest_framework\views.py:465: in handle_exception
+    self.raise_uncaught_exception(exc)
+lib\site-packages\rest_framework\views.py:476: in raise_uncaught_exception
+    raise exc
+lib\site-packages\rest_framework\views.py:502: in dispatch
+    response = handler(request, *args, **kwargs)
+lib\site-packages\rest_framework\mixins.py:19: in create
+    self.perform_create(serializer)
+brabbl\core\views.py:273: in perform_create
+    super().perform_create(serializer)
+lib\site-packages\rest_framework\mixins.py:24: in perform_create
+    serializer.save()
+lib\site-packages\rest_framework\serializers.py:212: in save
+    self.instance = self.create(validated_data)
+brabbl\core\serializers.py:364: in create
+    **validated_data
+lib\site-packages\django\db\models\manager.py:82: in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+lib\site-packages\django\db\models\query.py:422: in create
+    obj.save(force_insert=True, using=self.db)
+brabbl\core\models.py:339: in save
+    super().save(*args, **kwargs)
+lib\site-packages\django\db\models\base.py:744: in save
+    force_update=force_update, update_fields=update_fields)
+lib\site-packages\django\db\models\base.py:769: in save_base
+    update_fields=update_fields,
+lib\site-packages\django\dispatch\dispatcher.py:175: in send
+    for receiver in self._live_receivers(sender)
+lib\site-packages\django\dispatch\dispatcher.py:174: in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+brabbl\core\signals.py:122: in image_video_xor_add
+    instance.thumbnail = YoutubeBackend(instance.video).thumbnail
+lib\site-packages\embed_video\backends.py:192: in thumbnail
+    return self.get_thumbnail_url()
+lib\site-packages\embed_video\backends.py:349: in get_thumbnail_url
+    if int(requests.head(temp_thumbnail_url).status_code) < 400:
+lib\site-packages\requests\api.py:98: in head
+    return request('head', url, **kwargs)
+lib\site-packages\requests\api.py:58: in request
+    return session.request(method=method, url=url, **kwargs)
+lib\site-packages\requests\sessions.py:512: in request
+    resp = self.send(prep, **send_kwargs)
+lib\site-packages\requests\sessions.py:622: in send
+    r = adapter.send(request, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <requests.adapters.HTTPAdapter object at 0x000001BCF43568C8>
+request = <PreparedRequest [HEAD]>, stream = False
+timeout = <urllib3.util.timeout.Timeout object at 0x000001BCF4356A48>
+verify = True, cert = None, proxies = OrderedDict()
+
+    def send(self, request, stream=False, timeout=None, verify=True, cert=None, proxies=None):
+        """Sends PreparedRequest object. Returns Response object.
+    
+        :param request: The :class:`PreparedRequest <PreparedRequest>` being sent.
+        :param stream: (optional) Whether to stream the request content.
+        :param timeout: (optional) How long to wait for the server to send
+            data before giving up, as a float, or a :ref:`(connect timeout,
+            read timeout) <timeouts>` tuple.
+        :type timeout: float or tuple or urllib3 Timeout object
+        :param verify: (optional) Either a boolean, in which case it controls whether
+            we verify the server's TLS certificate, or a string, in which case it
+            must be a path to a CA bundle to use
+        :param cert: (optional) Any user-provided SSL certificate to be trusted.
+        :param proxies: (optional) The proxies dictionary to apply to the request.
+        :rtype: requests.Response
+        """
+    
+        conn = self.get_connection(request.url, proxies)
+    
+        self.cert_verify(conn, request.url, verify, cert)
+        url = self.request_url(request, proxies)
+        self.add_headers(request, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+    
+        chunked = not (request.body is None or 'Content-Length' in request.headers)
+    
+        if isinstance(timeout, tuple):
+            try:
+                connect, read = timeout
+                timeout = TimeoutSauce(connect=connect, read=read)
+            except ValueError as e:
+                # this may raise a string formatting error.
+                err = ("Invalid timeout {0}. Pass a (connect, read) "
+                       "timeout tuple, or a single float to set "
+                       "both timeouts to the same value".format(timeout))
+                raise ValueError(err)
+        elif isinstance(timeout, TimeoutSauce):
+            pass
+        else:
+            timeout = TimeoutSauce(connect=timeout, read=timeout)
+    
+        try:
+            if not chunked:
+                resp = conn.urlopen(
+                    method=request.method,
+                    url=url,
+                    body=request.body,
+                    headers=request.headers,
+                    redirect=False,
+                    assert_same_host=False,
+                    preload_content=False,
+                    decode_content=False,
+                    retries=self.max_retries,
+                    timeout=timeout
+                )
+    
+            # Send the request.
+            else:
+                if hasattr(conn, 'proxy_pool'):
+                    conn = conn.proxy_pool
+    
+                low_conn = conn._get_conn(timeout=DEFAULT_POOL_TIMEOUT)
+    
+                try:
+                    low_conn.putrequest(request.method,
+                                        url,
+                                        skip_accept_encoding=True)
+    
+                    for header, value in request.headers.items():
+                        low_conn.putheader(header, value)
+    
+                    low_conn.endheaders()
+    
+                    for i in request.body:
+                        low_conn.send(hex(len(i))[2:].encode('utf-8'))
+                        low_conn.send(b'\r\n')
+                        low_conn.send(i)
+                        low_conn.send(b'\r\n')
+                    low_conn.send(b'0\r\n\r\n')
+    
+                    # Receive the response from the server
+                    try:
+                        # For Python 2.7+ versions, use buffering of HTTP
+                        # responses
+                        r = low_conn.getresponse(buffering=True)
+                    except TypeError:
+                        # For compatibility with Python 2.6 versions and back
+                        r = low_conn.getresponse()
+    
+                    resp = HTTPResponse.from_httplib(
+                        r,
+                        pool=conn,
+                        connection=low_conn,
+                        preload_content=False,
+                        decode_content=False
+                    )
+                except:
+                    # If we hit any problems here, clean up the connection.
+                    # Then, reraise so that we can handle the actual exception.
+                    low_conn.close()
+                    raise
+    
+        except (ProtocolError, socket.error) as err:
+            raise ConnectionError(err, request=request)
+    
+        except MaxRetryError as e:
+            if isinstance(e.reason, ConnectTimeoutError):
+                # TODO: Remove this in 3.0.0: see #2811
+                if not isinstance(e.reason, NewConnectionError):
+                    raise ConnectTimeout(e, request=request)
+    
+            if isinstance(e.reason, ResponseError):
+                raise RetryError(e, request=request)
+    
+            if isinstance(e.reason, _ProxyError):
+                raise ProxyError(e, request=request)
+    
+            if isinstance(e.reason, _SSLError):
+                # This branch is for urllib3 v1.22 and later.
+                raise SSLError(e, request=request)
+    
+>           raise ConnectionError(e, request=request)
+E           requests.exceptions.ConnectionError: HTTPSConnectionPool(host='img.youtube.com', port=443): Max retries exceeded with url: /vi/TKukepIA34w/maxresdefault.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF4193348>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+lib\site-packages\requests\adapters.py:513: ConnectionError
+---------------------------- Captured stdout call -----------------------------
+
+------------------------------ Captured log call ------------------------------
+ERROR    django.request:log.py:228 Internal Server Error: /api/v1/statements/
+Traceback (most recent call last):
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connection.py", line 171, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\util\connection.py", line 56, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Program Files\Python37\lib\socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
+    self._validate_conn(conn)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connectionpool.py", line 849, in _validate_conn
+    conn.connect()
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connection.py", line 314, in connect
+    conn = self._new_conn()
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connection.py", line 180, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF4193348>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\WebDev\brabbl-backend\lib\site-packages\requests\adapters.py", line 445, in send
+    timeout=timeout
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "F:\WebDev\brabbl-backend\lib\site-packages\urllib3\util\retry.py", line 398, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='img.youtube.com', port=443): Max retries exceeded with url: /vi/TKukepIA34w/maxresdefault.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF4193348>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "F:\WebDev\brabbl-backend\brabbl\core\views.py", line 273, in perform_create
+    super().perform_create(serializer)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "F:\WebDev\brabbl-backend\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "F:\WebDev\brabbl-backend\brabbl\core\serializers.py", line 364, in create
+    **validated_data
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\db\models\query.py", line 422, in create
+    obj.save(force_insert=True, using=self.db)
+  File "F:\WebDev\brabbl-backend\brabbl\core\models.py", line 339, in save
+    super().save(*args, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\db\models\base.py", line 744, in save
+    force_update=force_update, update_fields=update_fields)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\db\models\base.py", line 769, in save_base
+    update_fields=update_fields,
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\dispatch\dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\django\dispatch\dispatcher.py", line 174, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "F:\WebDev\brabbl-backend\brabbl\core\signals.py", line 122, in image_video_xor_add
+    instance.thumbnail = YoutubeBackend(instance.video).thumbnail
+  File "F:\WebDev\brabbl-backend\lib\site-packages\embed_video\backends.py", line 192, in thumbnail
+    return self.get_thumbnail_url()
+  File "F:\WebDev\brabbl-backend\lib\site-packages\embed_video\backends.py", line 349, in get_thumbnail_url
+    if int(requests.head(temp_thumbnail_url).status_code) < 400:
+  File "F:\WebDev\brabbl-backend\lib\site-packages\requests\api.py", line 98, in head
+    return request('head', url, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\requests\sessions.py", line 512, in request
+    resp = self.send(prep, **send_kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\requests\sessions.py", line 622, in send
+    r = adapter.send(request, **kwargs)
+  File "F:\WebDev\brabbl-backend\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='img.youtube.com', port=443): Max retries exceeded with url: /vi/TKukepIA34w/maxresdefault.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001BCF4193348>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+_____________________ DiscussionTest.test_download_image ______________________
+
+self = <brabbl.core.tests.test_models.DiscussionTest testMethod=test_download_image>
+
+    def test_download_image(self):
+        discussion = factories.SimpleDiscussionFactory(
+            image_url='',
+            source_url='https://ogp.me/',
+        )
+        self.assertEqual(discussion.image_url, '')
+    
+        with self.settings(TESTING=False):
+            discussion.save()  # trigger signal and task
+    
+        discussion = models.Discussion.objects.get(pk=discussion.pk)
+>       self.assertEqual(discussion.image_url, 'https://ogp.me/logo.png')
+E       AssertionError: '' != 'https://ogp.me/logo.png'
+E       + https://ogp.me/logo.png
+
+brabbl\core\tests\test_models.py:34: AssertionError
+_____________________ FlagSignalTests.test_flag_argument ______________________
+
+self = <brabbl.core.tests.test_signals.FlagSignalTests testMethod=test_flag_argument>
+
+    def test_flag_argument(self):
+>       self._test_flag_object(self.argument)
+
+brabbl\core\tests\test_signals.py:164: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+brabbl\core\tests\test_signals.py:157: in _test_flag_object
+    self.assertEqual('support@brabbl.com', mail.outbox[0].from_email)
+E   AssertionError: 'support@brabbl.com' != 'by1990315@gmail.com'
+E   - support@brabbl.com
+E   + by1990315@gmail.com
+____________________ FlagSignalTests.test_flag_argument_1 _____________________
+
+self = <brabbl.core.tests.test_signals.FlagSignalTests testMethod=test_flag_argument_1>
+
+    def test_flag_argument_1(self):
+        # test lower limit
+        self.customer.flag_count_notification = 1
+        self.customer.save()
+>       self._test_flag_object(self.argument)
+
+brabbl\core\tests\test_signals.py:170: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+brabbl\core\tests\test_signals.py:157: in _test_flag_object
+    self.assertEqual('support@brabbl.com', mail.outbox[0].from_email)
+E   AssertionError: 'support@brabbl.com' != 'by1990315@gmail.com'
+E   - support@brabbl.com
+E   + by1990315@gmail.com
+_____________________ FlagSignalTests.test_flag_statement _____________________
+
+self = <brabbl.core.tests.test_signals.FlagSignalTests testMethod=test_flag_statement>
+
+    def test_flag_statement(self):
+>       self._test_flag_object(self.statement)
+
+brabbl\core\tests\test_signals.py:173: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+brabbl\core\tests\test_signals.py:157: in _test_flag_object
+    self.assertEqual('support@brabbl.com', mail.outbox[0].from_email)
+E   AssertionError: 'support@brabbl.com' != 'by1990315@gmail.com'
+E   - support@brabbl.com
+E   + by1990315@gmail.com
+____________________ FlagSignalTests.test_flag_statement_1 ____________________
+
+self = <brabbl.core.tests.test_signals.FlagSignalTests testMethod=test_flag_statement_1>
+
+    def test_flag_statement_1(self):
+        # test lower limit
+        self.customer.flag_count_notification = 1
+        self.customer.save()
+>       self._test_flag_object(self.statement)
+
+brabbl\core\tests\test_signals.py:179: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+brabbl\core\tests\test_signals.py:157: in _test_flag_object
+    self.assertEqual('support@brabbl.com', mail.outbox[0].from_email)
+E   AssertionError: 'support@brabbl.com' != 'by1990315@gmail.com'
+E   - support@brabbl.com
+E   + by1990315@gmail.com
+_________________________________ PEP8-check __________________________________
+F:\WebDev\brabbl-backend\brabbl\utils\news.py:1:36: E231 missing whitespace after ','
+from brabbl.core.models import News,User,Discussion,Statement,Argument
+                                   ^
+F:\WebDev\brabbl-backend\brabbl\utils\news.py:1:41: E231 missing whitespace after ','
+from brabbl.core.models import News,User,Discussion,Statement,Argument
+                                        ^
+F:\WebDev\brabbl-backend\brabbl\utils\news.py:1:52: E231 missing whitespace after ','
+from brabbl.core.models import News,User,Discussion,Statement,Argument
+                                                   ^
+F:\WebDev\brabbl-backend\brabbl\utils\news.py:1:62: E231 missing whitespace after ','
+from brabbl.core.models import News,User,Discussion,Statement,Argument
+                                                             ^
+F:\WebDev\brabbl-backend\brabbl\utils\news.py:2:1: E302 expected 2 blank lines, found 0
+def get_news_info(user):
+^
+F:\WebDev\brabbl-backend\brabbl\utils\news.py:5:1: W293 blank line contains whitespace
+
+^
+F:\WebDev\brabbl-backend\brabbl\utils\news.py:18:51: W291 trailing whitespace
+                news_data[news.discussion.id] = {}
+                                                  ^
+F:\WebDev\brabbl-backend\brabbl\utils\news.py:22:121: E501 line too long (135 > 120 characters)
+            #     news_data[news.discussion.id]["detail"] = JSONRenderer.render(serializers.DiscussionSerializer(news.discussion).data)
+                                                                                                                        ^
+F:\WebDev\brabbl-backend\brabbl\utils\news.py:24:82: W291 trailing whitespace
+                news_data[news.discussion.id][news.statement.id]["argument"] = []
+                                                                                 ^
+F:\WebDev\brabbl-backend\brabbl\utils\news.py:39:1: W391 blank line at end of file
+    return news_data
+^
+
+============================== warnings summary ===============================
+lib\site-packages\_pytest\mark\structures.py:327
+  F:\WebDev\brabbl-backend\lib\site-packages\_pytest\mark\structures.py:327: PytestUnknownMarkWarning: Unknown pytest.mark.pep8 - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
+    PytestUnknownMarkWarning,
+
+lib\site-packages\unittest2\compatibility.py:143
+  F:\WebDev\brabbl-backend\lib\site-packages\unittest2\compatibility.py:143: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3,and in 3.9 it will stop working
+    class ChainMap(collections.MutableMapping):
+
+lib\site-packages\social\tests\models.py:52
+  F:\WebDev\brabbl-backend\lib\site-packages\social\tests\models.py:52: PytestCollectionWarning: cannot collect test class 'TestUserSocialAuth' because it has a __init__ constructor (from: brabbl/accounts/tests/test_psa.py)
+    class TestUserSocialAuth(UserMixin, BaseModel):
+
+lib\site-packages\social\tests\models.py:134
+  F:\WebDev\brabbl-backend\lib\site-packages\social\tests\models.py:134: PytestCollectionWarning: cannot collect test class 'TestNonce' because it has a __init__ constructor (from: brabbl/accounts/tests/test_psa.py)
+    class TestNonce(NonceMixin, BaseModel):
+
+lib\site-packages\social\tests\models.py:151
+  F:\WebDev\brabbl-backend\lib\site-packages\social\tests\models.py:151: PytestCollectionWarning: cannot collect test class 'TestAssociation' because it has a __init__ constructor (from: brabbl/accounts/tests/test_psa.py)
+    class TestAssociation(AssociationMixin, BaseModel):
+
+lib\site-packages\social\tests\strategy.py:21
+  F:\WebDev\brabbl-backend\lib\site-packages\social\tests\strategy.py:21: PytestCollectionWarning: cannot collect test class 'TestStrategy' because it has a __init__ constructor (from: brabbl/accounts/tests/test_psa.py)
+    class TestStrategy(BaseStrategy):
+
+brabbl/accounts/tests/test_commands.py::test_sending_newsletters
+brabbl/accounts/tests/test_commands.py::test_sending_newsletters
+brabbl/accounts/tests/test_commands.py::test_sending_newsletters
+brabbl/accounts/tests/test_model.py::SocialAuthMixinTestCase::test_get_social_auth
+brabbl/accounts/tests/test_model.py::SocialAuthMixinTestCase::test_get_social_auth
+brabbl/accounts/tests/test_model.py::SocialAuthMixinTestCase::test_get_social_auth_for_user
+  F:\WebDev\brabbl-backend\lib\site-packages\django\db\models\sql\compiler.py:1072: RemovedInDjango30Warning: Remove the context parameter from JSONField.from_db_value(). Support for it will be removed in Django 3.0.
+    RemovedInDjango30Warning,
+
+brabbl/accounts/tests/test_psa.py::FacebookTestCase::test_login
+brabbl/accounts/tests/test_psa.py::FacebookTestCase::test_login
+brabbl/accounts/tests/test_psa.py::FacebookTestCase::test_login
+brabbl/accounts/tests/test_psa.py::FacebookTestCase::test_login
+brabbl/accounts/tests/test_psa.py::FacebookOAuth2Test::test_login
+brabbl/accounts/tests/test_psa.py::FacebookOAuth2Test::test_login
+brabbl/accounts/tests/test_psa.py::FacebookOAuth2Test::test_login
+brabbl/accounts/tests/test_psa.py::FacebookOAuth2Test::test_login
+brabbl/accounts/tests/test_psa.py::FacebookOAuth2Test::test_partial_pipeline
+brabbl/accounts/tests/test_psa.py::FacebookOAuth2Test::test_partial_pipeline
+brabbl/accounts/tests/test_psa.py::FacebookOAuth2Test::test_partial_pipeline
+brabbl/accounts/tests/test_psa.py::FacebookOAuth2Test::test_partial_pipeline
+brabbl/accounts/tests/test_psa.py::FacebookOAuth2Test::test_partial_pipeline
+brabbl/accounts/tests/test_psa.py::FacebookOAuth2Test::test_partial_pipeline
+brabbl/accounts/tests/test_psa.py::FacebookOAuth2Test::test_partial_pipeline
+brabbl/accounts/tests/test_psa.py::FacebookOAuth2Test::test_partial_pipeline
+  F:\WebDev\brabbl-backend\lib\site-packages\httpretty\core.py:438: PendingDeprecationWarning: isAlive() is deprecated, use is_alive() instead
+    if t.isAlive():
+
+brabbl/accounts/tests/test_admin.py::AccountsAdminTestCase::test_send_news_mail
+brabbl/accounts/tests/test_admin.py::AccountsAdminTestCase::test_send_news_mail
+  F:\WebDev\brabbl-backend\lib\site-packages\django_rq\templatetags\jquery_path.py:8: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if LooseVersion(get_version()) >= LooseVersion('1.9'):
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+--- generated html file: file://F:\WebDev\brabbl-backend\test_results.html ----
+
+----------- coverage: platform win32, python 3.7.9-final-0 -----------
+Coverage HTML written to dir htmlcov
+
+========================== slowest 10 test durations ==========================
+45.97s setup    brabbl/accounts/tests/test_commands.py::test_sending_newsletters
+16.77s teardown brabbl/accounts/tests/test_psa.py::FacebookTestCase::test_login
+12.28s call     brabbl/core/tests/test_api.py::StatementAPITest::test_multiple_statements_allowed
+0.95s teardown brabbl/utils/tests/__init__.py
+0.54s call     brabbl/accounts/tests/test_api.py::PrivateAccountAPITest::test_create
+0.53s call     brabbl/core/tests/test_api.py::StatementVoteAPITest::test_vote_must_be_natural_within_range
+0.51s call     brabbl/core/tests/test_api.py::ArgumentRatingAPITest::test_allow_only_valid_ratings
+0.50s call     brabbl/accounts/tests/test_api.py::AccountAPITest::test_create
+0.49s call     brabbl/accounts/tests/test_api.py::AccountAPITest::test_update
+0.49s call     brabbl/accounts/tests/test_api.py::LoginAPITest::test_login_with_casedifferent_upper_username_result_allowed
+=========== 15 failed, 377 passed, 30 warnings in 149.80s (0:02:29) ===========

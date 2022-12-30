@@ -162,6 +162,7 @@ class WordingValue(models.Model):
     def __str__(self):
         return self.name
 
+
 class Discussion(LastActivityMixin,
                  TimestampedModelMixin,
                  models.Model):
@@ -253,7 +254,7 @@ class Discussion(LastActivityMixin,
         for statement in statements:
             statement.delete()
 
-        #TODO: delete related news [Blame]
+        # TODO: delete related news [Blame]
         news_discusssions = self.news_discussions.all()
         for news_discussion in news_discusssions:
             news_discussion.delete()
@@ -347,7 +348,7 @@ class Statement(LastActivityMixin,
             pdf.delete()
 
         print("statement delete")
-        #TODO: delete related news [Blame]
+        # TODO: delete related news [Blame]
         news_statements = self.news_statements.all()
         for news_statement in news_statements:
             news_statement.delete()
@@ -457,13 +458,13 @@ class Argument(LastActivityMixin,
     def discussion(self):
         return self.statement.discussion
 
-    def delete(self, *args, **kwargs):    
-        #TODO: delete related news [Blame]    
+    def delete(self, *args, **kwargs):
+        # TODO: delete related news [Blame]
         news_arguments = self.news_arguments.all()
         for news_argument in news_arguments:
             news_argument.delete()
-            
         super().delete(*args, **kwargs)
+
 
 class Rating(TimestampedModelMixin, models.Model):
     argument = models.ForeignKey(
@@ -484,6 +485,7 @@ class Flag(TimestampedModelMixin, models.Model):
 
     class Meta:
         unique_together = ('content_type', 'object_id', 'user')
+
 
 class News(models.Model):
     user = models.ForeignKey(User, related_name='news_users', on_delete=models.CASCADE)
